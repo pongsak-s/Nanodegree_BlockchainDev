@@ -61,9 +61,21 @@ class Blockchain {
      * Note: the symbol `_` in the method name indicates in the javascript convention 
      * that this method is a private method. 
      */
-    _addBlock(block) {
+    _addBlock(newBlock) {
         let self = this;
         return new Promise(async (resolve, reject) => {
+            newBlock.height = self.chain.length;
+            self.height = newBlock.height;
+            newBlock.time = new Date().getTime().toString().slice(0,-3);
+            if(self.chain.length > 0) {
+                newBlock.previousBlockHash = self.chain[self.chain.length - 1].hash;
+            } else
+            {
+                reject("Cannot add genesis block here.")
+            }
+            newBlock.hash = SHA256(JSON.stringify(newBlock)).toString();
+            self.chain.push(newBlock);
+            resolve(newBlock);
            
         });
     }
@@ -78,7 +90,7 @@ class Blockchain {
      */
     requestMessageOwnershipVerification(address) {
         return new Promise((resolve) => {
-            
+            resolve(`${address}:${new Date().getTime().toString().slice(0,-3)}:starRegistry`);
         });
     }
 
@@ -102,7 +114,30 @@ class Blockchain {
     submitStar(address, message, signature, star) {
         let self = this;
         return new Promise(async (resolve, reject) => {
-            
+            let msgTime = parseInt(message.split(':')[1]);
+            let currentTime = parseInt(new Date().getTime().toString().slice(0, -3));
+            let timeDifferenceInMin = Math.abs(currentTime - msgTime) / 60;
+            if (timeDifferenceInMin < 5)
+            {
+                if (bitcoinMessage.verify(message, address, signature))
+                {
+                    let jsonData = {
+                        "owner": address,
+                        "star": star
+                    };
+                    let newBlock = new BlockClass.Block(jsonData);
+                    console.log('block has been created');
+                    self._addBlock(newBlock)
+                    .then( (addedBlock) => { resolve(addedBlock); } )
+                    .catch( (msg) => {reject(msg)});
+
+                }else{
+                    reject("Message not verified.")
+                }
+            } else
+            {
+                reject(`Time difference greater than 5 minutes.${timeDifferenceInMin}`);
+            }
         });
     }
 
@@ -115,7 +150,8 @@ class Blockchain {
     getBlockByHash(hash) {
         let self = this;
         return new Promise((resolve, reject) => {
-           
+           let chain = self.chain;
+           resolve( chain.find( element => element.hash == hash ));
         });
     }
 
@@ -146,6 +182,22 @@ class Blockchain {
         let self = this;
         let stars = [];
         return new Promise((resolve, reject) => {
+            let chain = self.chain;
+            let results = []
+            for (var i = chain.length - 1; i >= 0; i--) {
+                let eachBlock = chain[i];
+                let data = eachBlock.getBData();
+                if(data && ('owner' in data) && (data.owner == address))
+                    results.push(data);
+            }
+
+            if(results.length > 0)
+            {
+                resolve(results)
+            } else
+            {
+                reject("Not found block!");
+            }
             
         });
     }
@@ -160,7 +212,15 @@ class Blockchain {
         let self = this;
         let errorLog = [];
         return new Promise(async (resolve, reject) => {
-            
+            let chain = self.chain;
+            let errors = [];
+            for (let i = 0; i < chain.length; i++) {
+                let eachBlock = chain[i];
+                await eachBlock.validate()
+                .then( (msg) => { if(!msg) errors.push(this)  })
+                .catch( (msg) => {errors.push(this)} );
+            }
+            resolve(errors);
         });
     }
 

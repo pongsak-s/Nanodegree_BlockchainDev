@@ -9,13 +9,13 @@
  *  run asynchronous.
  */
 
-const SHA256 = require('crypto-js/sha256');
-const hex2ascii = require('hex2ascii');
+ const SHA256 = require('crypto-js/sha256');
+ const hex2ascii = require('hex2ascii');
 
-class Block {
+ class Block {
 
     // Constructor - argument data will be the object containing the transaction data
-	constructor(data){
+    constructor(data){
 		this.hash = null;                                           // Hash of the block
 		this.height = 0;                                            // Block Height (consecutive number of each block)
 		this.body = Buffer.from(JSON.stringify(data)).toString('hex');   // Will contain the transactions stored in the block, by default it will encode the data
@@ -35,16 +35,26 @@ class Block {
      *  5. Resolve true or false depending if it is valid or not.
      *  Note: to access the class values inside a Promise code you need to create an auxiliary value `let self = this;`
      */
-    validate() {
+     validate() {
         let self = this;
         return new Promise((resolve, reject) => {
             // Save in auxiliary variable the current block hash
-                                            
+            var hash_value = self.hash;
+            self.hash = null;
+
             // Recalculate the hash of the Block
+            new_hash = SHA256(JSON.stringify(self)).toString();
+
             // Comparing if the hashes changed
-            // Returning the Block is not valid
-            
-            // Returning the Block is valid
+            if(hash_value!=new_hash) 
+            {
+                // Returning the Block is not valid
+                resolve(false);
+            }
+            else {
+                // Returning the Block is valid
+                resolve(true);
+            }
 
         });
     }
@@ -58,12 +68,16 @@ class Block {
      *  3. Resolve with the data and make sure that you don't need to return the data for the `genesis block` 
      *     or Reject with an error.
      */
-    getBData() {
+     getBData() {
         // Getting the encoded data saved in the Block
         // Decoding the data to retrieve the JSON representation of the object
         // Parse the data to an object to be retrieve.
-
+        var bodyObject = JSON.parse(hex2ascii(this.body))
         // Resolve with the data if the object isn't the Genesis block
+        if (this.height > 0)
+            return bodyObject;
+
+        return null;
 
     }
 
