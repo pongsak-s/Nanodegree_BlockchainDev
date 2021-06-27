@@ -75,7 +75,14 @@ class Blockchain {
             }
             newBlock.hash = SHA256(JSON.stringify(newBlock)).toString();
             self.chain.push(newBlock);
-            resolve(newBlock);
+            newBlock.validate()
+            .then( (msg) => {
+                if(msg)
+                    resolve(newBlock);
+                else
+                    reject("Fail to validate block!");
+             } )
+            .catch( () => reject("Fail to vaildate block!"));
            
         });
     }
@@ -126,7 +133,6 @@ class Blockchain {
                         "star": star
                     };
                     let newBlock = new BlockClass.Block(jsonData);
-                    console.log('block has been created');
                     self._addBlock(newBlock)
                     .then( (addedBlock) => { resolve(addedBlock); } )
                     .catch( (msg) => {reject(msg)});
