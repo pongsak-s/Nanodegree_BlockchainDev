@@ -222,6 +222,15 @@ class Blockchain {
             let errors = [];
             for (let i = 0; i < chain.length; i++) {
                 let eachBlock = chain[i];
+                if( eachBlock.height > 0 ) // not genesis block
+                {
+                    let previousBlock = chain[i-1];
+                    if (eachBlock.previousBlockHash != previousBlock.hash)
+                    {
+                        errors.push(this);
+                        continue;
+                    }
+                }
                 await eachBlock.validate()
                 .then( (msg) => { if(!msg) errors.push(this)  })
                 .catch( (msg) => {errors.push(this)} );
