@@ -1,0 +1,4505 @@
+ ~/U/B/Nanodegree_BlockchainDev   main  projects/p1_private_blockchain  ls       147ms  Wed Jun 30 22:02:48 2021
+BlockchainController.js app.js                  package-lock.json       src
+README.md               node_modules            package.json
+ ~/U/B/Nanodegree_BlockchainDev   main  projects/p1_private_blockchain  cd ..            Wed Jun 30 22:02:57 2021
+ ~/U/B/Nanodegree_BlockchainDev   main    projects  cd ..                               Wed Jun 30 22:02:58 2021
+ ~/U/B/Nanodegree_BlockchainDev   main    cd excercise/                                  Wed Jun 30 22:03:01 2021
+ ~/U/B/Nanodegree_BlockchainDev   main  excercise  ls                                    Wed Jun 30 22:03:03 2021
+encoding           node_playground    private_blockchain
+ ~/U/B/Nanodegree_BlockchainDev   main  excercise  ls                                    Wed Jun 30 22:03:03 2021
+encoding           node_playground    private_blockchain
+ ~/U/B/Nanodegree_BlockchainDev   main  excercise  ls -la                                Wed Jun 30 22:05:02 2021
+total 16
+drwxr-xr-x  6 pongsaks  staff   192 Jun 26 15:17 .
+drwxr-xr-x  7 pongsaks  staff   224 Jun 26 11:41 ..
+-rw-r--r--@ 1 pongsaks  staff  6148 Jun 26 11:41 .DS_Store
+drwxr-xr-x  5 pongsaks  staff   160 Jun 26 11:44 encoding
+drwxr-xr-x  7 pongsaks  staff   224 Jun 26 15:20 node_playground
+drwxr-xr-x  9 pongsaks  staff   288 Jun 26 10:56 private_blockchain
+ ~/U/B/Nanodegree_BlockchainDev   main  excercise  mkdir web3_playground                 Wed Jun 30 22:05:18 2021
+ ~/U/B/Nanodegree_BlockchainDev   main  excercise  cd web3_playground/                   Wed Jun 30 22:05:48 2021
+ ~/U/B/Nanodegree_BlockchainDev   main  excercise/web3_playground  npm init              Wed Jun 30 22:05:56 2021
+This utility will walk you through creating a package.json file.
+It only covers the most common items, and tries to guess sensible defaults.
+
+See `npm help json` for definitive documentation on these fields
+and exactly what they do.
+
+Use `npm install <pkg>` afterwards to install a package and
+save it as a dependency in the package.json file.
+
+Press ^C at any time to quit.
+package name: (web3_playground) 
+version: (1.0.0) 
+description: 
+entry point: (index.js) 
+test command: 
+git repository: 
+keywords: 
+author: 
+license: (ISC) 
+About to write to /Users/pongsaks/Udacity/Blockchain/Nanodegree_BlockchainDev/excercise/web3_playground/package.json:
+
+{
+  "name": "web3_playground",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
+
+
+Is this OK? (yes) 
+ ~/U/B/Nanodegree_BlockchainDev   main    excercise/web3_playground            4658ms  Wed Jun 30 22:06:03 2021
+ ~/U/B/Nanodegree_BlockchainDev   main    excercise/web3_playground                     Wed Jun 30 22:06:03 2021
+ ~/U/B/Nanodegree_BlockchainDev   main    excercise/web3_playground                     Wed Jun 30 22:06:04 2021
+ ~/U/B/Nanodegree_BlockchainDev   main    excercise/web3_playground  sublime .          Wed Jun 30 22:06:04 2021
+ ~/U/B/Nanodegree_BlockchainDev   main    excercise/web3_playground  touch .gitignore
+ ~/U/B/Nanodegree_BlockchainDev   main    excercise/web3_playground                     Wed Jun 30 22:06:43 2021
+ ~/U/B/Nanodegree_BlockchainDev   main    excercise/web3_playground                     Wed Jun 30 22:07:15 2021
+ ~/U/B/Nanodegree_BlockchainDev   main    excercise/web3_playground  ls                 Wed Jun 30 22:07:15 2021
+package.json
+ ~/U/B/Nanodegree_BlockchainDev   main    excercise/web3_playground  npm install web3 --save
+npm WARN deprecated mkdirp-promise@5.0.1: This package is broken and no longer maintained. 'mkdirp' itself supports promises now, please switch to that.
+npm WARN deprecated request@2.88.2: request has been deprecated, see https://github.com/request/request/issues/3142
+npm WARN deprecated har-validator@5.1.5: this library is no longer supported
+npm WARN deprecated uuid@3.4.0: Please upgrade  to version 7 or higher.  Older versions may use Math.random() in certain circumstances, which is known to be problematic.  See https://v8.dev/blog/math-random for details.
+npm WARN deprecated uuid@3.3.2: Please upgrade  to version 7 or higher.  Older versions may use Math.random() in certain circumstances, which is known to be problematic.  See https://v8.dev/blog/math-random for details.
+npm WARN deprecated ethereumjs-tx@2.1.2: New package name format for new versions: @ethereumjs/tx. Please update.
+npm WARN deprecated ethereumjs-common@1.5.2: New package name format for new versions: @ethereumjs/common. Please update.
+npm WARN deprecated multicodec@0.5.7: stable api reached
+
+> bufferutil@4.0.3 install /Users/pongsaks/Udacity/Blockchain/Nanodegree_BlockchainDev/excercise/web3_playground/node_modules/bufferutil
+> node-gyp-build
+
+
+> keccak@3.0.1 install /Users/pongsaks/Udacity/Blockchain/Nanodegree_BlockchainDev/excercise/web3_playground/node_modules/keccak
+> node-gyp-build || exit 0
+
+
+> secp256k1@4.0.2 install /Users/pongsaks/Udacity/Blockchain/Nanodegree_BlockchainDev/excercise/web3_playground/node_modules/secp256k1
+> node-gyp-build || exit 0
+
+
+> utf-8-validate@5.0.5 install /Users/pongsaks/Udacity/Blockchain/Nanodegree_BlockchainDev/excercise/web3_playground/node_modules/utf-8-validate
+> node-gyp-build
+
+
+> web3-bzz@1.3.6 postinstall /Users/pongsaks/Udacity/Blockchain/Nanodegree_BlockchainDev/excercise/web3_playground/node_modules/web3-bzz
+> echo "WARNING: the web3-bzz api will be deprecated in the next version"
+
+WARNING: the web3-bzz api will be deprecated in the next version
+
+> web3-shh@1.3.6 postinstall /Users/pongsaks/Udacity/Blockchain/Nanodegree_BlockchainDev/excercise/web3_playground/node_modules/web3-shh
+> echo "WARNING: the web3-shh api will be deprecated in the next version"
+
+WARNING: the web3-shh api will be deprecated in the next version
+
+> web3@1.3.6 postinstall /Users/pongsaks/Udacity/Blockchain/Nanodegree_BlockchainDev/excercise/web3_playground/node_modules/web3
+> echo "WARNING: the web3-shh and web3-bzz api will be deprecated in the next version"
+
+WARNING: the web3-shh and web3-bzz api will be deprecated in the next version
+npm notice created a lockfile as package-lock.json. You should commit this file.
+npm WARN web3_playground@1.0.0 No description
+npm WARN web3_playground@1.0.0 No repository field.
+
++ web3@1.3.6
+added 358 packages from 323 contributors and audited 358 packages in 42.551s
+found 1 low severity vulnerability
+  run `npm audit fix` to fix them, or `npm audit` for details
+
+
+   ╭────────────────────────────────────────────────────────────────╮
+   │                                                                │
+   │       New major version of npm available! 6.9.0 → 7.19.0       │
+   │   Changelog: https://github.com/npm/cli/releases/tag/v7.19.0   │
+   │               Run npm install -g npm to update!                │
+   │                                                                │
+   ╰────────────────────────────────────────────────────────────────╯
+
+ ~/U/B/Nanodegree_BlockchainDev   main    excercise/web3_playground             43.5s  Wed Jun 30 22:08:11 2021
+ ~/U/B/Nanodegree_BlockchainDev   main    excercise/web3_playground                     Wed Jun 30 22:09:28 2021
+ ~/U/B/Nanodegree_BlockchainDev   main    excercise/web3_playground  ls -la             Wed Jun 30 22:09:28 2021
+total 248
+drwxr-xr-x    6 pongsaks  staff     192 Jun 30 22:08 .
+drwxr-xr-x    7 pongsaks  staff     224 Jun 30 22:05 ..
+-rw-r--r--    1 pongsaks  staff      15 Jun 30 22:06 .gitignore
+drwxr-xr-x  314 pongsaks  staff   10048 Jun 30 22:08 node_modules
+-rw-r--r--    1 pongsaks  staff  116219 Jun 30 22:08 package-lock.json
+-rw-r--r--    1 pongsaks  staff     257 Jun 30 22:08 package.json
+ ~/U/B/Nanodegree_BlockchainDev   main    excercise/web3_playground  node               Wed Jun 30 22:09:30 2021
+> let Web3 = require('web3')
+undefined
+> Web3
+{ [Function: Web3]
+  version: '1.3.6',
+  utils:
+   { _fireError: [Function: _fireError],
+     _jsonInterfaceMethodToString: [Function: _jsonInterfaceMethodToString],
+     _flattenTypes: [Function: _flattenTypes],
+     randomHex: [Function: randomHex],
+     _:
+      { [Function: _]
+        VERSION: '1.12.1',
+        toPath: [Function: toPath],
+        iteratee: [Function: iteratee],
+        templateSettings: [Object],
+        after: [Function: after],
+        all: [Function: every],
+        allKeys: [Function: allKeys],
+        any: [Function: some],
+        assign: [Function],
+        before: [Function: before],
+        bind: [Function],
+        bindAll: [Function],
+        chain: [Function: chain],
+        chunk: [Function: chunk],
+        clone: [Function: clone],
+        collect: [Function: map],
+        compact: [Function: compact],
+        compose: [Function: compose],
+        constant: [Function: constant],
+        contains: [Function: contains],
+        countBy: [Function],
+        create: [Function: create],
+        debounce: [Function: debounce],
+        default: [Circular],
+        defaults: [Function],
+        defer: [Function: bound],
+        delay: [Function],
+        detect: [Function: find],
+        difference: [Function],
+        drop: [Function: rest],
+        each: [Function: each],
+        escape: [Function],
+        every: [Function: every],
+        extend: [Function],
+        extendOwn: [Function],
+        filter: [Function: filter],
+        find: [Function: find],
+        findIndex: [Function],
+        findKey: [Function: findKey],
+        findLastIndex: [Function],
+        findWhere: [Function: findWhere],
+        first: [Function: first],
+        flatten: [Function: flatten$1],
+        foldl: [Function],
+        foldr: [Function],
+        forEach: [Function: each],
+        functions: [Function: functions],
+        get: [Function: get],
+        groupBy: [Function],
+        has: [Function: has$1],
+        head: [Function: first],
+        identity: [Function: identity],
+        include: [Function: contains],
+        includes: [Function: contains],
+        indexBy: [Function],
+        indexOf: [Function],
+        initial: [Function: initial],
+        inject: [Function],
+        intersection: [Function: intersection],
+        invert: [Function: invert],
+        invoke: [Function],
+        isArguments: [Function],
+        isArray: [Function: isArray],
+        isArrayBuffer: [Function],
+        isBoolean: [Function: isBoolean],
+        isDataView: [Function],
+        isDate: [Function],
+        isElement: [Function: isElement],
+        isEmpty: [Function: isEmpty],
+        isEqual: [Function: isEqual],
+        isError: [Function],
+        isFinite: [Function: isFinite$1],
+        isFunction: [Function: isFunction],
+        isMap: [Function],
+        isMatch: [Function: isMatch],
+        isNaN: [Function: isNaN$1],
+        isNull: [Function: isNull],
+        isNumber: [Function],
+        isObject: [Function: isObject],
+        isRegExp: [Function],
+        isSet: [Function],
+        isString: [Function],
+        isSymbol: [Function],
+        isTypedArray: [Function: isTypedArray],
+        isUndefined: [Function: isUndefined],
+        isWeakMap: [Function],
+        isWeakSet: [Function],
+        keys: [Function: keys],
+        last: [Function: last],
+        lastIndexOf: [Function],
+        map: [Function: map],
+        mapObject: [Function: mapObject],
+        matcher: [Function: matcher],
+        matches: [Function: matcher],
+        max: [Function: max],
+        memoize: [Function: memoize],
+        methods: [Function: functions],
+        min: [Function: min],
+        mixin: [Function: mixin],
+        negate: [Function: negate],
+        noop: [Function: noop],
+        now: [Function: now],
+        object: [Function: object],
+        omit: [Function],
+        once: [Function: bound],
+        pairs: [Function: pairs],
+        partial: [Function],
+        partition: [Function],
+        pick: [Function],
+        pluck: [Function: pluck],
+        property: [Function: property],
+        propertyOf: [Function: propertyOf],
+        random: [Function: random],
+        range: [Function: range],
+        reduce: [Function],
+        reduceRight: [Function],
+        reject: [Function: reject],
+        rest: [Function: rest],
+        restArguments: [Function: restArguments],
+        result: [Function: result],
+        sample: [Function: sample],
+        select: [Function: filter],
+        shuffle: [Function: shuffle],
+        size: [Function: size],
+        some: [Function: some],
+        sortBy: [Function: sortBy],
+        sortedIndex: [Function: sortedIndex],
+        tail: [Function: rest],
+        take: [Function: first],
+        tap: [Function: tap],
+        template: [Function: template],
+        throttle: [Function: throttle],
+        times: [Function: times],
+        toArray: [Function: toArray],
+        transpose: [Function: unzip],
+        unescape: [Function],
+        union: [Function],
+        uniq: [Function: uniq],
+        unique: [Function: uniq],
+        uniqueId: [Function: uniqueId],
+        unzip: [Function: unzip],
+        values: [Function: values],
+        where: [Function: where],
+        without: [Function],
+        wrap: [Function: wrap],
+        zip: [Function],
+        _: [Circular] },
+     BN:
+      { [Function: BN]
+        BN: [Circular],
+        wordSize: 26,
+        isBN: [Function: isBN],
+        max: [Function: max],
+        min: [Function: min],
+        red: [Function: red],
+        _prime: [Function: prime],
+        mont: [Function: mont] },
+     isBN: [Function: isBN],
+     isBigNumber: [Function: isBigNumber],
+     isHex: [Function: isHex],
+     isHexStrict: [Function: isHexStrict],
+     sha3: { [Function: sha3] _Hash: [Object] },
+     sha3Raw: [Function: sha3Raw],
+     keccak256: { [Function: sha3] _Hash: [Object] },
+     soliditySha3: [Function: soliditySha3],
+     soliditySha3Raw: [Function: soliditySha3Raw],
+     encodePacked: [Function: encodePacked],
+     isAddress: [Function: isAddress],
+     checkAddressChecksum: [Function: checkAddressChecksum],
+     toChecksumAddress: [Function: toChecksumAddress],
+     toHex: [Function: toHex],
+     toBN: [Function: toBN],
+     bytesToHex: [Function: bytesToHex],
+     hexToBytes: [Function: hexToBytes],
+     hexToNumberString: [Function: hexToNumberString],
+     hexToNumber: [Function: hexToNumber],
+     toDecimal: [Function: hexToNumber],
+     numberToHex: [Function: numberToHex],
+     fromDecimal: [Function: numberToHex],
+     hexToUtf8: [Function: hexToUtf8],
+     hexToString: [Function: hexToUtf8],
+     toUtf8: [Function: hexToUtf8],
+     stripHexPrefix: [Function: stripHexPrefix],
+     utf8ToHex: [Function: utf8ToHex],
+     stringToHex: [Function: utf8ToHex],
+     fromUtf8: [Function: utf8ToHex],
+     hexToAscii: [Function: hexToAscii],
+     toAscii: [Function: hexToAscii],
+     asciiToHex: [Function: asciiToHex],
+     fromAscii: [Function: asciiToHex],
+     unitMap:
+      { noether: '0',
+        wei: '1',
+        kwei: '1000',
+        Kwei: '1000',
+        babbage: '1000',
+        femtoether: '1000',
+        mwei: '1000000',
+        Mwei: '1000000',
+        lovelace: '1000000',
+        picoether: '1000000',
+        gwei: '1000000000',
+        Gwei: '1000000000',
+        shannon: '1000000000',
+        nanoether: '1000000000',
+        nano: '1000000000',
+        szabo: '1000000000000',
+        microether: '1000000000000',
+        micro: '1000000000000',
+        finney: '1000000000000000',
+        milliether: '1000000000000000',
+        milli: '1000000000000000',
+        ether: '1000000000000000000',
+        kether: '1000000000000000000000',
+        grand: '1000000000000000000000',
+        mether: '1000000000000000000000000',
+        gether: '1000000000000000000000000000',
+        tether: '1000000000000000000000000000000' },
+     toWei: [Function: toWei],
+     fromWei: [Function: fromWei],
+     padLeft: [Function: leftPad],
+     leftPad: [Function: leftPad],
+     padRight: [Function: rightPad],
+     rightPad: [Function: rightPad],
+     toTwosComplement: [Function: toTwosComplement],
+     isBloom: [Function: isBloom],
+     isUserEthereumAddressInBloom: [Function: isUserEthereumAddressInBloom],
+     isContractAddressInBloom: [Function: isContractAddressInBloom],
+     isTopic: [Function: isTopic],
+     isTopicInBloom: [Function: isTopicInBloom],
+     isInBloom: [Function: isInBloom],
+     compareBlockNumbers: [Function: compareBlockNumbers] },
+  modules:
+   { Eth: { [Function: Eth] givenProvider: null, providers: [Object] },
+     Net: { [Function: Net] givenProvider: null, providers: [Object] },
+     Personal:
+      { [Function: Personal] givenProvider: null, providers: [Object] },
+     Shh: { [Function: Shh] givenProvider: null, providers: [Object] },
+     Bzz: { [Function: Bzz] givenProvider: null } },
+  givenProvider: null,
+  providers:
+   { WebsocketProvider: [Function: WebsocketProvider],
+     HttpProvider: [Function: HttpProvider],
+     IpcProvider: [Function: IpcProvider] } }
+> 
+> 
+> .quit
+Invalid REPL keyword
+> .exit
+ ~/U/B/Nanodegree_BlockchainDev   main    excercise/web3_playground                1m  Wed Jun 30 22:10:38 2021
+ ~/U/B/Nanodegree_BlockchainDev   main    excercise/web3_playground                     Wed Jun 30 22:10:39 2021
+ ~/U/B/Nanodegree_BlockchainDev   main    excercise/web3_playground  node --version     Wed Jun 30 22:10:39 2021
+v10.16.0
+ ~/U/B/Nanodegree_BlockchainDev   main    excercise/web3_playground  node               Wed Jun 30 22:10:41 2021
+> let web3 = require('web3')
+undefined
+> web3
+{ [Function: Web3]
+  version: '1.3.6',
+  utils:
+   { _fireError: [Function: _fireError],
+     _jsonInterfaceMethodToString: [Function: _jsonInterfaceMethodToString],
+     _flattenTypes: [Function: _flattenTypes],
+     randomHex: [Function: randomHex],
+     _:
+      { [Function: _]
+        VERSION: '1.12.1',
+        toPath: [Function: toPath],
+        iteratee: [Function: iteratee],
+        templateSettings: [Object],
+        after: [Function: after],
+        all: [Function: every],
+        allKeys: [Function: allKeys],
+        any: [Function: some],
+        assign: [Function],
+        before: [Function: before],
+        bind: [Function],
+        bindAll: [Function],
+        chain: [Function: chain],
+        chunk: [Function: chunk],
+        clone: [Function: clone],
+        collect: [Function: map],
+        compact: [Function: compact],
+        compose: [Function: compose],
+        constant: [Function: constant],
+        contains: [Function: contains],
+        countBy: [Function],
+        create: [Function: create],
+        debounce: [Function: debounce],
+        default: [Circular],
+        defaults: [Function],
+        defer: [Function: bound],
+        delay: [Function],
+        detect: [Function: find],
+        difference: [Function],
+        drop: [Function: rest],
+        each: [Function: each],
+        escape: [Function],
+        every: [Function: every],
+        extend: [Function],
+        extendOwn: [Function],
+        filter: [Function: filter],
+        find: [Function: find],
+        findIndex: [Function],
+        findKey: [Function: findKey],
+        findLastIndex: [Function],
+        findWhere: [Function: findWhere],
+        first: [Function: first],
+        flatten: [Function: flatten$1],
+        foldl: [Function],
+        foldr: [Function],
+        forEach: [Function: each],
+        functions: [Function: functions],
+        get: [Function: get],
+        groupBy: [Function],
+        has: [Function: has$1],
+        head: [Function: first],
+        identity: [Function: identity],
+        include: [Function: contains],
+        includes: [Function: contains],
+        indexBy: [Function],
+        indexOf: [Function],
+        initial: [Function: initial],
+        inject: [Function],
+        intersection: [Function: intersection],
+        invert: [Function: invert],
+        invoke: [Function],
+        isArguments: [Function],
+        isArray: [Function: isArray],
+        isArrayBuffer: [Function],
+        isBoolean: [Function: isBoolean],
+        isDataView: [Function],
+        isDate: [Function],
+        isElement: [Function: isElement],
+        isEmpty: [Function: isEmpty],
+        isEqual: [Function: isEqual],
+        isError: [Function],
+        isFinite: [Function: isFinite$1],
+        isFunction: [Function: isFunction],
+        isMap: [Function],
+        isMatch: [Function: isMatch],
+        isNaN: [Function: isNaN$1],
+        isNull: [Function: isNull],
+        isNumber: [Function],
+        isObject: [Function: isObject],
+        isRegExp: [Function],
+        isSet: [Function],
+        isString: [Function],
+        isSymbol: [Function],
+        isTypedArray: [Function: isTypedArray],
+        isUndefined: [Function: isUndefined],
+        isWeakMap: [Function],
+        isWeakSet: [Function],
+        keys: [Function: keys],
+        last: [Function: last],
+        lastIndexOf: [Function],
+        map: [Function: map],
+        mapObject: [Function: mapObject],
+        matcher: [Function: matcher],
+        matches: [Function: matcher],
+        max: [Function: max],
+        memoize: [Function: memoize],
+        methods: [Function: functions],
+        min: [Function: min],
+        mixin: [Function: mixin],
+        negate: [Function: negate],
+        noop: [Function: noop],
+        now: [Function: now],
+        object: [Function: object],
+        omit: [Function],
+        once: [Function: bound],
+        pairs: [Function: pairs],
+        partial: [Function],
+        partition: [Function],
+        pick: [Function],
+        pluck: [Function: pluck],
+        property: [Function: property],
+        propertyOf: [Function: propertyOf],
+        random: [Function: random],
+        range: [Function: range],
+        reduce: [Function],
+        reduceRight: [Function],
+        reject: [Function: reject],
+        rest: [Function: rest],
+        restArguments: [Function: restArguments],
+        result: [Function: result],
+        sample: [Function: sample],
+        select: [Function: filter],
+        shuffle: [Function: shuffle],
+        size: [Function: size],
+        some: [Function: some],
+        sortBy: [Function: sortBy],
+        sortedIndex: [Function: sortedIndex],
+        tail: [Function: rest],
+        take: [Function: first],
+        tap: [Function: tap],
+        template: [Function: template],
+        throttle: [Function: throttle],
+        times: [Function: times],
+        toArray: [Function: toArray],
+        transpose: [Function: unzip],
+        unescape: [Function],
+        union: [Function],
+        uniq: [Function: uniq],
+        unique: [Function: uniq],
+        uniqueId: [Function: uniqueId],
+        unzip: [Function: unzip],
+        values: [Function: values],
+        where: [Function: where],
+        without: [Function],
+        wrap: [Function: wrap],
+        zip: [Function],
+        _: [Circular] },
+     BN:
+      { [Function: BN]
+        BN: [Circular],
+        wordSize: 26,
+        isBN: [Function: isBN],
+        max: [Function: max],
+        min: [Function: min],
+        red: [Function: red],
+        _prime: [Function: prime],
+        mont: [Function: mont] },
+     isBN: [Function: isBN],
+     isBigNumber: [Function: isBigNumber],
+     isHex: [Function: isHex],
+     isHexStrict: [Function: isHexStrict],
+     sha3: { [Function: sha3] _Hash: [Object] },
+     sha3Raw: [Function: sha3Raw],
+     keccak256: { [Function: sha3] _Hash: [Object] },
+     soliditySha3: [Function: soliditySha3],
+     soliditySha3Raw: [Function: soliditySha3Raw],
+     encodePacked: [Function: encodePacked],
+     isAddress: [Function: isAddress],
+     checkAddressChecksum: [Function: checkAddressChecksum],
+     toChecksumAddress: [Function: toChecksumAddress],
+     toHex: [Function: toHex],
+     toBN: [Function: toBN],
+     bytesToHex: [Function: bytesToHex],
+     hexToBytes: [Function: hexToBytes],
+     hexToNumberString: [Function: hexToNumberString],
+     hexToNumber: [Function: hexToNumber],
+     toDecimal: [Function: hexToNumber],
+     numberToHex: [Function: numberToHex],
+     fromDecimal: [Function: numberToHex],
+     hexToUtf8: [Function: hexToUtf8],
+     hexToString: [Function: hexToUtf8],
+     toUtf8: [Function: hexToUtf8],
+     stripHexPrefix: [Function: stripHexPrefix],
+     utf8ToHex: [Function: utf8ToHex],
+     stringToHex: [Function: utf8ToHex],
+     fromUtf8: [Function: utf8ToHex],
+     hexToAscii: [Function: hexToAscii],
+     toAscii: [Function: hexToAscii],
+     asciiToHex: [Function: asciiToHex],
+     fromAscii: [Function: asciiToHex],
+     unitMap:
+      { noether: '0',
+        wei: '1',
+        kwei: '1000',
+        Kwei: '1000',
+        babbage: '1000',
+        femtoether: '1000',
+        mwei: '1000000',
+        Mwei: '1000000',
+        lovelace: '1000000',
+        picoether: '1000000',
+        gwei: '1000000000',
+        Gwei: '1000000000',
+        shannon: '1000000000',
+        nanoether: '1000000000',
+        nano: '1000000000',
+        szabo: '1000000000000',
+        microether: '1000000000000',
+        micro: '1000000000000',
+        finney: '1000000000000000',
+        milliether: '1000000000000000',
+        milli: '1000000000000000',
+        ether: '1000000000000000000',
+        kether: '1000000000000000000000',
+        grand: '1000000000000000000000',
+        mether: '1000000000000000000000000',
+        gether: '1000000000000000000000000000',
+        tether: '1000000000000000000000000000000' },
+     toWei: [Function: toWei],
+     fromWei: [Function: fromWei],
+     padLeft: [Function: leftPad],
+     leftPad: [Function: leftPad],
+     padRight: [Function: rightPad],
+     rightPad: [Function: rightPad],
+     toTwosComplement: [Function: toTwosComplement],
+     isBloom: [Function: isBloom],
+     isUserEthereumAddressInBloom: [Function: isUserEthereumAddressInBloom],
+     isContractAddressInBloom: [Function: isContractAddressInBloom],
+     isTopic: [Function: isTopic],
+     isTopicInBloom: [Function: isTopicInBloom],
+     isInBloom: [Function: isInBloom],
+     compareBlockNumbers: [Function: compareBlockNumbers] },
+  modules:
+   { Eth: { [Function: Eth] givenProvider: null, providers: [Object] },
+     Net: { [Function: Net] givenProvider: null, providers: [Object] },
+     Personal:
+      { [Function: Personal] givenProvider: null, providers: [Object] },
+     Shh: { [Function: Shh] givenProvider: null, providers: [Object] },
+     Bzz: { [Function: Bzz] givenProvider: null } },
+  givenProvider: null,
+  providers:
+   { WebsocketProvider: [Function: WebsocketProvider],
+     HttpProvider: [Function: HttpProvider],
+     IpcProvider: [Function: IpcProvider] } }
+> 
+> 
+> let url = 'https://rinkeby.infura.io/v3/ec21762a0e8c4cb8aa08fcfb4a2e2dea'
+undefined
+> url
+'https://rinkeby.infura.io/v3/ec21762a0e8c4cb8aa08fcfb4a2e2dea'
+> let w3 = new web3(url)
+undefined
+> w3
+Web3 {
+  currentProvider: [Getter/Setter],
+  _requestManager:
+   RequestManager {
+     provider:
+      HttpProvider {
+        withCredentials: false,
+        timeout: 0,
+        headers: undefined,
+        agent: undefined,
+        connected: false,
+        host:
+         'https://rinkeby.infura.io/v3/ec21762a0e8c4cb8aa08fcfb4a2e2dea',
+        httpsAgent: [Agent] },
+     providers:
+      { WebsocketProvider: [Function: WebsocketProvider],
+        HttpProvider: [Function: HttpProvider],
+        IpcProvider: [Function: IpcProvider] },
+     subscriptions: Map {} },
+  givenProvider: null,
+  providers:
+   { WebsocketProvider: [Function: WebsocketProvider],
+     HttpProvider: [Function: HttpProvider],
+     IpcProvider: [Function: IpcProvider] },
+  _provider:
+   HttpProvider {
+     withCredentials: false,
+     timeout: 0,
+     headers: undefined,
+     agent: undefined,
+     connected: false,
+     host:
+      'https://rinkeby.infura.io/v3/ec21762a0e8c4cb8aa08fcfb4a2e2dea',
+     httpsAgent:
+      Agent {
+        domain: [Domain],
+        _events: [Object],
+        _eventsCount: 1,
+        _maxListeners: undefined,
+        defaultPort: 443,
+        protocol: 'https:',
+        options: [Object],
+        requests: {},
+        sockets: {},
+        freeSockets: {},
+        keepAliveMsecs: 1000,
+        keepAlive: true,
+        maxSockets: Infinity,
+        maxFreeSockets: 256,
+        maxCachedSessions: 100,
+        _sessionCache: [Object] } },
+  setProvider: [Function],
+  setRequestManager: [Function],
+  BatchRequest: [Function: bound Batch],
+  extend:
+   { [Function: ex]
+     formatters:
+      { inputDefaultBlockNumberFormatter: [Function: inputDefaultBlockNumberFormatter],
+        inputBlockNumberFormatter: [Function: inputBlockNumberFormatter],
+        inputCallFormatter: [Function: inputCallFormatter],
+        inputTransactionFormatter: [Function: inputTransactionFormatter],
+        inputAddressFormatter: [Function: inputAddressFormatter],
+        inputPostFormatter: [Function: inputPostFormatter],
+        inputLogFormatter: [Function: inputLogFormatter],
+        inputSignFormatter: [Function: inputSignFormatter],
+        inputStorageKeysFormatter: [Function: inputStorageKeysFormatter],
+        outputProofFormatter: [Function: outputProofFormatter],
+        outputBigNumberFormatter: [Function: outputBigNumberFormatter],
+        outputTransactionFormatter: [Function: outputTransactionFormatter],
+        outputTransactionReceiptFormatter: [Function: outputTransactionReceiptFormatter],
+        outputBlockFormatter: [Function: outputBlockFormatter],
+        outputLogFormatter: [Function: outputLogFormatter],
+        outputPostFormatter: [Function: outputPostFormatter],
+        outputSyncingFormatter: [Function: outputSyncingFormatter] },
+     utils:
+      { _fireError: [Function: _fireError],
+        _jsonInterfaceMethodToString: [Function: _jsonInterfaceMethodToString],
+        _flattenTypes: [Function: _flattenTypes],
+        randomHex: [Function: randomHex],
+        _: [Function],
+        BN: [Function],
+        isBN: [Function: isBN],
+        isBigNumber: [Function: isBigNumber],
+        isHex: [Function: isHex],
+        isHexStrict: [Function: isHexStrict],
+        sha3: [Function],
+        sha3Raw: [Function: sha3Raw],
+        keccak256: [Function],
+        soliditySha3: [Function: soliditySha3],
+        soliditySha3Raw: [Function: soliditySha3Raw],
+        encodePacked: [Function: encodePacked],
+        isAddress: [Function: isAddress],
+        checkAddressChecksum: [Function: checkAddressChecksum],
+        toChecksumAddress: [Function: toChecksumAddress],
+        toHex: [Function: toHex],
+        toBN: [Function: toBN],
+        bytesToHex: [Function: bytesToHex],
+        hexToBytes: [Function: hexToBytes],
+        hexToNumberString: [Function: hexToNumberString],
+        hexToNumber: [Function: hexToNumber],
+        toDecimal: [Function: hexToNumber],
+        numberToHex: [Function: numberToHex],
+        fromDecimal: [Function: numberToHex],
+        hexToUtf8: [Function: hexToUtf8],
+        hexToString: [Function: hexToUtf8],
+        toUtf8: [Function: hexToUtf8],
+        stripHexPrefix: [Function: stripHexPrefix],
+        utf8ToHex: [Function: utf8ToHex],
+        stringToHex: [Function: utf8ToHex],
+        fromUtf8: [Function: utf8ToHex],
+        hexToAscii: [Function: hexToAscii],
+        toAscii: [Function: hexToAscii],
+        asciiToHex: [Function: asciiToHex],
+        fromAscii: [Function: asciiToHex],
+        unitMap: [Object],
+        toWei: [Function: toWei],
+        fromWei: [Function: fromWei],
+        padLeft: [Function: leftPad],
+        leftPad: [Function: leftPad],
+        padRight: [Function: rightPad],
+        rightPad: [Function: rightPad],
+        toTwosComplement: [Function: toTwosComplement],
+        isBloom: [Function: isBloom],
+        isUserEthereumAddressInBloom: [Function: isUserEthereumAddressInBloom],
+        isContractAddressInBloom: [Function: isContractAddressInBloom],
+        isTopic: [Function: isTopic],
+        isTopicInBloom: [Function: isTopicInBloom],
+        isInBloom: [Function: isInBloom],
+        compareBlockNumbers: [Function: compareBlockNumbers] },
+     Method: [Function: Method] },
+  version: '1.3.6',
+  utils:
+   { _fireError: [Function: _fireError],
+     _jsonInterfaceMethodToString: [Function: _jsonInterfaceMethodToString],
+     _flattenTypes: [Function: _flattenTypes],
+     randomHex: [Function: randomHex],
+     _:
+      { [Function: _]
+        VERSION: '1.12.1',
+        toPath: [Function: toPath],
+        iteratee: [Function: iteratee],
+        templateSettings: [Object],
+        after: [Function: after],
+        all: [Function: every],
+        allKeys: [Function: allKeys],
+        any: [Function: some],
+        assign: [Function],
+        before: [Function: before],
+        bind: [Function],
+        bindAll: [Function],
+        chain: [Function: chain],
+        chunk: [Function: chunk],
+        clone: [Function: clone],
+        collect: [Function: map],
+        compact: [Function: compact],
+        compose: [Function: compose],
+        constant: [Function: constant],
+        contains: [Function: contains],
+        countBy: [Function],
+        create: [Function: create],
+        debounce: [Function: debounce],
+        default: [Circular],
+        defaults: [Function],
+        defer: [Function: bound],
+        delay: [Function],
+        detect: [Function: find],
+        difference: [Function],
+        drop: [Function: rest],
+        each: [Function: each],
+        escape: [Function],
+        every: [Function: every],
+        extend: [Function],
+        extendOwn: [Function],
+        filter: [Function: filter],
+        find: [Function: find],
+        findIndex: [Function],
+        findKey: [Function: findKey],
+        findLastIndex: [Function],
+        findWhere: [Function: findWhere],
+        first: [Function: first],
+        flatten: [Function: flatten$1],
+        foldl: [Function],
+        foldr: [Function],
+        forEach: [Function: each],
+        functions: [Function: functions],
+        get: [Function: get],
+        groupBy: [Function],
+        has: [Function: has$1],
+        head: [Function: first],
+        identity: [Function: identity],
+        include: [Function: contains],
+        includes: [Function: contains],
+        indexBy: [Function],
+        indexOf: [Function],
+        initial: [Function: initial],
+        inject: [Function],
+        intersection: [Function: intersection],
+        invert: [Function: invert],
+        invoke: [Function],
+        isArguments: [Function],
+        isArray: [Function: isArray],
+        isArrayBuffer: [Function],
+        isBoolean: [Function: isBoolean],
+        isDataView: [Function],
+        isDate: [Function],
+        isElement: [Function: isElement],
+        isEmpty: [Function: isEmpty],
+        isEqual: [Function: isEqual],
+        isError: [Function],
+        isFinite: [Function: isFinite$1],
+        isFunction: [Function: isFunction],
+        isMap: [Function],
+        isMatch: [Function: isMatch],
+        isNaN: [Function: isNaN$1],
+        isNull: [Function: isNull],
+        isNumber: [Function],
+        isObject: [Function: isObject],
+        isRegExp: [Function],
+        isSet: [Function],
+        isString: [Function],
+        isSymbol: [Function],
+        isTypedArray: [Function: isTypedArray],
+        isUndefined: [Function: isUndefined],
+        isWeakMap: [Function],
+        isWeakSet: [Function],
+        keys: [Function: keys],
+        last: [Function: last],
+        lastIndexOf: [Function],
+        map: [Function: map],
+        mapObject: [Function: mapObject],
+        matcher: [Function: matcher],
+        matches: [Function: matcher],
+        max: [Function: max],
+        memoize: [Function: memoize],
+        methods: [Function: functions],
+        min: [Function: min],
+        mixin: [Function: mixin],
+        negate: [Function: negate],
+        noop: [Function: noop],
+        now: [Function: now],
+        object: [Function: object],
+        omit: [Function],
+        once: [Function: bound],
+        pairs: [Function: pairs],
+        partial: [Function],
+        partition: [Function],
+        pick: [Function],
+        pluck: [Function: pluck],
+        property: [Function: property],
+        propertyOf: [Function: propertyOf],
+        random: [Function: random],
+        range: [Function: range],
+        reduce: [Function],
+        reduceRight: [Function],
+        reject: [Function: reject],
+        rest: [Function: rest],
+        restArguments: [Function: restArguments],
+        result: [Function: result],
+        sample: [Function: sample],
+        select: [Function: filter],
+        shuffle: [Function: shuffle],
+        size: [Function: size],
+        some: [Function: some],
+        sortBy: [Function: sortBy],
+        sortedIndex: [Function: sortedIndex],
+        tail: [Function: rest],
+        take: [Function: first],
+        tap: [Function: tap],
+        template: [Function: template],
+        throttle: [Function: throttle],
+        times: [Function: times],
+        toArray: [Function: toArray],
+        transpose: [Function: unzip],
+        unescape: [Function],
+        union: [Function],
+        uniq: [Function: uniq],
+        unique: [Function: uniq],
+        uniqueId: [Function: uniqueId],
+        unzip: [Function: unzip],
+        values: [Function: values],
+        where: [Function: where],
+        without: [Function],
+        wrap: [Function: wrap],
+        zip: [Function],
+        _: [Circular] },
+     BN:
+      { [Function: BN]
+        BN: [Circular],
+        wordSize: 26,
+        isBN: [Function: isBN],
+        max: [Function: max],
+        min: [Function: min],
+        red: [Function: red],
+        _prime: [Function: prime],
+        mont: [Function: mont] },
+     isBN: [Function: isBN],
+     isBigNumber: [Function: isBigNumber],
+     isHex: [Function: isHex],
+     isHexStrict: [Function: isHexStrict],
+     sha3: { [Function: sha3] _Hash: [Object] },
+     sha3Raw: [Function: sha3Raw],
+     keccak256: { [Function: sha3] _Hash: [Object] },
+     soliditySha3: [Function: soliditySha3],
+     soliditySha3Raw: [Function: soliditySha3Raw],
+     encodePacked: [Function: encodePacked],
+     isAddress: [Function: isAddress],
+     checkAddressChecksum: [Function: checkAddressChecksum],
+     toChecksumAddress: [Function: toChecksumAddress],
+     toHex: [Function: toHex],
+     toBN: [Function: toBN],
+     bytesToHex: [Function: bytesToHex],
+     hexToBytes: [Function: hexToBytes],
+     hexToNumberString: [Function: hexToNumberString],
+     hexToNumber: [Function: hexToNumber],
+     toDecimal: [Function: hexToNumber],
+     numberToHex: [Function: numberToHex],
+     fromDecimal: [Function: numberToHex],
+     hexToUtf8: [Function: hexToUtf8],
+     hexToString: [Function: hexToUtf8],
+     toUtf8: [Function: hexToUtf8],
+     stripHexPrefix: [Function: stripHexPrefix],
+     utf8ToHex: [Function: utf8ToHex],
+     stringToHex: [Function: utf8ToHex],
+     fromUtf8: [Function: utf8ToHex],
+     hexToAscii: [Function: hexToAscii],
+     toAscii: [Function: hexToAscii],
+     asciiToHex: [Function: asciiToHex],
+     fromAscii: [Function: asciiToHex],
+     unitMap:
+      { noether: '0',
+        wei: '1',
+        kwei: '1000',
+        Kwei: '1000',
+        babbage: '1000',
+        femtoether: '1000',
+        mwei: '1000000',
+        Mwei: '1000000',
+        lovelace: '1000000',
+        picoether: '1000000',
+        gwei: '1000000000',
+        Gwei: '1000000000',
+        shannon: '1000000000',
+        nanoether: '1000000000',
+        nano: '1000000000',
+        szabo: '1000000000000',
+        microether: '1000000000000',
+        micro: '1000000000000',
+        finney: '1000000000000000',
+        milliether: '1000000000000000',
+        milli: '1000000000000000',
+        ether: '1000000000000000000',
+        kether: '1000000000000000000000',
+        grand: '1000000000000000000000',
+        mether: '1000000000000000000000000',
+        gether: '1000000000000000000000000000',
+        tether: '1000000000000000000000000000000' },
+     toWei: [Function: toWei],
+     fromWei: [Function: fromWei],
+     padLeft: [Function: leftPad],
+     leftPad: [Function: leftPad],
+     padRight: [Function: rightPad],
+     rightPad: [Function: rightPad],
+     toTwosComplement: [Function: toTwosComplement],
+     isBloom: [Function: isBloom],
+     isUserEthereumAddressInBloom: [Function: isUserEthereumAddressInBloom],
+     isContractAddressInBloom: [Function: isContractAddressInBloom],
+     isTopic: [Function: isTopic],
+     isTopicInBloom: [Function: isTopicInBloom],
+     isInBloom: [Function: isInBloom],
+     compareBlockNumbers: [Function: compareBlockNumbers] },
+  eth:
+   Eth {
+     currentProvider: [Getter/Setter],
+     _requestManager:
+      RequestManager {
+        provider: [HttpProvider],
+        providers: [Object],
+        subscriptions: Map {} },
+     givenProvider: null,
+     providers:
+      { WebsocketProvider: [Function: WebsocketProvider],
+        HttpProvider: [Function: HttpProvider],
+        IpcProvider: [Function: IpcProvider] },
+     _provider:
+      HttpProvider {
+        withCredentials: false,
+        timeout: 0,
+        headers: undefined,
+        agent: undefined,
+        connected: false,
+        host:
+         'https://rinkeby.infura.io/v3/ec21762a0e8c4cb8aa08fcfb4a2e2dea',
+        httpsAgent: [Agent] },
+     setProvider: [Function],
+     setRequestManager: [Function],
+     BatchRequest: [Function: bound Batch],
+     extend:
+      { [Function: ex]
+        formatters: [Object],
+        utils: [Object],
+        Method: [Function: Method] },
+     handleRevert: [Getter/Setter],
+     defaultCommon: [Getter/Setter],
+     defaultHardfork: [Getter/Setter],
+     defaultChain: [Getter/Setter],
+     transactionPollingTimeout: [Getter/Setter],
+     transactionConfirmationBlocks: [Getter/Setter],
+     transactionBlockTimeout: [Getter/Setter],
+     defaultAccount: [Getter/Setter],
+     defaultBlock: [Getter/Setter],
+     maxListenersWarningThreshold: [Getter/Setter],
+     clearSubscriptions: [Function: bound ],
+     net:
+      Net {
+        currentProvider: [Getter/Setter],
+        _requestManager: [RequestManager],
+        givenProvider: null,
+        providers: [Object],
+        _provider: [HttpProvider],
+        setProvider: [Function],
+        setRequestManager: [Function],
+        BatchRequest: [Function: bound Batch],
+        extend: [Function],
+        getId: [Function],
+        isListening: [Function],
+        getPeerCount: [Function],
+        getNetworkType: [Function: bound getNetworkType] },
+     accounts:
+      Accounts {
+        currentProvider: [Getter/Setter],
+        _requestManager: [RequestManager],
+        givenProvider: null,
+        providers: [Object],
+        _provider: [HttpProvider],
+        setProvider: [Function],
+        setRequestManager: [Function],
+        _ethereumCall: [Object],
+        wallet: [Wallet] },
+     personal:
+      Personal {
+        currentProvider: [Getter/Setter],
+        _requestManager: [RequestManager],
+        givenProvider: null,
+        providers: [Object],
+        _provider: [HttpProvider],
+        setProvider: [Function],
+        setRequestManager: [Function],
+        BatchRequest: [Function: bound Batch],
+        extend: [Function],
+        net: [Net],
+        defaultAccount: [Getter/Setter],
+        defaultBlock: [Getter/Setter],
+        getAccounts: [Function],
+        newAccount: [Function],
+        unlockAccount: [Function],
+        lockAccount: [Function],
+        importRawKey: [Function],
+        sendTransaction: [Function],
+        signTransaction: [Function],
+        sign: [Function],
+        ecRecover: [Function] },
+     Contract:
+      { [Function: Contract]
+        setProvider: [Function],
+        defaultAccount: null,
+        defaultBlock: 'latest',
+        transactionBlockTimeout: 50,
+        transactionConfirmationBlocks: 24,
+        transactionPollingTimeout: 750,
+        handleRevert: false,
+        _requestManager: [RequestManager],
+        _ethAccounts: [Accounts],
+        currentProvider: [HttpProvider] },
+     Iban: [Function: Iban],
+     abi: ABICoder {},
+     ens:
+      ENS {
+        eth: [Circular],
+        _detectedAddress: null,
+        _lastSyncCheck: null,
+        registry: [Getter],
+        resolverMethodHandler: [Getter],
+        registryAddress: [Getter/Setter] },
+     getNodeInfo:
+      { [Function: send]
+        method: [Method],
+        request: [Function: bound ],
+        call: 'web3_clientVersion' },
+     getProtocolVersion:
+      { [Function: send]
+        method: [Method],
+        request: [Function: bound ],
+        call: 'eth_protocolVersion' },
+     getCoinbase:
+      { [Function: send]
+        method: [Method],
+        request: [Function: bound ],
+        call: 'eth_coinbase' },
+     isMining:
+      { [Function: send]
+        method: [Method],
+        request: [Function: bound ],
+        call: 'eth_mining' },
+     getHashrate:
+      { [Function: send]
+        method: [Method],
+        request: [Function: bound ],
+        call: 'eth_hashrate' },
+     isSyncing:
+      { [Function: send]
+        method: [Method],
+        request: [Function: bound ],
+        call: 'eth_syncing' },
+     getGasPrice:
+      { [Function: send]
+        method: [Method],
+        request: [Function: bound ],
+        call: 'eth_gasPrice' },
+     getAccounts:
+      { [Function: send]
+        method: [Method],
+        request: [Function: bound ],
+        call: 'eth_accounts' },
+     getBlockNumber:
+      { [Function: send]
+        method: [Method],
+        request: [Function: bound ],
+        call: 'eth_blockNumber' },
+     getBalance:
+      { [Function: send]
+        method: [Method],
+        request: [Function: bound ],
+        call: 'eth_getBalance' },
+     getStorageAt:
+      { [Function: send]
+        method: [Method],
+        request: [Function: bound ],
+        call: 'eth_getStorageAt' },
+     getCode:
+      { [Function: send]
+        method: [Method],
+        request: [Function: bound ],
+        call: 'eth_getCode' },
+     getBlock:
+      { [Function: send]
+        method: [Method],
+        request: [Function: bound ],
+        call: [Function: blockCall] },
+     getUncle:
+      { [Function: send]
+        method: [Method],
+        request: [Function: bound ],
+        call: [Function: uncleCall] },
+     getBlockTransactionCount:
+      { [Function: send]
+        method: [Method],
+        request: [Function: bound ],
+        call: [Function: getBlockTransactionCountCall] },
+     getBlockUncleCount:
+      { [Function: send]
+        method: [Method],
+        request: [Function: bound ],
+        call: [Function: uncleCountCall] },
+     getTransaction:
+      { [Function: send]
+        method: [Method],
+        request: [Function: bound ],
+        call: 'eth_getTransactionByHash' },
+     getTransactionFromBlock:
+      { [Function: send]
+        method: [Method],
+        request: [Function: bound ],
+        call: [Function: transactionFromBlockCall] },
+     getTransactionReceipt:
+      { [Function: send]
+        method: [Method],
+        request: [Function: bound ],
+        call: 'eth_getTransactionReceipt' },
+     getTransactionCount:
+      { [Function: send]
+        method: [Method],
+        request: [Function: bound ],
+        call: 'eth_getTransactionCount' },
+     sendSignedTransaction:
+      { [Function: send]
+        method: [Method],
+        request: [Function: bound ],
+        call: 'eth_sendRawTransaction' },
+     signTransaction:
+      { [Function: send]
+        method: [Method],
+        request: [Function: bound ],
+        call: 'eth_signTransaction' },
+     sendTransaction:
+      { [Function: send]
+        method: [Method],
+        request: [Function: bound ],
+        call: 'eth_sendTransaction' },
+     sign:
+      { [Function: send]
+        method: [Method],
+        request: [Function: bound ],
+        call: 'eth_sign' },
+     call:
+      { [Function: send]
+        method: [Method],
+        request: [Function: bound ],
+        call: 'eth_call' },
+     estimateGas:
+      { [Function: send]
+        method: [Method],
+        request: [Function: bound ],
+        call: 'eth_estimateGas' },
+     submitWork:
+      { [Function: send]
+        method: [Method],
+        request: [Function: bound ],
+        call: 'eth_submitWork' },
+     getWork:
+      { [Function: send]
+        method: [Method],
+        request: [Function: bound ],
+        call: 'eth_getWork' },
+     getPastLogs:
+      { [Function: send]
+        method: [Method],
+        request: [Function: bound ],
+        call: 'eth_getLogs' },
+     getChainId:
+      { [Function: send]
+        method: [Method],
+        request: [Function: bound ],
+        call: 'eth_chainId' },
+     requestAccounts:
+      { [Function: send]
+        method: [Method],
+        request: [Function: bound ],
+        call: 'eth_requestAccounts' },
+     getProof:
+      { [Function: send]
+        method: [Method],
+        request: [Function: bound ],
+        call: 'eth_getProof' },
+     getPendingTransactions:
+      { [Function: send]
+        method: [Method],
+        request: [Function: bound ],
+        call: 'eth_pendingTransactions' },
+     subscribe: [Function] },
+  shh:
+   Shh {
+     currentProvider: [Getter/Setter],
+     _requestManager:
+      RequestManager {
+        provider: [HttpProvider],
+        providers: [Object],
+        subscriptions: Map {} },
+     givenProvider: null,
+     providers:
+      { WebsocketProvider: [Function: WebsocketProvider],
+        HttpProvider: [Function: HttpProvider],
+        IpcProvider: [Function: IpcProvider] },
+     _provider:
+      HttpProvider {
+        withCredentials: false,
+        timeout: 0,
+        headers: undefined,
+        agent: undefined,
+        connected: false,
+        host:
+         'https://rinkeby.infura.io/v3/ec21762a0e8c4cb8aa08fcfb4a2e2dea',
+        httpsAgent: [Agent] },
+     setProvider: [Function],
+     setRequestManager: [Function],
+     BatchRequest: [Function: bound Batch],
+     extend:
+      { [Function: ex]
+        formatters: [Object],
+        utils: [Object],
+        Method: [Function: Method] },
+     net:
+      Net {
+        currentProvider: [Getter/Setter],
+        _requestManager: [RequestManager],
+        givenProvider: null,
+        providers: [Object],
+        _provider: [HttpProvider],
+        setProvider: [Function],
+        setRequestManager: [Function],
+        BatchRequest: [Function: bound Batch],
+        extend: [Function],
+        getId: [Function],
+        isListening: [Function],
+        getPeerCount: [Function] },
+     subscribe: [Function],
+     getVersion:
+      { [Function: send]
+        method: [Method],
+        request: [Function: bound ],
+        call: 'shh_version' },
+     getInfo:
+      { [Function: send]
+        method: [Method],
+        request: [Function: bound ],
+        call: 'shh_info' },
+     setMaxMessageSize:
+      { [Function: send]
+        method: [Method],
+        request: [Function: bound ],
+        call: 'shh_setMaxMessageSize' },
+     setMinPoW:
+      { [Function: send]
+        method: [Method],
+        request: [Function: bound ],
+        call: 'shh_setMinPoW' },
+     markTrustedPeer:
+      { [Function: send]
+        method: [Method],
+        request: [Function: bound ],
+        call: 'shh_markTrustedPeer' },
+     newKeyPair:
+      { [Function: send]
+        method: [Method],
+        request: [Function: bound ],
+        call: 'shh_newKeyPair' },
+     addPrivateKey:
+      { [Function: send]
+        method: [Method],
+        request: [Function: bound ],
+        call: 'shh_addPrivateKey' },
+     deleteKeyPair:
+      { [Function: send]
+        method: [Method],
+        request: [Function: bound ],
+        call: 'shh_deleteKeyPair' },
+     hasKeyPair:
+      { [Function: send]
+        method: [Method],
+        request: [Function: bound ],
+        call: 'shh_hasKeyPair' },
+     getPublicKey:
+      { [Function: send]
+        method: [Method],
+        request: [Function: bound ],
+        call: 'shh_getPublicKey' },
+     getPrivateKey:
+      { [Function: send]
+        method: [Method],
+        request: [Function: bound ],
+        call: 'shh_getPrivateKey' },
+     newSymKey:
+      { [Function: send]
+        method: [Method],
+        request: [Function: bound ],
+        call: 'shh_newSymKey' },
+     addSymKey:
+      { [Function: send]
+        method: [Method],
+        request: [Function: bound ],
+        call: 'shh_addSymKey' },
+     generateSymKeyFromPassword:
+      { [Function: send]
+        method: [Method],
+        request: [Function: bound ],
+        call: 'shh_generateSymKeyFromPassword' },
+     hasSymKey:
+      { [Function: send]
+        method: [Method],
+        request: [Function: bound ],
+        call: 'shh_hasSymKey' },
+     getSymKey:
+      { [Function: send]
+        method: [Method],
+        request: [Function: bound ],
+        call: 'shh_getSymKey' },
+     deleteSymKey:
+      { [Function: send]
+        method: [Method],
+        request: [Function: bound ],
+        call: 'shh_deleteSymKey' },
+     newMessageFilter:
+      { [Function: send]
+        method: [Method],
+        request: [Function: bound ],
+        call: 'shh_newMessageFilter' },
+     getFilterMessages:
+      { [Function: send]
+        method: [Method],
+        request: [Function: bound ],
+        call: 'shh_getFilterMessages' },
+     deleteMessageFilter:
+      { [Function: send]
+        method: [Method],
+        request: [Function: bound ],
+        call: 'shh_deleteMessageFilter' },
+     post:
+      { [Function: send]
+        method: [Method],
+        request: [Function: bound ],
+        call: 'shh_post' },
+     unsubscribe:
+      { [Function: send]
+        method: [Method],
+        request: [Function: bound ],
+        call: 'shh_unsubscribe' } },
+  bzz:
+   Bzz {
+     givenProvider: null,
+     currentProvider: null,
+     isAvailable: [Function],
+     upload: [Function],
+     download: [Function] } }
+> 
+> 
+> let urlMainNet = 'https://mainnet.infura.io/v3/ec21762a0e8c4cb8aa08fcfb4a2e2dea'
+undefined
+> let w3MainNet = new web3(urlMainNet)
+undefined
+> w3MainNet
+Web3 {
+  currentProvider: [Getter/Setter],
+  _requestManager:
+   RequestManager {
+     provider:
+      HttpProvider {
+        withCredentials: false,
+        timeout: 0,
+        headers: undefined,
+        agent: undefined,
+        connected: false,
+        host:
+         'https://mainnet.infura.io/v3/ec21762a0e8c4cb8aa08fcfb4a2e2dea',
+        httpsAgent: [Agent] },
+     providers:
+      { WebsocketProvider: [Function: WebsocketProvider],
+        HttpProvider: [Function: HttpProvider],
+        IpcProvider: [Function: IpcProvider] },
+     subscriptions: Map {} },
+  givenProvider: null,
+  providers:
+   { WebsocketProvider: [Function: WebsocketProvider],
+     HttpProvider: [Function: HttpProvider],
+     IpcProvider: [Function: IpcProvider] },
+  _provider:
+   HttpProvider {
+     withCredentials: false,
+     timeout: 0,
+     headers: undefined,
+     agent: undefined,
+     connected: false,
+     host:
+      'https://mainnet.infura.io/v3/ec21762a0e8c4cb8aa08fcfb4a2e2dea',
+     httpsAgent:
+      Agent {
+        domain: [Domain],
+        _events: [Object],
+        _eventsCount: 1,
+        _maxListeners: undefined,
+        defaultPort: 443,
+        protocol: 'https:',
+        options: [Object],
+        requests: {},
+        sockets: {},
+        freeSockets: {},
+        keepAliveMsecs: 1000,
+        keepAlive: true,
+        maxSockets: Infinity,
+        maxFreeSockets: 256,
+        maxCachedSessions: 100,
+        _sessionCache: [Object] } },
+  setProvider: [Function],
+  setRequestManager: [Function],
+  BatchRequest: [Function: bound Batch],
+  extend:
+   { [Function: ex]
+     formatters:
+      { inputDefaultBlockNumberFormatter: [Function: inputDefaultBlockNumberFormatter],
+        inputBlockNumberFormatter: [Function: inputBlockNumberFormatter],
+        inputCallFormatter: [Function: inputCallFormatter],
+        inputTransactionFormatter: [Function: inputTransactionFormatter],
+        inputAddressFormatter: [Function: inputAddressFormatter],
+        inputPostFormatter: [Function: inputPostFormatter],
+        inputLogFormatter: [Function: inputLogFormatter],
+        inputSignFormatter: [Function: inputSignFormatter],
+        inputStorageKeysFormatter: [Function: inputStorageKeysFormatter],
+        outputProofFormatter: [Function: outputProofFormatter],
+        outputBigNumberFormatter: [Function: outputBigNumberFormatter],
+        outputTransactionFormatter: [Function: outputTransactionFormatter],
+        outputTransactionReceiptFormatter: [Function: outputTransactionReceiptFormatter],
+        outputBlockFormatter: [Function: outputBlockFormatter],
+        outputLogFormatter: [Function: outputLogFormatter],
+        outputPostFormatter: [Function: outputPostFormatter],
+        outputSyncingFormatter: [Function: outputSyncingFormatter] },
+     utils:
+      { _fireError: [Function: _fireError],
+        _jsonInterfaceMethodToString: [Function: _jsonInterfaceMethodToString],
+        _flattenTypes: [Function: _flattenTypes],
+        randomHex: [Function: randomHex],
+        _: [Function],
+        BN: [Function],
+        isBN: [Function: isBN],
+        isBigNumber: [Function: isBigNumber],
+        isHex: [Function: isHex],
+        isHexStrict: [Function: isHexStrict],
+        sha3: [Function],
+        sha3Raw: [Function: sha3Raw],
+        keccak256: [Function],
+        soliditySha3: [Function: soliditySha3],
+        soliditySha3Raw: [Function: soliditySha3Raw],
+        encodePacked: [Function: encodePacked],
+        isAddress: [Function: isAddress],
+        checkAddressChecksum: [Function: checkAddressChecksum],
+        toChecksumAddress: [Function: toChecksumAddress],
+        toHex: [Function: toHex],
+        toBN: [Function: toBN],
+        bytesToHex: [Function: bytesToHex],
+        hexToBytes: [Function: hexToBytes],
+        hexToNumberString: [Function: hexToNumberString],
+        hexToNumber: [Function: hexToNumber],
+        toDecimal: [Function: hexToNumber],
+        numberToHex: [Function: numberToHex],
+        fromDecimal: [Function: numberToHex],
+        hexToUtf8: [Function: hexToUtf8],
+        hexToString: [Function: hexToUtf8],
+        toUtf8: [Function: hexToUtf8],
+        stripHexPrefix: [Function: stripHexPrefix],
+        utf8ToHex: [Function: utf8ToHex],
+        stringToHex: [Function: utf8ToHex],
+        fromUtf8: [Function: utf8ToHex],
+        hexToAscii: [Function: hexToAscii],
+        toAscii: [Function: hexToAscii],
+        asciiToHex: [Function: asciiToHex],
+        fromAscii: [Function: asciiToHex],
+        unitMap: [Object],
+        toWei: [Function: toWei],
+        fromWei: [Function: fromWei],
+        padLeft: [Function: leftPad],
+        leftPad: [Function: leftPad],
+        padRight: [Function: rightPad],
+        rightPad: [Function: rightPad],
+        toTwosComplement: [Function: toTwosComplement],
+        isBloom: [Function: isBloom],
+        isUserEthereumAddressInBloom: [Function: isUserEthereumAddressInBloom],
+        isContractAddressInBloom: [Function: isContractAddressInBloom],
+        isTopic: [Function: isTopic],
+        isTopicInBloom: [Function: isTopicInBloom],
+        isInBloom: [Function: isInBloom],
+        compareBlockNumbers: [Function: compareBlockNumbers] },
+     Method: [Function: Method] },
+  version: '1.3.6',
+  utils:
+   { _fireError: [Function: _fireError],
+     _jsonInterfaceMethodToString: [Function: _jsonInterfaceMethodToString],
+     _flattenTypes: [Function: _flattenTypes],
+     randomHex: [Function: randomHex],
+     _:
+      { [Function: _]
+        VERSION: '1.12.1',
+        toPath: [Function: toPath],
+        iteratee: [Function: iteratee],
+        templateSettings: [Object],
+        after: [Function: after],
+        all: [Function: every],
+        allKeys: [Function: allKeys],
+        any: [Function: some],
+        assign: [Function],
+        before: [Function: before],
+        bind: [Function],
+        bindAll: [Function],
+        chain: [Function: chain],
+        chunk: [Function: chunk],
+        clone: [Function: clone],
+        collect: [Function: map],
+        compact: [Function: compact],
+        compose: [Function: compose],
+        constant: [Function: constant],
+        contains: [Function: contains],
+        countBy: [Function],
+        create: [Function: create],
+        debounce: [Function: debounce],
+        default: [Circular],
+        defaults: [Function],
+        defer: [Function: bound],
+        delay: [Function],
+        detect: [Function: find],
+        difference: [Function],
+        drop: [Function: rest],
+        each: [Function: each],
+        escape: [Function],
+        every: [Function: every],
+        extend: [Function],
+        extendOwn: [Function],
+        filter: [Function: filter],
+        find: [Function: find],
+        findIndex: [Function],
+        findKey: [Function: findKey],
+        findLastIndex: [Function],
+        findWhere: [Function: findWhere],
+        first: [Function: first],
+        flatten: [Function: flatten$1],
+        foldl: [Function],
+        foldr: [Function],
+        forEach: [Function: each],
+        functions: [Function: functions],
+        get: [Function: get],
+        groupBy: [Function],
+        has: [Function: has$1],
+        head: [Function: first],
+        identity: [Function: identity],
+        include: [Function: contains],
+        includes: [Function: contains],
+        indexBy: [Function],
+        indexOf: [Function],
+        initial: [Function: initial],
+        inject: [Function],
+        intersection: [Function: intersection],
+        invert: [Function: invert],
+        invoke: [Function],
+        isArguments: [Function],
+        isArray: [Function: isArray],
+        isArrayBuffer: [Function],
+        isBoolean: [Function: isBoolean],
+        isDataView: [Function],
+        isDate: [Function],
+        isElement: [Function: isElement],
+        isEmpty: [Function: isEmpty],
+        isEqual: [Function: isEqual],
+        isError: [Function],
+        isFinite: [Function: isFinite$1],
+        isFunction: [Function: isFunction],
+        isMap: [Function],
+        isMatch: [Function: isMatch],
+        isNaN: [Function: isNaN$1],
+        isNull: [Function: isNull],
+        isNumber: [Function],
+        isObject: [Function: isObject],
+        isRegExp: [Function],
+        isSet: [Function],
+        isString: [Function],
+        isSymbol: [Function],
+        isTypedArray: [Function: isTypedArray],
+        isUndefined: [Function: isUndefined],
+        isWeakMap: [Function],
+        isWeakSet: [Function],
+        keys: [Function: keys],
+        last: [Function: last],
+        lastIndexOf: [Function],
+        map: [Function: map],
+        mapObject: [Function: mapObject],
+        matcher: [Function: matcher],
+        matches: [Function: matcher],
+        max: [Function: max],
+        memoize: [Function: memoize],
+        methods: [Function: functions],
+        min: [Function: min],
+        mixin: [Function: mixin],
+        negate: [Function: negate],
+        noop: [Function: noop],
+        now: [Function: now],
+        object: [Function: object],
+        omit: [Function],
+        once: [Function: bound],
+        pairs: [Function: pairs],
+        partial: [Function],
+        partition: [Function],
+        pick: [Function],
+        pluck: [Function: pluck],
+        property: [Function: property],
+        propertyOf: [Function: propertyOf],
+        random: [Function: random],
+        range: [Function: range],
+        reduce: [Function],
+        reduceRight: [Function],
+        reject: [Function: reject],
+        rest: [Function: rest],
+        restArguments: [Function: restArguments],
+        result: [Function: result],
+        sample: [Function: sample],
+        select: [Function: filter],
+        shuffle: [Function: shuffle],
+        size: [Function: size],
+        some: [Function: some],
+        sortBy: [Function: sortBy],
+        sortedIndex: [Function: sortedIndex],
+        tail: [Function: rest],
+        take: [Function: first],
+        tap: [Function: tap],
+        template: [Function: template],
+        throttle: [Function: throttle],
+        times: [Function: times],
+        toArray: [Function: toArray],
+        transpose: [Function: unzip],
+        unescape: [Function],
+        union: [Function],
+        uniq: [Function: uniq],
+        unique: [Function: uniq],
+        uniqueId: [Function: uniqueId],
+        unzip: [Function: unzip],
+        values: [Function: values],
+        where: [Function: where],
+        without: [Function],
+        wrap: [Function: wrap],
+        zip: [Function],
+        _: [Circular] },
+     BN:
+      { [Function: BN]
+        BN: [Circular],
+        wordSize: 26,
+        isBN: [Function: isBN],
+        max: [Function: max],
+        min: [Function: min],
+        red: [Function: red],
+        _prime: [Function: prime],
+        mont: [Function: mont] },
+     isBN: [Function: isBN],
+     isBigNumber: [Function: isBigNumber],
+     isHex: [Function: isHex],
+     isHexStrict: [Function: isHexStrict],
+     sha3: { [Function: sha3] _Hash: [Object] },
+     sha3Raw: [Function: sha3Raw],
+     keccak256: { [Function: sha3] _Hash: [Object] },
+     soliditySha3: [Function: soliditySha3],
+     soliditySha3Raw: [Function: soliditySha3Raw],
+     encodePacked: [Function: encodePacked],
+     isAddress: [Function: isAddress],
+     checkAddressChecksum: [Function: checkAddressChecksum],
+     toChecksumAddress: [Function: toChecksumAddress],
+     toHex: [Function: toHex],
+     toBN: [Function: toBN],
+     bytesToHex: [Function: bytesToHex],
+     hexToBytes: [Function: hexToBytes],
+     hexToNumberString: [Function: hexToNumberString],
+     hexToNumber: [Function: hexToNumber],
+     toDecimal: [Function: hexToNumber],
+     numberToHex: [Function: numberToHex],
+     fromDecimal: [Function: numberToHex],
+     hexToUtf8: [Function: hexToUtf8],
+     hexToString: [Function: hexToUtf8],
+     toUtf8: [Function: hexToUtf8],
+     stripHexPrefix: [Function: stripHexPrefix],
+     utf8ToHex: [Function: utf8ToHex],
+     stringToHex: [Function: utf8ToHex],
+     fromUtf8: [Function: utf8ToHex],
+     hexToAscii: [Function: hexToAscii],
+     toAscii: [Function: hexToAscii],
+     asciiToHex: [Function: asciiToHex],
+     fromAscii: [Function: asciiToHex],
+     unitMap:
+      { noether: '0',
+        wei: '1',
+        kwei: '1000',
+        Kwei: '1000',
+        babbage: '1000',
+        femtoether: '1000',
+        mwei: '1000000',
+        Mwei: '1000000',
+        lovelace: '1000000',
+        picoether: '1000000',
+        gwei: '1000000000',
+        Gwei: '1000000000',
+        shannon: '1000000000',
+        nanoether: '1000000000',
+        nano: '1000000000',
+        szabo: '1000000000000',
+        microether: '1000000000000',
+        micro: '1000000000000',
+        finney: '1000000000000000',
+        milliether: '1000000000000000',
+        milli: '1000000000000000',
+        ether: '1000000000000000000',
+        kether: '1000000000000000000000',
+        grand: '1000000000000000000000',
+        mether: '1000000000000000000000000',
+        gether: '1000000000000000000000000000',
+        tether: '1000000000000000000000000000000' },
+     toWei: [Function: toWei],
+     fromWei: [Function: fromWei],
+     padLeft: [Function: leftPad],
+     leftPad: [Function: leftPad],
+     padRight: [Function: rightPad],
+     rightPad: [Function: rightPad],
+     toTwosComplement: [Function: toTwosComplement],
+     isBloom: [Function: isBloom],
+     isUserEthereumAddressInBloom: [Function: isUserEthereumAddressInBloom],
+     isContractAddressInBloom: [Function: isContractAddressInBloom],
+     isTopic: [Function: isTopic],
+     isTopicInBloom: [Function: isTopicInBloom],
+     isInBloom: [Function: isInBloom],
+     compareBlockNumbers: [Function: compareBlockNumbers] },
+  eth:
+   Eth {
+     currentProvider: [Getter/Setter],
+     _requestManager:
+      RequestManager {
+        provider: [HttpProvider],
+        providers: [Object],
+        subscriptions: Map {} },
+     givenProvider: null,
+     providers:
+      { WebsocketProvider: [Function: WebsocketProvider],
+        HttpProvider: [Function: HttpProvider],
+        IpcProvider: [Function: IpcProvider] },
+     _provider:
+      HttpProvider {
+        withCredentials: false,
+        timeout: 0,
+        headers: undefined,
+        agent: undefined,
+        connected: false,
+        host:
+         'https://mainnet.infura.io/v3/ec21762a0e8c4cb8aa08fcfb4a2e2dea',
+        httpsAgent: [Agent] },
+     setProvider: [Function],
+     setRequestManager: [Function],
+     BatchRequest: [Function: bound Batch],
+     extend:
+      { [Function: ex]
+        formatters: [Object],
+        utils: [Object],
+        Method: [Function: Method] },
+     handleRevert: [Getter/Setter],
+     defaultCommon: [Getter/Setter],
+     defaultHardfork: [Getter/Setter],
+     defaultChain: [Getter/Setter],
+     transactionPollingTimeout: [Getter/Setter],
+     transactionConfirmationBlocks: [Getter/Setter],
+     transactionBlockTimeout: [Getter/Setter],
+     defaultAccount: [Getter/Setter],
+     defaultBlock: [Getter/Setter],
+     maxListenersWarningThreshold: [Getter/Setter],
+     clearSubscriptions: [Function: bound ],
+     net:
+      Net {
+        currentProvider: [Getter/Setter],
+        _requestManager: [RequestManager],
+        givenProvider: null,
+        providers: [Object],
+        _provider: [HttpProvider],
+        setProvider: [Function],
+        setRequestManager: [Function],
+        BatchRequest: [Function: bound Batch],
+        extend: [Function],
+        getId: [Function],
+        isListening: [Function],
+        getPeerCount: [Function],
+        getNetworkType: [Function: bound getNetworkType] },
+     accounts:
+      Accounts {
+        currentProvider: [Getter/Setter],
+        _requestManager: [RequestManager],
+        givenProvider: null,
+        providers: [Object],
+        _provider: [HttpProvider],
+        setProvider: [Function],
+        setRequestManager: [Function],
+        _ethereumCall: [Object],
+        wallet: [Wallet] },
+     personal:
+      Personal {
+        currentProvider: [Getter/Setter],
+        _requestManager: [RequestManager],
+        givenProvider: null,
+        providers: [Object],
+        _provider: [HttpProvider],
+        setProvider: [Function],
+        setRequestManager: [Function],
+        BatchRequest: [Function: bound Batch],
+        extend: [Function],
+        net: [Net],
+        defaultAccount: [Getter/Setter],
+        defaultBlock: [Getter/Setter],
+        getAccounts: [Function],
+        newAccount: [Function],
+        unlockAccount: [Function],
+        lockAccount: [Function],
+        importRawKey: [Function],
+        sendTransaction: [Function],
+        signTransaction: [Function],
+        sign: [Function],
+        ecRecover: [Function] },
+     Contract:
+      { [Function: Contract]
+        setProvider: [Function],
+        defaultAccount: null,
+        defaultBlock: 'latest',
+        transactionBlockTimeout: 50,
+        transactionConfirmationBlocks: 24,
+        transactionPollingTimeout: 750,
+        handleRevert: false,
+        _requestManager: [RequestManager],
+        _ethAccounts: [Accounts],
+        currentProvider: [HttpProvider] },
+     Iban: [Function: Iban],
+     abi: ABICoder {},
+     ens:
+      ENS {
+        eth: [Circular],
+        _detectedAddress: null,
+        _lastSyncCheck: null,
+        registry: [Getter],
+        resolverMethodHandler: [Getter],
+        registryAddress: [Getter/Setter] },
+     getNodeInfo:
+      { [Function: send]
+        method: [Method],
+        request: [Function: bound ],
+        call: 'web3_clientVersion' },
+     getProtocolVersion:
+      { [Function: send]
+        method: [Method],
+        request: [Function: bound ],
+        call: 'eth_protocolVersion' },
+     getCoinbase:
+      { [Function: send]
+        method: [Method],
+        request: [Function: bound ],
+        call: 'eth_coinbase' },
+     isMining:
+      { [Function: send]
+        method: [Method],
+        request: [Function: bound ],
+        call: 'eth_mining' },
+     getHashrate:
+      { [Function: send]
+        method: [Method],
+        request: [Function: bound ],
+        call: 'eth_hashrate' },
+     isSyncing:
+      { [Function: send]
+        method: [Method],
+        request: [Function: bound ],
+        call: 'eth_syncing' },
+     getGasPrice:
+      { [Function: send]
+        method: [Method],
+        request: [Function: bound ],
+        call: 'eth_gasPrice' },
+     getAccounts:
+      { [Function: send]
+        method: [Method],
+        request: [Function: bound ],
+        call: 'eth_accounts' },
+     getBlockNumber:
+      { [Function: send]
+        method: [Method],
+        request: [Function: bound ],
+        call: 'eth_blockNumber' },
+     getBalance:
+      { [Function: send]
+        method: [Method],
+        request: [Function: bound ],
+        call: 'eth_getBalance' },
+     getStorageAt:
+      { [Function: send]
+        method: [Method],
+        request: [Function: bound ],
+        call: 'eth_getStorageAt' },
+     getCode:
+      { [Function: send]
+        method: [Method],
+        request: [Function: bound ],
+        call: 'eth_getCode' },
+     getBlock:
+      { [Function: send]
+        method: [Method],
+        request: [Function: bound ],
+        call: [Function: blockCall] },
+     getUncle:
+      { [Function: send]
+        method: [Method],
+        request: [Function: bound ],
+        call: [Function: uncleCall] },
+     getBlockTransactionCount:
+      { [Function: send]
+        method: [Method],
+        request: [Function: bound ],
+        call: [Function: getBlockTransactionCountCall] },
+     getBlockUncleCount:
+      { [Function: send]
+        method: [Method],
+        request: [Function: bound ],
+        call: [Function: uncleCountCall] },
+     getTransaction:
+      { [Function: send]
+        method: [Method],
+        request: [Function: bound ],
+        call: 'eth_getTransactionByHash' },
+     getTransactionFromBlock:
+      { [Function: send]
+        method: [Method],
+        request: [Function: bound ],
+        call: [Function: transactionFromBlockCall] },
+     getTransactionReceipt:
+      { [Function: send]
+        method: [Method],
+        request: [Function: bound ],
+        call: 'eth_getTransactionReceipt' },
+     getTransactionCount:
+      { [Function: send]
+        method: [Method],
+        request: [Function: bound ],
+        call: 'eth_getTransactionCount' },
+     sendSignedTransaction:
+      { [Function: send]
+        method: [Method],
+        request: [Function: bound ],
+        call: 'eth_sendRawTransaction' },
+     signTransaction:
+      { [Function: send]
+        method: [Method],
+        request: [Function: bound ],
+        call: 'eth_signTransaction' },
+     sendTransaction:
+      { [Function: send]
+        method: [Method],
+        request: [Function: bound ],
+        call: 'eth_sendTransaction' },
+     sign:
+      { [Function: send]
+        method: [Method],
+        request: [Function: bound ],
+        call: 'eth_sign' },
+     call:
+      { [Function: send]
+        method: [Method],
+        request: [Function: bound ],
+        call: 'eth_call' },
+     estimateGas:
+      { [Function: send]
+        method: [Method],
+        request: [Function: bound ],
+        call: 'eth_estimateGas' },
+     submitWork:
+      { [Function: send]
+        method: [Method],
+        request: [Function: bound ],
+        call: 'eth_submitWork' },
+     getWork:
+      { [Function: send]
+        method: [Method],
+        request: [Function: bound ],
+        call: 'eth_getWork' },
+     getPastLogs:
+      { [Function: send]
+        method: [Method],
+        request: [Function: bound ],
+        call: 'eth_getLogs' },
+     getChainId:
+      { [Function: send]
+        method: [Method],
+        request: [Function: bound ],
+        call: 'eth_chainId' },
+     requestAccounts:
+      { [Function: send]
+        method: [Method],
+        request: [Function: bound ],
+        call: 'eth_requestAccounts' },
+     getProof:
+      { [Function: send]
+        method: [Method],
+        request: [Function: bound ],
+        call: 'eth_getProof' },
+     getPendingTransactions:
+      { [Function: send]
+        method: [Method],
+        request: [Function: bound ],
+        call: 'eth_pendingTransactions' },
+     subscribe: [Function] },
+  shh:
+   Shh {
+     currentProvider: [Getter/Setter],
+     _requestManager:
+      RequestManager {
+        provider: [HttpProvider],
+        providers: [Object],
+        subscriptions: Map {} },
+     givenProvider: null,
+     providers:
+      { WebsocketProvider: [Function: WebsocketProvider],
+        HttpProvider: [Function: HttpProvider],
+        IpcProvider: [Function: IpcProvider] },
+     _provider:
+      HttpProvider {
+        withCredentials: false,
+        timeout: 0,
+        headers: undefined,
+        agent: undefined,
+        connected: false,
+        host:
+         'https://mainnet.infura.io/v3/ec21762a0e8c4cb8aa08fcfb4a2e2dea',
+        httpsAgent: [Agent] },
+     setProvider: [Function],
+     setRequestManager: [Function],
+     BatchRequest: [Function: bound Batch],
+     extend:
+      { [Function: ex]
+        formatters: [Object],
+        utils: [Object],
+        Method: [Function: Method] },
+     net:
+      Net {
+        currentProvider: [Getter/Setter],
+        _requestManager: [RequestManager],
+        givenProvider: null,
+        providers: [Object],
+        _provider: [HttpProvider],
+        setProvider: [Function],
+        setRequestManager: [Function],
+        BatchRequest: [Function: bound Batch],
+        extend: [Function],
+        getId: [Function],
+        isListening: [Function],
+        getPeerCount: [Function] },
+     subscribe: [Function],
+     getVersion:
+      { [Function: send]
+        method: [Method],
+        request: [Function: bound ],
+        call: 'shh_version' },
+     getInfo:
+      { [Function: send]
+        method: [Method],
+        request: [Function: bound ],
+        call: 'shh_info' },
+     setMaxMessageSize:
+      { [Function: send]
+        method: [Method],
+        request: [Function: bound ],
+        call: 'shh_setMaxMessageSize' },
+     setMinPoW:
+      { [Function: send]
+        method: [Method],
+        request: [Function: bound ],
+        call: 'shh_setMinPoW' },
+     markTrustedPeer:
+      { [Function: send]
+        method: [Method],
+        request: [Function: bound ],
+        call: 'shh_markTrustedPeer' },
+     newKeyPair:
+      { [Function: send]
+        method: [Method],
+        request: [Function: bound ],
+        call: 'shh_newKeyPair' },
+     addPrivateKey:
+      { [Function: send]
+        method: [Method],
+        request: [Function: bound ],
+        call: 'shh_addPrivateKey' },
+     deleteKeyPair:
+      { [Function: send]
+        method: [Method],
+        request: [Function: bound ],
+        call: 'shh_deleteKeyPair' },
+     hasKeyPair:
+      { [Function: send]
+        method: [Method],
+        request: [Function: bound ],
+        call: 'shh_hasKeyPair' },
+     getPublicKey:
+      { [Function: send]
+        method: [Method],
+        request: [Function: bound ],
+        call: 'shh_getPublicKey' },
+     getPrivateKey:
+      { [Function: send]
+        method: [Method],
+        request: [Function: bound ],
+        call: 'shh_getPrivateKey' },
+     newSymKey:
+      { [Function: send]
+        method: [Method],
+        request: [Function: bound ],
+        call: 'shh_newSymKey' },
+     addSymKey:
+      { [Function: send]
+        method: [Method],
+        request: [Function: bound ],
+        call: 'shh_addSymKey' },
+     generateSymKeyFromPassword:
+      { [Function: send]
+        method: [Method],
+        request: [Function: bound ],
+        call: 'shh_generateSymKeyFromPassword' },
+     hasSymKey:
+      { [Function: send]
+        method: [Method],
+        request: [Function: bound ],
+        call: 'shh_hasSymKey' },
+     getSymKey:
+      { [Function: send]
+        method: [Method],
+        request: [Function: bound ],
+        call: 'shh_getSymKey' },
+     deleteSymKey:
+      { [Function: send]
+        method: [Method],
+        request: [Function: bound ],
+        call: 'shh_deleteSymKey' },
+     newMessageFilter:
+      { [Function: send]
+        method: [Method],
+        request: [Function: bound ],
+        call: 'shh_newMessageFilter' },
+     getFilterMessages:
+      { [Function: send]
+        method: [Method],
+        request: [Function: bound ],
+        call: 'shh_getFilterMessages' },
+     deleteMessageFilter:
+      { [Function: send]
+        method: [Method],
+        request: [Function: bound ],
+        call: 'shh_deleteMessageFilter' },
+     post:
+      { [Function: send]
+        method: [Method],
+        request: [Function: bound ],
+        call: 'shh_post' },
+     unsubscribe:
+      { [Function: send]
+        method: [Method],
+        request: [Function: bound ],
+        call: 'shh_unsubscribe' } },
+  bzz:
+   Bzz {
+     givenProvider: null,
+     currentProvider: null,
+     isAvailable: [Function],
+     upload: [Function],
+     download: [Function] } }
+> 
+> 
+> let address = '0x00000000219ab540356cBB839Cbe05303d7705Fa'
+undefined
+> w3MainNet.eth.getBalance(address, (err, bal) => { balance = bal })
+Promise {
+  <pending>,
+  domain:
+   Domain {
+     domain: null,
+     _events:
+      [Object: null prototype] {
+        removeListener: [Function: updateExceptionCapture],
+        newListener: [Function: updateExceptionCapture],
+        error: [Function: debugDomainError] },
+     _eventsCount: 3,
+     _maxListeners: undefined,
+     members: [],
+     [Symbol(kWeak)]: WeakReference {} } }
+> balanc
+Thrown:
+ReferenceError: balanc is not defined
+> balance
+'5995266000069000000000069'
+> w3MainNet.eth.getBalance(address, (err, bal) => { balance = bal })
+> w3.eth.getBalance('0xde7dE341D49A918AE0F55f17853f16960156C1fF', (err, bal) => { balance2 = bal })
+Promise {
+  <pending>,
+  domain:
+   Domain {
+     domain: null,
+     _events:
+      [Object: null prototype] {
+        removeListener: [Function: updateExceptionCapture],
+        newListener: [Function: updateExceptionCapture],
+        error: [Function: debugDomainError] },
+     _eventsCount: 3,
+     _maxListeners: undefined,
+     members: [],
+     [Symbol(kWeak)]: WeakReference {} } }
+> balance2
+'3000000000000000000'
+> w3.utils.fromWei(balance, 'ether')
+'5995266.000069000000000069'
+> w3.utils.fromWei(balance2, 'ether')
+'3'
+> w3.eth.getTransactionCount(address).then(console.log)
+Promise {
+  <pending>,
+  domain:
+   Domain {
+     domain: null,
+     _events:
+      [Object: null prototype] {
+        removeListener: [Function: updateExceptionCapture],
+        newListener: [Function: updateExceptionCapture],
+        error: [Function: debugDomainError] },
+     _eventsCount: 3,
+     _maxListeners: undefined,
+     members: [],
+     [Symbol(kWeak)]: WeakReference {} } }
+> 0
+
+> 
+> w3MainNet.eth.getTransactionCount(address).then(console.log)
+Promise {
+  <pending>,
+  domain:
+   Domain {
+     domain: null,
+     _events:
+      [Object: null prototype] {
+        removeListener: [Function: updateExceptionCapture],
+        newListener: [Function: updateExceptionCapture],
+        error: [Function: debugDomainError] },
+     _eventsCount: 3,
+     _maxListeners: undefined,
+     members: [],
+     [Symbol(kWeak)]: WeakReference {} } }
+> 1
+
+> .exit
+ ~/U/B/Nanodegree_BlockchainDev   main    excercise/web3_playground  
+ ~/U/B/Nanodegree_BlockchainDev   main    excercise/web3_playground     Wed Jun 30 23:24:26 2021
+ ~/U/B/Nanodegree_BlockchainDev   main    excercise/web3_playground  ls
+node_modules      package-lock.json package.json
+ ~/U/B/Nanodegree_BlockchainDev   main    excercise/web3_playground  touch getABI
+ ~/U/B/Nanodegree_BlockchainDev   main    excercise/web3_playground  ls
+getABI            node_modules      package-lock.json package.json
+ ~/U/B/Nanodegree_BlockchainDev   main    excercise/web3_playground  ren getABI getABI.js
+fish: Unknown command 'ren'
+ !  ~/U/B/Nanodegree_BlockchainDev   main    excercise/web3_playground  mv getABI getABI.js
+ ~/U/B/Nanodegree_BlockchainDev   main    excercise/web3_playground                     Wed Jun 30 23:25:11 2021
+ ~/U/B/Nanodegree_BlockchainDev   main    excercise/web3_playground  node getABI.js     Wed Jun 30 23:25:13 2021
+test
+ ~/U/B/Nanodegree_BlockchainDev   main    excercise/web3_playground             119ms  Wed Jun 30 23:25:15 2021
+ ~/U/B/Nanodegree_BlockchainDev   main    excercise/web3_playground                     Wed Jun 30 23:25:16 2021
+ ~/U/B/Nanodegree_BlockchainDev   main    excercise/web3_playground  node getABI.js     Wed Jun 30 23:25:16 2021
+test
+/Users/pongsaks/Udacity/Blockchain/Nanodegree_BlockchainDev/excercise/web3_playground/getABI.js:7
+$.getJSON('https://api.etherscan.io/api?module=contract&action=getabi&address=0x0d8775f648430679a709e98d2b0cb6250d2887ef', function (data) {
+^
+
+ReferenceError: $ is not defined
+    at Object.<anonymous> (/Users/pongsaks/Udacity/Blockchain/Nanodegree_BlockchainDev/excercise/web3_playground/getABI.js:7:1)
+    at Module._compile (internal/modules/cjs/loader.js:776:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:787:10)
+    at Module.load (internal/modules/cjs/loader.js:653:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:593:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:585:3)
+    at Function.Module.runMain (internal/modules/cjs/loader.js:829:12)
+    at startup (internal/bootstrap/node.js:283:19)
+    at bootstrapNodeJSCore (internal/bootstrap/node.js:622:3)
+ !  ~/U/B/Nanodegree_BlockchainDev   main    excercise/web3_playground  node getABI.js 
+test
+internal/modules/cjs/loader.js:638
+    throw err;
+    ^
+
+Error: Cannot find module 'jquery'
+    at Function.Module._resolveFilename (internal/modules/cjs/loader.js:636:15)
+    at Function.Module._load (internal/modules/cjs/loader.js:562:25)
+    at Module.require (internal/modules/cjs/loader.js:690:17)
+    at require (internal/modules/cjs/helpers.js:25:18)
+    at Object.<anonymous> (/Users/pongsaks/Udacity/Blockchain/Nanodegree_BlockchainDev/excercise/web3_playground/getABI.js:3:9)
+    at Module._compile (internal/modules/cjs/loader.js:776:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:787:10)
+    at Module.load (internal/modules/cjs/loader.js:653:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:593:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:585:3)
+ !  ~/U/B/Nanodegree_BlockchainDev   main    excercise/web3_playground  npm install jquery --save
+npm WARN web3_playground@1.0.0 No description
+npm WARN web3_playground@1.0.0 No repository field.
+
++ jquery@3.6.0
+added 1 package from 1 contributor and audited 359 packages in 2.455s
+found 1 low severity vulnerability
+  run `npm audit fix` to fix them, or `npm audit` for details
+ ~/U/B/Nanodegree_BlockchainDev   main    excercise/web3_playground  node getABI.js 
+test
+/Users/pongsaks/Udacity/Blockchain/Nanodegree_BlockchainDev/excercise/web3_playground/getABI.js:9
+$.getJSON('https://api.etherscan.io/api?module=contract&action=getabi&address=0x0d8775f648430679a709e98d2b0cb6250d2887ef', function (data) {
+  ^
+
+TypeError: $.getJSON is not a function
+    at Object.<anonymous> (/Users/pongsaks/Udacity/Blockchain/Nanodegree_BlockchainDev/excercise/web3_playground/getABI.js:9:3)
+    at Module._compile (internal/modules/cjs/loader.js:776:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:787:10)
+    at Module.load (internal/modules/cjs/loader.js:653:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:593:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:585:3)
+    at Function.Module.runMain (internal/modules/cjs/loader.js:829:12)
+    at startup (internal/bootstrap/node.js:283:19)
+    at bootstrapNodeJSCore (internal/bootstrap/node.js:622:3)
+ !  ~/U/B/Nanodegree_BlockchainDev   main    excercise/web3_playground  npm install
+npm WARN web3_playground@1.0.0 No description
+npm WARN web3_playground@1.0.0 No repository field.
+
+removed 1 package and audited 358 packages in 2.16s
+found 1 low severity vulnerability
+  run `npm audit fix` to fix them, or `npm audit` for details
+ ~/U/B/Nanodegree_BlockchainDev   main    excercise/web3_playground  node getABI.js 
+test
+internal/modules/cjs/loader.js:638
+    throw err;
+    ^
+
+Error: Cannot find module 'jquery'
+    at Function.Module._resolveFilename (internal/modules/cjs/loader.js:636:15)
+    at Function.Module._load (internal/modules/cjs/loader.js:562:25)
+    at Module.require (internal/modules/cjs/loader.js:690:17)
+    at require (internal/modules/cjs/helpers.js:25:18)
+    at Object.<anonymous> (/Users/pongsaks/Udacity/Blockchain/Nanodegree_BlockchainDev/excercise/web3_playground/getABI.js:3:9)
+    at Module._compile (internal/modules/cjs/loader.js:776:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:787:10)
+    at Module.load (internal/modules/cjs/loader.js:653:32)
+    at tryModuleLoad (internal/modules/cjs/loader.js:593:12)
+    at Function.Module._load (internal/modules/cjs/loader.js:585:3)
+ !  ~/U/B/Nanodegree_BlockchainDev   main    excercise/web3_playground         105ms  Wed Jun 30 23:28:18 2021
+ !  ~/U/B/Nanodegree_BlockchainDev   main    excercise/web3_playground                 Wed Jun 30 23:29:24 2021
+ !  ~/U/B/Nanodegree_BlockchainDev   main    excercise/web3_playground  npm install get-json --save
+npm WARN web3_playground@1.0.0 No description
+npm WARN web3_playground@1.0.0 No repository field.
+
++ get-json@1.0.1
+added 4 packages from 3 contributors and audited 362 packages in 7.514s
+found 1 low severity vulnerability
+  run `npm audit fix` to fix them, or `npm audit` for details
+ ~/U/B/Nanodegree_BlockchainDev   main    excercise/web3_playground  node getabi.js
+test
+/Users/pongsaks/Udacity/Blockchain/Nanodegree_BlockchainDev/excercise/web3_playground/getabi.js:11
+    contractABI = JSON.parse(data.result);
+                                  ^
+
+TypeError: Cannot read property 'result' of null
+    at /Users/pongsaks/Udacity/Blockchain/Nanodegree_BlockchainDev/excercise/web3_playground/getabi.js:11:35
+    at /Users/pongsaks/Udacity/Blockchain/Nanodegree_BlockchainDev/excercise/web3_playground/node_modules/get-json/lib/node.js:15:7
+    at /Users/pongsaks/Udacity/Blockchain/Nanodegree_BlockchainDev/excercise/web3_playground/node_modules/get-json/lib/node.js:41:5
+    at IncomingMessage.<anonymous> (/Users/pongsaks/Udacity/Blockchain/Nanodegree_BlockchainDev/excercise/web3_playground/node_modules/phin/lib/phin.compiled.js:1:2100)
+    at IncomingMessage.emit (events.js:203:15)
+    at endReadableNT (_stream_readable.js:1129:12)
+    at process._tickCallback (internal/process/next_tick.js:63:19)
+ !  ~/U/B/Nanodegree_BlockchainDev   main    excercise/web3_playground  node getabi.js
+test
+null
+/Users/pongsaks/Udacity/Blockchain/Nanodegree_BlockchainDev/excercise/web3_playground/getabi.js:12
+    contractABI = JSON.parse(data.result);
+                                  ^
+
+TypeError: Cannot read property 'result' of null
+    at /Users/pongsaks/Udacity/Blockchain/Nanodegree_BlockchainDev/excercise/web3_playground/getabi.js:12:35
+    at /Users/pongsaks/Udacity/Blockchain/Nanodegree_BlockchainDev/excercise/web3_playground/node_modules/get-json/lib/node.js:15:7
+    at /Users/pongsaks/Udacity/Blockchain/Nanodegree_BlockchainDev/excercise/web3_playground/node_modules/get-json/lib/node.js:41:5
+    at IncomingMessage.<anonymous> (/Users/pongsaks/Udacity/Blockchain/Nanodegree_BlockchainDev/excercise/web3_playground/node_modules/phin/lib/phin.compiled.js:1:2100)
+    at IncomingMessage.emit (events.js:203:15)
+    at endReadableNT (_stream_readable.js:1129:12)
+    at process._tickCallback (internal/process/next_tick.js:63:19)
+ !  ~/U/B/Nanodegree_BlockchainDev   main    excercise/web3_playground  node getabi.js
+test
+null
+ ~/U/B/Nanodegree_BlockchainDev   main    excercise/web3_playground  node      1863ms  Wed Jun 30 23:32:15 2021
+> let abi = '[{"constant":true,"inputs":[],"name":"batFundDeposit","outputs":[{"name":"","type":"address"}],"payable":false,"type":"function"},{"constant":true,"inputs":[],"name":"name","outputs":[{"name":"","type":"string"}],"payable":false,"type":"function"},{"constant":false,"inputs":[{"name":"_spender","type":"address"},{"name":"_value","type":"uint256"}],"name":"approve","outputs":[{"name":"success","type":"bool"}],"payable":false,"type":"function"},{"constant":true,"inputs":[],"name":"totalSupply","outputs":[{"name":"","type":"uint256"}],"payable":false,"type":"function"},{"constant":true,"inputs":[],"name":"batFund","outputs":[{"name":"","type":"uint256"}],"payable":false,"type":"function"},{"constant":false,"inputs":[{"name":"_from","type":"address"},{"name":"_to","type":"address"},{"name":"_value","type":"uint256"}],"name":"transferFrom","outputs":[{"name":"success","type":"bool"}],"payable":false,"type":"function"},{"constant":true,"inputs":[],"name":"decimals","outputs":[{"name":"","type":"uint256"}],"payable":false,"type":"function"},{"constant":true,"inputs":[],"name":"tokenExchangeRate","outputs":[{"name":"","type":"uint256"}],"payable":false,"type":"function"},{"constant":false,"inputs":[],"name":"finalize","outputs":[],"payable":false,"type":"function"},{"constant":true,"inputs":[],"name":"version","outputs":[{"name":"","type":"string"}],"payable":false,"type":"function"},{"constant":false,"inputs":[],"name":"refund","outputs":[],"payable":false,"type":"function"},{"constant":true,"inputs":[],"name":"tokenCreationCap","outputs":[{"name":"","type":"uint256"}],"payable":false,"type":"function"},{"constant":true,"inputs":[{"name":"_owner","type":"address"}],"name":"balanceOf","outputs":[{"name":"balance","type":"uint256"}],"payable":false,"type":"function"},{"constant":true,"inputs":[],"name":"isFinalized","outputs":[{"name":"","type":"bool"}],"payable":false,"type":"function"},{"constant":true,"inputs":[],"name":"fundingEndBlock","outputs":[{"name":"","type":"uint256"}],"payable":false,"type":"function"},{"constant":true,"inputs":[],"name":"symbol","outputs":[{"name":"","type":"string"}],"payable":false,"type":"function"},{"constant":true,"inputs":[],"name":"ethFundDeposit","outputs":[{"name":"","type":"address"}],"payable":false,"type":"function"},{"constant":false,"inputs":[{"name":"_to","type":"address"},{"name":"_value","type":"uint256"}],"name":"transfer","outputs":[{"name":"success","type":"bool"}],"payable":false,"type":"function"},{"constant":false,"inputs":[],"name":"createTokens","outputs":[],"payable":true,"type":"function"},{"constant":true,"inputs":[],"name":"tokenCreationMin","outputs":[{"name":"","type":"uint256"}],"payable":false,"type":"function"},{"constant":true,"inputs":[],"name":"fundingStartBlock","outputs":[{"name":"","type":"uint256"}],"payable":false,"type":"function"},{"constant":true,"inputs":[{"name":"_owner","type":"address"},{"name":"_spender","type":"address"}],"name":"allowance","outputs":[{"name":"remaining","type":"uint256"}],"payable":false,"type":"function"},{"inputs":[{"name":"_ethFundDeposit","type":"address"},{"name":"_batFundDeposit","type":"address"},{"name":"_fundingStartBlock","type":"uint256"},{"name":"_fundingEndBlock","type":"uint256"}],"payable":false,"type":"constructor"},{"anonymous":false,"inputs":[{"indexed":true,"name":"_to","type":"address"},{"indexed":false,"name":"_value","type":"uint256"}],"name":"LogRefund","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"name":"_to","type":"address"},{"indexed":false,"name":"_value","type":"uint256"}],"name":"CreateBAT","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"name":"_from","type":"address"},{"indexed":true,"name":"_to","type":"address"},{"indexed":false,"name":"_value","type":"uint256"}],"name":"Transfer","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"name":"_owner","type":"address"},{"indexed":true,"name":"_spender","type":"address"},{"indexed":false,"name":"_value","type":"uint256"}],"name":"Approval","type":"event"}]'
+undefined
+> abi
+'[{"constant":true,"inputs":[],"name":"batFundDeposit","outputs":[{"name":"","type":"address"}],"payable":false,"type":"function"},{"constant":true,"inputs":[],"name":"name","outputs":[{"name":"","type":"string"}],"payable":false,"type":"function"},{"constant":false,"inputs":[{"name":"_spender","type":"address"},{"name":"_value","type":"uint256"}],"name":"approve","outputs":[{"name":"success","type":"bool"}],"payable":false,"type":"function"},{"constant":true,"inputs":[],"name":"totalSupply","outputs":[{"name":"","type":"uint256"}],"payable":false,"type":"function"},{"constant":true,"inputs":[],"name":"batFund","outputs":[{"name":"","type":"uint256"}],"payable":false,"type":"function"},{"constant":false,"inputs":[{"name":"_from","type":"address"},{"name":"_to","type":"address"},{"name":"_value","type":"uint256"}],"name":"transferFrom","outputs":[{"name":"success","type":"bool"}],"payable":false,"type":"function"},{"constant":true,"inputs":[],"name":"decimals","outputs":[{"name":"","type":"uint256"}],"payable":false,"type":"function"},{"constant":true,"inputs":[],"name":"tokenExchangeRate","outputs":[{"name":"","type":"uint256"}],"payable":false,"type":"function"},{"constant":false,"inputs":[],"name":"finalize","outputs":[],"payable":false,"type":"function"},{"constant":true,"inputs":[],"name":"version","outputs":[{"name":"","type":"string"}],"payable":false,"type":"function"},{"constant":false,"inputs":[],"name":"refund","outputs":[],"payable":false,"type":"function"},{"constant":true,"inputs":[],"name":"tokenCreationCap","outputs":[{"name":"","type":"uint256"}],"payable":false,"type":"function"},{"constant":true,"inputs":[{"name":"_owner","type":"address"}],"name":"balanceOf","outputs":[{"name":"balance","type":"uint256"}],"payable":false,"type":"function"},{"constant":true,"inputs":[],"name":"isFinalized","outputs":[{"name":"","type":"bool"}],"payable":false,"type":"function"},{"constant":true,"inputs":[],"name":"fundingEndBlock","outputs":[{"name":"","type":"uint256"}],"payable":false,"type":"function"},{"constant":true,"inputs":[],"name":"symbol","outputs":[{"name":"","type":"string"}],"payable":false,"type":"function"},{"constant":true,"inputs":[],"name":"ethFundDeposit","outputs":[{"name":"","type":"address"}],"payable":false,"type":"function"},{"constant":false,"inputs":[{"name":"_to","type":"address"},{"name":"_value","type":"uint256"}],"name":"transfer","outputs":[{"name":"success","type":"bool"}],"payable":false,"type":"function"},{"constant":false,"inputs":[],"name":"createTokens","outputs":[],"payable":true,"type":"function"},{"constant":true,"inputs":[],"name":"tokenCreationMin","outputs":[{"name":"","type":"uint256"}],"payable":false,"type":"function"},{"constant":true,"inputs":[],"name":"fundingStartBlock","outputs":[{"name":"","type":"uint256"}],"payable":false,"type":"function"},{"constant":true,"inputs":[{"name":"_owner","type":"address"},{"name":"_spender","type":"address"}],"name":"allowance","outputs":[{"name":"remaining","type":"uint256"}],"payable":false,"type":"function"},{"inputs":[{"name":"_ethFundDeposit","type":"address"},{"name":"_batFundDeposit","type":"address"},{"name":"_fundingStartBlock","type":"uint256"},{"name":"_fundingEndBlock","type":"uint256"}],"payable":false,"type":"constructor"},{"anonymous":false,"inputs":[{"indexed":true,"name":"_to","type":"address"},{"indexed":false,"name":"_value","type":"uint256"}],"name":"LogRefund","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"name":"_to","type":"address"},{"indexed":false,"name":"_value","type":"uint256"}],"name":"CreateBAT","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"name":"_from","type":"address"},{"indexed":true,"name":"_to","type":"address"},{"indexed":false,"name":"_value","type":"uint256"}],"name":"Transfer","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"name":"_owner","type":"address"},{"indexed":true,"name":"_spender","type":"address"},{"indexed":false,"name":"_value","type":"uint256"}],"name":"Approval","type":"event"}]'
+> let abi = JSON.parse(abi)
+Thrown:
+SyntaxError: Identifier 'abi' has already been declared
+> let abi2 = JSON.parse(abi)
+undefined
+> abi
+'[{"constant":true,"inputs":[],"name":"batFundDeposit","outputs":[{"name":"","type":"address"}],"payable":false,"type":"function"},{"constant":true,"inputs":[],"name":"name","outputs":[{"name":"","type":"string"}],"payable":false,"type":"function"},{"constant":false,"inputs":[{"name":"_spender","type":"address"},{"name":"_value","type":"uint256"}],"name":"approve","outputs":[{"name":"success","type":"bool"}],"payable":false,"type":"function"},{"constant":true,"inputs":[],"name":"totalSupply","outputs":[{"name":"","type":"uint256"}],"payable":false,"type":"function"},{"constant":true,"inputs":[],"name":"batFund","outputs":[{"name":"","type":"uint256"}],"payable":false,"type":"function"},{"constant":false,"inputs":[{"name":"_from","type":"address"},{"name":"_to","type":"address"},{"name":"_value","type":"uint256"}],"name":"transferFrom","outputs":[{"name":"success","type":"bool"}],"payable":false,"type":"function"},{"constant":true,"inputs":[],"name":"decimals","outputs":[{"name":"","type":"uint256"}],"payable":false,"type":"function"},{"constant":true,"inputs":[],"name":"tokenExchangeRate","outputs":[{"name":"","type":"uint256"}],"payable":false,"type":"function"},{"constant":false,"inputs":[],"name":"finalize","outputs":[],"payable":false,"type":"function"},{"constant":true,"inputs":[],"name":"version","outputs":[{"name":"","type":"string"}],"payable":false,"type":"function"},{"constant":false,"inputs":[],"name":"refund","outputs":[],"payable":false,"type":"function"},{"constant":true,"inputs":[],"name":"tokenCreationCap","outputs":[{"name":"","type":"uint256"}],"payable":false,"type":"function"},{"constant":true,"inputs":[{"name":"_owner","type":"address"}],"name":"balanceOf","outputs":[{"name":"balance","type":"uint256"}],"payable":false,"type":"function"},{"constant":true,"inputs":[],"name":"isFinalized","outputs":[{"name":"","type":"bool"}],"payable":false,"type":"function"},{"constant":true,"inputs":[],"name":"fundingEndBlock","outputs":[{"name":"","type":"uint256"}],"payable":false,"type":"function"},{"constant":true,"inputs":[],"name":"symbol","outputs":[{"name":"","type":"string"}],"payable":false,"type":"function"},{"constant":true,"inputs":[],"name":"ethFundDeposit","outputs":[{"name":"","type":"address"}],"payable":false,"type":"function"},{"constant":false,"inputs":[{"name":"_to","type":"address"},{"name":"_value","type":"uint256"}],"name":"transfer","outputs":[{"name":"success","type":"bool"}],"payable":false,"type":"function"},{"constant":false,"inputs":[],"name":"createTokens","outputs":[],"payable":true,"type":"function"},{"constant":true,"inputs":[],"name":"tokenCreationMin","outputs":[{"name":"","type":"uint256"}],"payable":false,"type":"function"},{"constant":true,"inputs":[],"name":"fundingStartBlock","outputs":[{"name":"","type":"uint256"}],"payable":false,"type":"function"},{"constant":true,"inputs":[{"name":"_owner","type":"address"},{"name":"_spender","type":"address"}],"name":"allowance","outputs":[{"name":"remaining","type":"uint256"}],"payable":false,"type":"function"},{"inputs":[{"name":"_ethFundDeposit","type":"address"},{"name":"_batFundDeposit","type":"address"},{"name":"_fundingStartBlock","type":"uint256"},{"name":"_fundingEndBlock","type":"uint256"}],"payable":false,"type":"constructor"},{"anonymous":false,"inputs":[{"indexed":true,"name":"_to","type":"address"},{"indexed":false,"name":"_value","type":"uint256"}],"name":"LogRefund","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"name":"_to","type":"address"},{"indexed":false,"name":"_value","type":"uint256"}],"name":"CreateBAT","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"name":"_from","type":"address"},{"indexed":true,"name":"_to","type":"address"},{"indexed":false,"name":"_value","type":"uint256"}],"name":"Transfer","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"name":"_owner","type":"address"},{"indexed":true,"name":"_spender","type":"address"},{"indexed":false,"name":"_value","type":"uint256"}],"name":"Approval","type":"event"}]'
+> abi2
+[ { constant: true,
+    inputs: [],
+    name: 'batFundDeposit',
+    outputs: [ [Object] ],
+    payable: false,
+    type: 'function' },
+  { constant: true,
+    inputs: [],
+    name: 'name',
+    outputs: [ [Object] ],
+    payable: false,
+    type: 'function' },
+  { constant: false,
+    inputs: [ [Object], [Object] ],
+    name: 'approve',
+    outputs: [ [Object] ],
+    payable: false,
+    type: 'function' },
+  { constant: true,
+    inputs: [],
+    name: 'totalSupply',
+    outputs: [ [Object] ],
+    payable: false,
+    type: 'function' },
+  { constant: true,
+    inputs: [],
+    name: 'batFund',
+    outputs: [ [Object] ],
+    payable: false,
+    type: 'function' },
+  { constant: false,
+    inputs: [ [Object], [Object], [Object] ],
+    name: 'transferFrom',
+    outputs: [ [Object] ],
+    payable: false,
+    type: 'function' },
+  { constant: true,
+    inputs: [],
+    name: 'decimals',
+    outputs: [ [Object] ],
+    payable: false,
+    type: 'function' },
+  { constant: true,
+    inputs: [],
+    name: 'tokenExchangeRate',
+    outputs: [ [Object] ],
+    payable: false,
+    type: 'function' },
+  { constant: false,
+    inputs: [],
+    name: 'finalize',
+    outputs: [],
+    payable: false,
+    type: 'function' },
+  { constant: true,
+    inputs: [],
+    name: 'version',
+    outputs: [ [Object] ],
+    payable: false,
+    type: 'function' },
+  { constant: false,
+    inputs: [],
+    name: 'refund',
+    outputs: [],
+    payable: false,
+    type: 'function' },
+  { constant: true,
+    inputs: [],
+    name: 'tokenCreationCap',
+    outputs: [ [Object] ],
+    payable: false,
+    type: 'function' },
+  { constant: true,
+    inputs: [ [Object] ],
+    name: 'balanceOf',
+    outputs: [ [Object] ],
+    payable: false,
+    type: 'function' },
+  { constant: true,
+    inputs: [],
+    name: 'isFinalized',
+    outputs: [ [Object] ],
+    payable: false,
+    type: 'function' },
+  { constant: true,
+    inputs: [],
+    name: 'fundingEndBlock',
+    outputs: [ [Object] ],
+    payable: false,
+    type: 'function' },
+  { constant: true,
+    inputs: [],
+    name: 'symbol',
+    outputs: [ [Object] ],
+    payable: false,
+    type: 'function' },
+  { constant: true,
+    inputs: [],
+    name: 'ethFundDeposit',
+    outputs: [ [Object] ],
+    payable: false,
+    type: 'function' },
+  { constant: false,
+    inputs: [ [Object], [Object] ],
+    name: 'transfer',
+    outputs: [ [Object] ],
+    payable: false,
+    type: 'function' },
+  { constant: false,
+    inputs: [],
+    name: 'createTokens',
+    outputs: [],
+    payable: true,
+    type: 'function' },
+  { constant: true,
+    inputs: [],
+    name: 'tokenCreationMin',
+    outputs: [ [Object] ],
+    payable: false,
+    type: 'function' },
+  { constant: true,
+    inputs: [],
+    name: 'fundingStartBlock',
+    outputs: [ [Object] ],
+    payable: false,
+    type: 'function' },
+  { constant: true,
+    inputs: [ [Object], [Object] ],
+    name: 'allowance',
+    outputs: [ [Object] ],
+    payable: false,
+    type: 'function' },
+  { inputs: [ [Object], [Object], [Object], [Object] ],
+    payable: false,
+    type: 'constructor' },
+  { anonymous: false,
+    inputs: [ [Object], [Object] ],
+    name: 'LogRefund',
+    type: 'event' },
+  { anonymous: false,
+    inputs: [ [Object], [Object] ],
+    name: 'CreateBAT',
+    type: 'event' },
+  { anonymous: false,
+    inputs: [ [Object], [Object], [Object] ],
+    name: 'Transfer',
+    type: 'event' },
+  { anonymous: false,
+    inputs: [ [Object], [Object], [Object] ],
+    name: 'Approval',
+    type: 'event' } ]
+> let contractAddress = '0x0d8775f648430679a709e98d2b0cb6250d2887ef'
+undefined
+> let Web3 = require('web3')
+undefined
+> Web3
+{ [Function: Web3]
+  version: '1.3.6',
+  utils:
+   { _fireError: [Function: _fireError],
+     _jsonInterfaceMethodToString: [Function: _jsonInterfaceMethodToString],
+     _flattenTypes: [Function: _flattenTypes],
+     randomHex: [Function: randomHex],
+     _:
+      { [Function: _]
+        VERSION: '1.12.1',
+        toPath: [Function: toPath],
+        iteratee: [Function: iteratee],
+        templateSettings: [Object],
+        after: [Function: after],
+        all: [Function: every],
+        allKeys: [Function: allKeys],
+        any: [Function: some],
+        assign: [Function],
+        before: [Function: before],
+        bind: [Function],
+        bindAll: [Function],
+        chain: [Function: chain],
+        chunk: [Function: chunk],
+        clone: [Function: clone],
+        collect: [Function: map],
+        compact: [Function: compact],
+        compose: [Function: compose],
+        constant: [Function: constant],
+        contains: [Function: contains],
+        countBy: [Function],
+        create: [Function: create],
+        debounce: [Function: debounce],
+        default: [Circular],
+        defaults: [Function],
+        defer: [Function: bound],
+        delay: [Function],
+        detect: [Function: find],
+        difference: [Function],
+        drop: [Function: rest],
+        each: [Function: each],
+        escape: [Function],
+        every: [Function: every],
+        extend: [Function],
+        extendOwn: [Function],
+        filter: [Function: filter],
+        find: [Function: find],
+        findIndex: [Function],
+        findKey: [Function: findKey],
+        findLastIndex: [Function],
+        findWhere: [Function: findWhere],
+        first: [Function: first],
+        flatten: [Function: flatten$1],
+        foldl: [Function],
+        foldr: [Function],
+        forEach: [Function: each],
+        functions: [Function: functions],
+        get: [Function: get],
+        groupBy: [Function],
+        has: [Function: has$1],
+        head: [Function: first],
+        identity: [Function: identity],
+        include: [Function: contains],
+        includes: [Function: contains],
+        indexBy: [Function],
+        indexOf: [Function],
+        initial: [Function: initial],
+        inject: [Function],
+        intersection: [Function: intersection],
+        invert: [Function: invert],
+        invoke: [Function],
+        isArguments: [Function],
+        isArray: [Function: isArray],
+        isArrayBuffer: [Function],
+        isBoolean: [Function: isBoolean],
+        isDataView: [Function],
+        isDate: [Function],
+        isElement: [Function: isElement],
+        isEmpty: [Function: isEmpty],
+        isEqual: [Function: isEqual],
+        isError: [Function],
+        isFinite: [Function: isFinite$1],
+        isFunction: [Function: isFunction],
+        isMap: [Function],
+        isMatch: [Function: isMatch],
+        isNaN: [Function: isNaN$1],
+        isNull: [Function: isNull],
+        isNumber: [Function],
+        isObject: [Function: isObject],
+        isRegExp: [Function],
+        isSet: [Function],
+        isString: [Function],
+        isSymbol: [Function],
+        isTypedArray: [Function: isTypedArray],
+        isUndefined: [Function: isUndefined],
+        isWeakMap: [Function],
+        isWeakSet: [Function],
+        keys: [Function: keys],
+        last: [Function: last],
+        lastIndexOf: [Function],
+        map: [Function: map],
+        mapObject: [Function: mapObject],
+        matcher: [Function: matcher],
+        matches: [Function: matcher],
+        max: [Function: max],
+        memoize: [Function: memoize],
+        methods: [Function: functions],
+        min: [Function: min],
+        mixin: [Function: mixin],
+        negate: [Function: negate],
+        noop: [Function: noop],
+        now: [Function: now],
+        object: [Function: object],
+        omit: [Function],
+        once: [Function: bound],
+        pairs: [Function: pairs],
+        partial: [Function],
+        partition: [Function],
+        pick: [Function],
+        pluck: [Function: pluck],
+        property: [Function: property],
+        propertyOf: [Function: propertyOf],
+        random: [Function: random],
+        range: [Function: range],
+        reduce: [Function],
+        reduceRight: [Function],
+        reject: [Function: reject],
+        rest: [Function: rest],
+        restArguments: [Function: restArguments],
+        result: [Function: result],
+        sample: [Function: sample],
+        select: [Function: filter],
+        shuffle: [Function: shuffle],
+        size: [Function: size],
+        some: [Function: some],
+        sortBy: [Function: sortBy],
+        sortedIndex: [Function: sortedIndex],
+        tail: [Function: rest],
+        take: [Function: first],
+        tap: [Function: tap],
+        template: [Function: template],
+        throttle: [Function: throttle],
+        times: [Function: times],
+        toArray: [Function: toArray],
+        transpose: [Function: unzip],
+        unescape: [Function],
+        union: [Function],
+        uniq: [Function: uniq],
+        unique: [Function: uniq],
+        uniqueId: [Function: uniqueId],
+        unzip: [Function: unzip],
+        values: [Function: values],
+        where: [Function: where],
+        without: [Function],
+        wrap: [Function: wrap],
+        zip: [Function],
+        _: [Circular] },
+     BN:
+      { [Function: BN]
+        BN: [Circular],
+        wordSize: 26,
+        isBN: [Function: isBN],
+        max: [Function: max],
+        min: [Function: min],
+        red: [Function: red],
+        _prime: [Function: prime],
+        mont: [Function: mont] },
+     isBN: [Function: isBN],
+     isBigNumber: [Function: isBigNumber],
+     isHex: [Function: isHex],
+     isHexStrict: [Function: isHexStrict],
+     sha3: { [Function: sha3] _Hash: [Object] },
+     sha3Raw: [Function: sha3Raw],
+     keccak256: { [Function: sha3] _Hash: [Object] },
+     soliditySha3: [Function: soliditySha3],
+     soliditySha3Raw: [Function: soliditySha3Raw],
+     encodePacked: [Function: encodePacked],
+     isAddress: [Function: isAddress],
+     checkAddressChecksum: [Function: checkAddressChecksum],
+     toChecksumAddress: [Function: toChecksumAddress],
+     toHex: [Function: toHex],
+     toBN: [Function: toBN],
+     bytesToHex: [Function: bytesToHex],
+     hexToBytes: [Function: hexToBytes],
+     hexToNumberString: [Function: hexToNumberString],
+     hexToNumber: [Function: hexToNumber],
+     toDecimal: [Function: hexToNumber],
+     numberToHex: [Function: numberToHex],
+     fromDecimal: [Function: numberToHex],
+     hexToUtf8: [Function: hexToUtf8],
+     hexToString: [Function: hexToUtf8],
+     toUtf8: [Function: hexToUtf8],
+     stripHexPrefix: [Function: stripHexPrefix],
+     utf8ToHex: [Function: utf8ToHex],
+     stringToHex: [Function: utf8ToHex],
+     fromUtf8: [Function: utf8ToHex],
+     hexToAscii: [Function: hexToAscii],
+     toAscii: [Function: hexToAscii],
+     asciiToHex: [Function: asciiToHex],
+     fromAscii: [Function: asciiToHex],
+     unitMap:
+      { noether: '0',
+        wei: '1',
+        kwei: '1000',
+        Kwei: '1000',
+        babbage: '1000',
+        femtoether: '1000',
+        mwei: '1000000',
+        Mwei: '1000000',
+        lovelace: '1000000',
+        picoether: '1000000',
+        gwei: '1000000000',
+        Gwei: '1000000000',
+        shannon: '1000000000',
+        nanoether: '1000000000',
+        nano: '1000000000',
+        szabo: '1000000000000',
+        microether: '1000000000000',
+        micro: '1000000000000',
+        finney: '1000000000000000',
+        milliether: '1000000000000000',
+        milli: '1000000000000000',
+        ether: '1000000000000000000',
+        kether: '1000000000000000000000',
+        grand: '1000000000000000000000',
+        mether: '1000000000000000000000000',
+        gether: '1000000000000000000000000000',
+        tether: '1000000000000000000000000000000' },
+     toWei: [Function: toWei],
+     fromWei: [Function: fromWei],
+     padLeft: [Function: leftPad],
+     leftPad: [Function: leftPad],
+     padRight: [Function: rightPad],
+     rightPad: [Function: rightPad],
+     toTwosComplement: [Function: toTwosComplement],
+     isBloom: [Function: isBloom],
+     isUserEthereumAddressInBloom: [Function: isUserEthereumAddressInBloom],
+     isContractAddressInBloom: [Function: isContractAddressInBloom],
+     isTopic: [Function: isTopic],
+     isTopicInBloom: [Function: isTopicInBloom],
+     isInBloom: [Function: isInBloom],
+     compareBlockNumbers: [Function: compareBlockNumbers] },
+  modules:
+   { Eth: { [Function: Eth] givenProvider: null, providers: [Object] },
+     Net: { [Function: Net] givenProvider: null, providers: [Object] },
+     Personal:
+      { [Function: Personal] givenProvider: null, providers: [Object] },
+     Shh: { [Function: Shh] givenProvider: null, providers: [Object] },
+     Bzz: { [Function: Bzz] givenProvider: null } },
+  givenProvider: null,
+  providers:
+   { WebsocketProvider: [Function: WebsocketProvider],
+     HttpProvider: [Function: HttpProvider],
+     IpcProvider: [Function: IpcProvider] } }
+> let web3 = new Web3('https://mainnet.infura.io/v3/ec21762a0e8c4cb8aa08fcfb4a2e2dea')
+undefined
+> web3
+Web3 {
+  currentProvider: [Getter/Setter],
+  _requestManager:
+   RequestManager {
+     provider:
+      HttpProvider {
+        withCredentials: false,
+        timeout: 0,
+        headers: undefined,
+        agent: undefined,
+        connected: false,
+        host:
+         'https://mainnet.infura.io/v3/ec21762a0e8c4cb8aa08fcfb4a2e2dea',
+        httpsAgent: [Agent] },
+     providers:
+      { WebsocketProvider: [Function: WebsocketProvider],
+        HttpProvider: [Function: HttpProvider],
+        IpcProvider: [Function: IpcProvider] },
+     subscriptions: Map {} },
+  givenProvider: null,
+  providers:
+   { WebsocketProvider: [Function: WebsocketProvider],
+     HttpProvider: [Function: HttpProvider],
+     IpcProvider: [Function: IpcProvider] },
+  _provider:
+   HttpProvider {
+     withCredentials: false,
+     timeout: 0,
+     headers: undefined,
+     agent: undefined,
+     connected: false,
+     host:
+      'https://mainnet.infura.io/v3/ec21762a0e8c4cb8aa08fcfb4a2e2dea',
+     httpsAgent:
+      Agent {
+        domain: [Domain],
+        _events: [Object],
+        _eventsCount: 1,
+        _maxListeners: undefined,
+        defaultPort: 443,
+        protocol: 'https:',
+        options: [Object],
+        requests: {},
+        sockets: {},
+        freeSockets: {},
+        keepAliveMsecs: 1000,
+        keepAlive: true,
+        maxSockets: Infinity,
+        maxFreeSockets: 256,
+        maxCachedSessions: 100,
+        _sessionCache: [Object] } },
+  setProvider: [Function],
+  setRequestManager: [Function],
+  BatchRequest: [Function: bound Batch],
+  extend:
+   { [Function: ex]
+     formatters:
+      { inputDefaultBlockNumberFormatter: [Function: inputDefaultBlockNumberFormatter],
+        inputBlockNumberFormatter: [Function: inputBlockNumberFormatter],
+        inputCallFormatter: [Function: inputCallFormatter],
+        inputTransactionFormatter: [Function: inputTransactionFormatter],
+        inputAddressFormatter: [Function: inputAddressFormatter],
+        inputPostFormatter: [Function: inputPostFormatter],
+        inputLogFormatter: [Function: inputLogFormatter],
+        inputSignFormatter: [Function: inputSignFormatter],
+        inputStorageKeysFormatter: [Function: inputStorageKeysFormatter],
+        outputProofFormatter: [Function: outputProofFormatter],
+        outputBigNumberFormatter: [Function: outputBigNumberFormatter],
+        outputTransactionFormatter: [Function: outputTransactionFormatter],
+        outputTransactionReceiptFormatter: [Function: outputTransactionReceiptFormatter],
+        outputBlockFormatter: [Function: outputBlockFormatter],
+        outputLogFormatter: [Function: outputLogFormatter],
+        outputPostFormatter: [Function: outputPostFormatter],
+        outputSyncingFormatter: [Function: outputSyncingFormatter] },
+     utils:
+      { _fireError: [Function: _fireError],
+        _jsonInterfaceMethodToString: [Function: _jsonInterfaceMethodToString],
+        _flattenTypes: [Function: _flattenTypes],
+        randomHex: [Function: randomHex],
+        _: [Function],
+        BN: [Function],
+        isBN: [Function: isBN],
+        isBigNumber: [Function: isBigNumber],
+        isHex: [Function: isHex],
+        isHexStrict: [Function: isHexStrict],
+        sha3: [Function],
+        sha3Raw: [Function: sha3Raw],
+        keccak256: [Function],
+        soliditySha3: [Function: soliditySha3],
+        soliditySha3Raw: [Function: soliditySha3Raw],
+        encodePacked: [Function: encodePacked],
+        isAddress: [Function: isAddress],
+        checkAddressChecksum: [Function: checkAddressChecksum],
+        toChecksumAddress: [Function: toChecksumAddress],
+        toHex: [Function: toHex],
+        toBN: [Function: toBN],
+        bytesToHex: [Function: bytesToHex],
+        hexToBytes: [Function: hexToBytes],
+        hexToNumberString: [Function: hexToNumberString],
+        hexToNumber: [Function: hexToNumber],
+        toDecimal: [Function: hexToNumber],
+        numberToHex: [Function: numberToHex],
+        fromDecimal: [Function: numberToHex],
+        hexToUtf8: [Function: hexToUtf8],
+        hexToString: [Function: hexToUtf8],
+        toUtf8: [Function: hexToUtf8],
+        stripHexPrefix: [Function: stripHexPrefix],
+        utf8ToHex: [Function: utf8ToHex],
+        stringToHex: [Function: utf8ToHex],
+        fromUtf8: [Function: utf8ToHex],
+        hexToAscii: [Function: hexToAscii],
+        toAscii: [Function: hexToAscii],
+        asciiToHex: [Function: asciiToHex],
+        fromAscii: [Function: asciiToHex],
+        unitMap: [Object],
+        toWei: [Function: toWei],
+        fromWei: [Function: fromWei],
+        padLeft: [Function: leftPad],
+        leftPad: [Function: leftPad],
+        padRight: [Function: rightPad],
+        rightPad: [Function: rightPad],
+        toTwosComplement: [Function: toTwosComplement],
+        isBloom: [Function: isBloom],
+        isUserEthereumAddressInBloom: [Function: isUserEthereumAddressInBloom],
+        isContractAddressInBloom: [Function: isContractAddressInBloom],
+        isTopic: [Function: isTopic],
+        isTopicInBloom: [Function: isTopicInBloom],
+        isInBloom: [Function: isInBloom],
+        compareBlockNumbers: [Function: compareBlockNumbers] },
+     Method: [Function: Method] },
+  version: '1.3.6',
+  utils:
+   { _fireError: [Function: _fireError],
+     _jsonInterfaceMethodToString: [Function: _jsonInterfaceMethodToString],
+     _flattenTypes: [Function: _flattenTypes],
+     randomHex: [Function: randomHex],
+     _:
+      { [Function: _]
+        VERSION: '1.12.1',
+        toPath: [Function: toPath],
+        iteratee: [Function: iteratee],
+        templateSettings: [Object],
+        after: [Function: after],
+        all: [Function: every],
+        allKeys: [Function: allKeys],
+        any: [Function: some],
+        assign: [Function],
+        before: [Function: before],
+        bind: [Function],
+        bindAll: [Function],
+        chain: [Function: chain],
+        chunk: [Function: chunk],
+        clone: [Function: clone],
+        collect: [Function: map],
+        compact: [Function: compact],
+        compose: [Function: compose],
+        constant: [Function: constant],
+        contains: [Function: contains],
+        countBy: [Function],
+        create: [Function: create],
+        debounce: [Function: debounce],
+        default: [Circular],
+        defaults: [Function],
+        defer: [Function: bound],
+        delay: [Function],
+        detect: [Function: find],
+        difference: [Function],
+        drop: [Function: rest],
+        each: [Function: each],
+        escape: [Function],
+        every: [Function: every],
+        extend: [Function],
+        extendOwn: [Function],
+        filter: [Function: filter],
+        find: [Function: find],
+        findIndex: [Function],
+        findKey: [Function: findKey],
+        findLastIndex: [Function],
+        findWhere: [Function: findWhere],
+        first: [Function: first],
+        flatten: [Function: flatten$1],
+        foldl: [Function],
+        foldr: [Function],
+        forEach: [Function: each],
+        functions: [Function: functions],
+        get: [Function: get],
+        groupBy: [Function],
+        has: [Function: has$1],
+        head: [Function: first],
+        identity: [Function: identity],
+        include: [Function: contains],
+        includes: [Function: contains],
+        indexBy: [Function],
+        indexOf: [Function],
+        initial: [Function: initial],
+        inject: [Function],
+        intersection: [Function: intersection],
+        invert: [Function: invert],
+        invoke: [Function],
+        isArguments: [Function],
+        isArray: [Function: isArray],
+        isArrayBuffer: [Function],
+        isBoolean: [Function: isBoolean],
+        isDataView: [Function],
+        isDate: [Function],
+        isElement: [Function: isElement],
+        isEmpty: [Function: isEmpty],
+        isEqual: [Function: isEqual],
+        isError: [Function],
+        isFinite: [Function: isFinite$1],
+        isFunction: [Function: isFunction],
+        isMap: [Function],
+        isMatch: [Function: isMatch],
+        isNaN: [Function: isNaN$1],
+        isNull: [Function: isNull],
+        isNumber: [Function],
+        isObject: [Function: isObject],
+        isRegExp: [Function],
+        isSet: [Function],
+        isString: [Function],
+        isSymbol: [Function],
+        isTypedArray: [Function: isTypedArray],
+        isUndefined: [Function: isUndefined],
+        isWeakMap: [Function],
+        isWeakSet: [Function],
+        keys: [Function: keys],
+        last: [Function: last],
+        lastIndexOf: [Function],
+        map: [Function: map],
+        mapObject: [Function: mapObject],
+        matcher: [Function: matcher],
+        matches: [Function: matcher],
+        max: [Function: max],
+        memoize: [Function: memoize],
+        methods: [Function: functions],
+        min: [Function: min],
+        mixin: [Function: mixin],
+        negate: [Function: negate],
+        noop: [Function: noop],
+        now: [Function: now],
+        object: [Function: object],
+        omit: [Function],
+        once: [Function: bound],
+        pairs: [Function: pairs],
+        partial: [Function],
+        partition: [Function],
+        pick: [Function],
+        pluck: [Function: pluck],
+        property: [Function: property],
+        propertyOf: [Function: propertyOf],
+        random: [Function: random],
+        range: [Function: range],
+        reduce: [Function],
+        reduceRight: [Function],
+        reject: [Function: reject],
+        rest: [Function: rest],
+        restArguments: [Function: restArguments],
+        result: [Function: result],
+        sample: [Function: sample],
+        select: [Function: filter],
+        shuffle: [Function: shuffle],
+        size: [Function: size],
+        some: [Function: some],
+        sortBy: [Function: sortBy],
+        sortedIndex: [Function: sortedIndex],
+        tail: [Function: rest],
+        take: [Function: first],
+        tap: [Function: tap],
+        template: [Function: template],
+        throttle: [Function: throttle],
+        times: [Function: times],
+        toArray: [Function: toArray],
+        transpose: [Function: unzip],
+        unescape: [Function],
+        union: [Function],
+        uniq: [Function: uniq],
+        unique: [Function: uniq],
+        uniqueId: [Function: uniqueId],
+        unzip: [Function: unzip],
+        values: [Function: values],
+        where: [Function: where],
+        without: [Function],
+        wrap: [Function: wrap],
+        zip: [Function],
+        _: [Circular] },
+     BN:
+      { [Function: BN]
+        BN: [Circular],
+        wordSize: 26,
+        isBN: [Function: isBN],
+        max: [Function: max],
+        min: [Function: min],
+        red: [Function: red],
+        _prime: [Function: prime],
+        mont: [Function: mont] },
+     isBN: [Function: isBN],
+     isBigNumber: [Function: isBigNumber],
+     isHex: [Function: isHex],
+     isHexStrict: [Function: isHexStrict],
+     sha3: { [Function: sha3] _Hash: [Object] },
+     sha3Raw: [Function: sha3Raw],
+     keccak256: { [Function: sha3] _Hash: [Object] },
+     soliditySha3: [Function: soliditySha3],
+     soliditySha3Raw: [Function: soliditySha3Raw],
+     encodePacked: [Function: encodePacked],
+     isAddress: [Function: isAddress],
+     checkAddressChecksum: [Function: checkAddressChecksum],
+     toChecksumAddress: [Function: toChecksumAddress],
+     toHex: [Function: toHex],
+     toBN: [Function: toBN],
+     bytesToHex: [Function: bytesToHex],
+     hexToBytes: [Function: hexToBytes],
+     hexToNumberString: [Function: hexToNumberString],
+     hexToNumber: [Function: hexToNumber],
+     toDecimal: [Function: hexToNumber],
+     numberToHex: [Function: numberToHex],
+     fromDecimal: [Function: numberToHex],
+     hexToUtf8: [Function: hexToUtf8],
+     hexToString: [Function: hexToUtf8],
+     toUtf8: [Function: hexToUtf8],
+     stripHexPrefix: [Function: stripHexPrefix],
+     utf8ToHex: [Function: utf8ToHex],
+     stringToHex: [Function: utf8ToHex],
+     fromUtf8: [Function: utf8ToHex],
+     hexToAscii: [Function: hexToAscii],
+     toAscii: [Function: hexToAscii],
+     asciiToHex: [Function: asciiToHex],
+     fromAscii: [Function: asciiToHex],
+     unitMap:
+      { noether: '0',
+        wei: '1',
+        kwei: '1000',
+        Kwei: '1000',
+        babbage: '1000',
+        femtoether: '1000',
+        mwei: '1000000',
+        Mwei: '1000000',
+        lovelace: '1000000',
+        picoether: '1000000',
+        gwei: '1000000000',
+        Gwei: '1000000000',
+        shannon: '1000000000',
+        nanoether: '1000000000',
+        nano: '1000000000',
+        szabo: '1000000000000',
+        microether: '1000000000000',
+        micro: '1000000000000',
+        finney: '1000000000000000',
+        milliether: '1000000000000000',
+        milli: '1000000000000000',
+        ether: '1000000000000000000',
+        kether: '1000000000000000000000',
+        grand: '1000000000000000000000',
+        mether: '1000000000000000000000000',
+        gether: '1000000000000000000000000000',
+        tether: '1000000000000000000000000000000' },
+     toWei: [Function: toWei],
+     fromWei: [Function: fromWei],
+     padLeft: [Function: leftPad],
+     leftPad: [Function: leftPad],
+     padRight: [Function: rightPad],
+     rightPad: [Function: rightPad],
+     toTwosComplement: [Function: toTwosComplement],
+     isBloom: [Function: isBloom],
+     isUserEthereumAddressInBloom: [Function: isUserEthereumAddressInBloom],
+     isContractAddressInBloom: [Function: isContractAddressInBloom],
+     isTopic: [Function: isTopic],
+     isTopicInBloom: [Function: isTopicInBloom],
+     isInBloom: [Function: isInBloom],
+     compareBlockNumbers: [Function: compareBlockNumbers] },
+  eth:
+   Eth {
+     currentProvider: [Getter/Setter],
+     _requestManager:
+      RequestManager {
+        provider: [HttpProvider],
+        providers: [Object],
+        subscriptions: Map {} },
+     givenProvider: null,
+     providers:
+      { WebsocketProvider: [Function: WebsocketProvider],
+        HttpProvider: [Function: HttpProvider],
+        IpcProvider: [Function: IpcProvider] },
+     _provider:
+      HttpProvider {
+        withCredentials: false,
+        timeout: 0,
+        headers: undefined,
+        agent: undefined,
+        connected: false,
+        host:
+         'https://mainnet.infura.io/v3/ec21762a0e8c4cb8aa08fcfb4a2e2dea',
+        httpsAgent: [Agent] },
+     setProvider: [Function],
+     setRequestManager: [Function],
+     BatchRequest: [Function: bound Batch],
+     extend:
+      { [Function: ex]
+        formatters: [Object],
+        utils: [Object],
+        Method: [Function: Method] },
+     handleRevert: [Getter/Setter],
+     defaultCommon: [Getter/Setter],
+     defaultHardfork: [Getter/Setter],
+     defaultChain: [Getter/Setter],
+     transactionPollingTimeout: [Getter/Setter],
+     transactionConfirmationBlocks: [Getter/Setter],
+     transactionBlockTimeout: [Getter/Setter],
+     defaultAccount: [Getter/Setter],
+     defaultBlock: [Getter/Setter],
+     maxListenersWarningThreshold: [Getter/Setter],
+     clearSubscriptions: [Function: bound ],
+     net:
+      Net {
+        currentProvider: [Getter/Setter],
+        _requestManager: [RequestManager],
+        givenProvider: null,
+        providers: [Object],
+        _provider: [HttpProvider],
+        setProvider: [Function],
+        setRequestManager: [Function],
+        BatchRequest: [Function: bound Batch],
+        extend: [Function],
+        getId: [Function],
+        isListening: [Function],
+        getPeerCount: [Function],
+        getNetworkType: [Function: bound getNetworkType] },
+     accounts:
+      Accounts {
+        currentProvider: [Getter/Setter],
+        _requestManager: [RequestManager],
+        givenProvider: null,
+        providers: [Object],
+        _provider: [HttpProvider],
+        setProvider: [Function],
+        setRequestManager: [Function],
+        _ethereumCall: [Object],
+        wallet: [Wallet] },
+     personal:
+      Personal {
+        currentProvider: [Getter/Setter],
+        _requestManager: [RequestManager],
+        givenProvider: null,
+        providers: [Object],
+        _provider: [HttpProvider],
+        setProvider: [Function],
+        setRequestManager: [Function],
+        BatchRequest: [Function: bound Batch],
+        extend: [Function],
+        net: [Net],
+        defaultAccount: [Getter/Setter],
+        defaultBlock: [Getter/Setter],
+        getAccounts: [Function],
+        newAccount: [Function],
+        unlockAccount: [Function],
+        lockAccount: [Function],
+        importRawKey: [Function],
+        sendTransaction: [Function],
+        signTransaction: [Function],
+        sign: [Function],
+        ecRecover: [Function] },
+     Contract:
+      { [Function: Contract]
+        setProvider: [Function],
+        defaultAccount: null,
+        defaultBlock: 'latest',
+        transactionBlockTimeout: 50,
+        transactionConfirmationBlocks: 24,
+        transactionPollingTimeout: 750,
+        handleRevert: false,
+        _requestManager: [RequestManager],
+        _ethAccounts: [Accounts],
+        currentProvider: [HttpProvider] },
+     Iban: [Function: Iban],
+     abi: ABICoder {},
+     ens:
+      ENS {
+        eth: [Circular],
+        _detectedAddress: null,
+        _lastSyncCheck: null,
+        registry: [Getter],
+        resolverMethodHandler: [Getter],
+        registryAddress: [Getter/Setter] },
+     getNodeInfo:
+      { [Function: send]
+        method: [Method],
+        request: [Function: bound ],
+        call: 'web3_clientVersion' },
+     getProtocolVersion:
+      { [Function: send]
+        method: [Method],
+        request: [Function: bound ],
+        call: 'eth_protocolVersion' },
+     getCoinbase:
+      { [Function: send]
+        method: [Method],
+        request: [Function: bound ],
+        call: 'eth_coinbase' },
+     isMining:
+      { [Function: send]
+        method: [Method],
+        request: [Function: bound ],
+        call: 'eth_mining' },
+     getHashrate:
+      { [Function: send]
+        method: [Method],
+        request: [Function: bound ],
+        call: 'eth_hashrate' },
+     isSyncing:
+      { [Function: send]
+        method: [Method],
+        request: [Function: bound ],
+        call: 'eth_syncing' },
+     getGasPrice:
+      { [Function: send]
+        method: [Method],
+        request: [Function: bound ],
+        call: 'eth_gasPrice' },
+     getAccounts:
+      { [Function: send]
+        method: [Method],
+        request: [Function: bound ],
+        call: 'eth_accounts' },
+     getBlockNumber:
+      { [Function: send]
+        method: [Method],
+        request: [Function: bound ],
+        call: 'eth_blockNumber' },
+     getBalance:
+      { [Function: send]
+        method: [Method],
+        request: [Function: bound ],
+        call: 'eth_getBalance' },
+     getStorageAt:
+      { [Function: send]
+        method: [Method],
+        request: [Function: bound ],
+        call: 'eth_getStorageAt' },
+     getCode:
+      { [Function: send]
+        method: [Method],
+        request: [Function: bound ],
+        call: 'eth_getCode' },
+     getBlock:
+      { [Function: send]
+        method: [Method],
+        request: [Function: bound ],
+        call: [Function: blockCall] },
+     getUncle:
+      { [Function: send]
+        method: [Method],
+        request: [Function: bound ],
+        call: [Function: uncleCall] },
+     getBlockTransactionCount:
+      { [Function: send]
+        method: [Method],
+        request: [Function: bound ],
+        call: [Function: getBlockTransactionCountCall] },
+     getBlockUncleCount:
+      { [Function: send]
+        method: [Method],
+        request: [Function: bound ],
+        call: [Function: uncleCountCall] },
+     getTransaction:
+      { [Function: send]
+        method: [Method],
+        request: [Function: bound ],
+        call: 'eth_getTransactionByHash' },
+     getTransactionFromBlock:
+      { [Function: send]
+        method: [Method],
+        request: [Function: bound ],
+        call: [Function: transactionFromBlockCall] },
+     getTransactionReceipt:
+      { [Function: send]
+        method: [Method],
+        request: [Function: bound ],
+        call: 'eth_getTransactionReceipt' },
+     getTransactionCount:
+      { [Function: send]
+        method: [Method],
+        request: [Function: bound ],
+        call: 'eth_getTransactionCount' },
+     sendSignedTransaction:
+      { [Function: send]
+        method: [Method],
+        request: [Function: bound ],
+        call: 'eth_sendRawTransaction' },
+     signTransaction:
+      { [Function: send]
+        method: [Method],
+        request: [Function: bound ],
+        call: 'eth_signTransaction' },
+     sendTransaction:
+      { [Function: send]
+        method: [Method],
+        request: [Function: bound ],
+        call: 'eth_sendTransaction' },
+     sign:
+      { [Function: send]
+        method: [Method],
+        request: [Function: bound ],
+        call: 'eth_sign' },
+     call:
+      { [Function: send]
+        method: [Method],
+        request: [Function: bound ],
+        call: 'eth_call' },
+     estimateGas:
+      { [Function: send]
+        method: [Method],
+        request: [Function: bound ],
+        call: 'eth_estimateGas' },
+     submitWork:
+      { [Function: send]
+        method: [Method],
+        request: [Function: bound ],
+        call: 'eth_submitWork' },
+     getWork:
+      { [Function: send]
+        method: [Method],
+        request: [Function: bound ],
+        call: 'eth_getWork' },
+     getPastLogs:
+      { [Function: send]
+        method: [Method],
+        request: [Function: bound ],
+        call: 'eth_getLogs' },
+     getChainId:
+      { [Function: send]
+        method: [Method],
+        request: [Function: bound ],
+        call: 'eth_chainId' },
+     requestAccounts:
+      { [Function: send]
+        method: [Method],
+        request: [Function: bound ],
+        call: 'eth_requestAccounts' },
+     getProof:
+      { [Function: send]
+        method: [Method],
+        request: [Function: bound ],
+        call: 'eth_getProof' },
+     getPendingTransactions:
+      { [Function: send]
+        method: [Method],
+        request: [Function: bound ],
+        call: 'eth_pendingTransactions' },
+     subscribe: [Function] },
+  shh:
+   Shh {
+     currentProvider: [Getter/Setter],
+     _requestManager:
+      RequestManager {
+        provider: [HttpProvider],
+        providers: [Object],
+        subscriptions: Map {} },
+     givenProvider: null,
+     providers:
+      { WebsocketProvider: [Function: WebsocketProvider],
+        HttpProvider: [Function: HttpProvider],
+        IpcProvider: [Function: IpcProvider] },
+     _provider:
+      HttpProvider {
+        withCredentials: false,
+        timeout: 0,
+        headers: undefined,
+        agent: undefined,
+        connected: false,
+        host:
+         'https://mainnet.infura.io/v3/ec21762a0e8c4cb8aa08fcfb4a2e2dea',
+        httpsAgent: [Agent] },
+     setProvider: [Function],
+     setRequestManager: [Function],
+     BatchRequest: [Function: bound Batch],
+     extend:
+      { [Function: ex]
+        formatters: [Object],
+        utils: [Object],
+        Method: [Function: Method] },
+     net:
+      Net {
+        currentProvider: [Getter/Setter],
+        _requestManager: [RequestManager],
+        givenProvider: null,
+        providers: [Object],
+        _provider: [HttpProvider],
+        setProvider: [Function],
+        setRequestManager: [Function],
+        BatchRequest: [Function: bound Batch],
+        extend: [Function],
+        getId: [Function],
+        isListening: [Function],
+        getPeerCount: [Function] },
+     subscribe: [Function],
+     getVersion:
+      { [Function: send]
+        method: [Method],
+        request: [Function: bound ],
+        call: 'shh_version' },
+     getInfo:
+      { [Function: send]
+        method: [Method],
+        request: [Function: bound ],
+        call: 'shh_info' },
+     setMaxMessageSize:
+      { [Function: send]
+        method: [Method],
+        request: [Function: bound ],
+        call: 'shh_setMaxMessageSize' },
+     setMinPoW:
+      { [Function: send]
+        method: [Method],
+        request: [Function: bound ],
+        call: 'shh_setMinPoW' },
+     markTrustedPeer:
+      { [Function: send]
+        method: [Method],
+        request: [Function: bound ],
+        call: 'shh_markTrustedPeer' },
+     newKeyPair:
+      { [Function: send]
+        method: [Method],
+        request: [Function: bound ],
+        call: 'shh_newKeyPair' },
+     addPrivateKey:
+      { [Function: send]
+        method: [Method],
+        request: [Function: bound ],
+        call: 'shh_addPrivateKey' },
+     deleteKeyPair:
+      { [Function: send]
+        method: [Method],
+        request: [Function: bound ],
+        call: 'shh_deleteKeyPair' },
+     hasKeyPair:
+      { [Function: send]
+        method: [Method],
+        request: [Function: bound ],
+        call: 'shh_hasKeyPair' },
+     getPublicKey:
+      { [Function: send]
+        method: [Method],
+        request: [Function: bound ],
+        call: 'shh_getPublicKey' },
+     getPrivateKey:
+      { [Function: send]
+        method: [Method],
+        request: [Function: bound ],
+        call: 'shh_getPrivateKey' },
+     newSymKey:
+      { [Function: send]
+        method: [Method],
+        request: [Function: bound ],
+        call: 'shh_newSymKey' },
+     addSymKey:
+      { [Function: send]
+        method: [Method],
+        request: [Function: bound ],
+        call: 'shh_addSymKey' },
+     generateSymKeyFromPassword:
+      { [Function: send]
+        method: [Method],
+        request: [Function: bound ],
+        call: 'shh_generateSymKeyFromPassword' },
+     hasSymKey:
+      { [Function: send]
+        method: [Method],
+        request: [Function: bound ],
+        call: 'shh_hasSymKey' },
+     getSymKey:
+      { [Function: send]
+        method: [Method],
+        request: [Function: bound ],
+        call: 'shh_getSymKey' },
+     deleteSymKey:
+      { [Function: send]
+        method: [Method],
+        request: [Function: bound ],
+        call: 'shh_deleteSymKey' },
+     newMessageFilter:
+      { [Function: send]
+        method: [Method],
+        request: [Function: bound ],
+        call: 'shh_newMessageFilter' },
+     getFilterMessages:
+      { [Function: send]
+        method: [Method],
+        request: [Function: bound ],
+        call: 'shh_getFilterMessages' },
+     deleteMessageFilter:
+      { [Function: send]
+        method: [Method],
+        request: [Function: bound ],
+        call: 'shh_deleteMessageFilter' },
+     post:
+      { [Function: send]
+        method: [Method],
+        request: [Function: bound ],
+        call: 'shh_post' },
+     unsubscribe:
+      { [Function: send]
+        method: [Method],
+        request: [Function: bound ],
+        call: 'shh_unsubscribe' } },
+  bzz:
+   Bzz {
+     givenProvider: null,
+     currentProvider: null,
+     isAvailable: [Function],
+     upload: [Function],
+     download: [Function] } }
+> let contract = new web3.eth.Contract(abi2, contractAddress)
+undefined
+> contract
+Contract {
+  setProvider: [Function],
+  currentProvider: [Getter/Setter],
+  _requestManager:
+   RequestManager {
+     provider:
+      HttpProvider {
+        withCredentials: false,
+        timeout: 0,
+        headers: undefined,
+        agent: undefined,
+        connected: false,
+        host:
+         'https://mainnet.infura.io/v3/ec21762a0e8c4cb8aa08fcfb4a2e2dea',
+        httpsAgent: [Agent] },
+     providers:
+      { WebsocketProvider: [Function: WebsocketProvider],
+        HttpProvider: [Function: HttpProvider],
+        IpcProvider: [Function: IpcProvider] },
+     subscriptions: Map {} },
+  givenProvider: null,
+  providers:
+   { WebsocketProvider: [Function: WebsocketProvider],
+     HttpProvider: [Function: HttpProvider],
+     IpcProvider: [Function: IpcProvider] },
+  _provider:
+   HttpProvider {
+     withCredentials: false,
+     timeout: 0,
+     headers: undefined,
+     agent: undefined,
+     connected: false,
+     host:
+      'https://mainnet.infura.io/v3/ec21762a0e8c4cb8aa08fcfb4a2e2dea',
+     httpsAgent:
+      Agent {
+        domain: [Domain],
+        _events: [Object],
+        _eventsCount: 1,
+        _maxListeners: undefined,
+        defaultPort: 443,
+        protocol: 'https:',
+        options: [Object],
+        requests: {},
+        sockets: {},
+        freeSockets: {},
+        keepAliveMsecs: 1000,
+        keepAlive: true,
+        maxSockets: Infinity,
+        maxFreeSockets: 256,
+        maxCachedSessions: 100,
+        _sessionCache: [Object] } },
+  setRequestManager: [Function],
+  BatchRequest: [Function: bound Batch],
+  extend:
+   { [Function: ex]
+     formatters:
+      { inputDefaultBlockNumberFormatter: [Function: inputDefaultBlockNumberFormatter],
+        inputBlockNumberFormatter: [Function: inputBlockNumberFormatter],
+        inputCallFormatter: [Function: inputCallFormatter],
+        inputTransactionFormatter: [Function: inputTransactionFormatter],
+        inputAddressFormatter: [Function: inputAddressFormatter],
+        inputPostFormatter: [Function: inputPostFormatter],
+        inputLogFormatter: [Function: inputLogFormatter],
+        inputSignFormatter: [Function: inputSignFormatter],
+        inputStorageKeysFormatter: [Function: inputStorageKeysFormatter],
+        outputProofFormatter: [Function: outputProofFormatter],
+        outputBigNumberFormatter: [Function: outputBigNumberFormatter],
+        outputTransactionFormatter: [Function: outputTransactionFormatter],
+        outputTransactionReceiptFormatter: [Function: outputTransactionReceiptFormatter],
+        outputBlockFormatter: [Function: outputBlockFormatter],
+        outputLogFormatter: [Function: outputLogFormatter],
+        outputPostFormatter: [Function: outputPostFormatter],
+        outputSyncingFormatter: [Function: outputSyncingFormatter] },
+     utils:
+      { _fireError: [Function: _fireError],
+        _jsonInterfaceMethodToString: [Function: _jsonInterfaceMethodToString],
+        _flattenTypes: [Function: _flattenTypes],
+        randomHex: [Function: randomHex],
+        _: [Function],
+        BN: [Function],
+        isBN: [Function: isBN],
+        isBigNumber: [Function: isBigNumber],
+        isHex: [Function: isHex],
+        isHexStrict: [Function: isHexStrict],
+        sha3: [Function],
+        sha3Raw: [Function: sha3Raw],
+        keccak256: [Function],
+        soliditySha3: [Function: soliditySha3],
+        soliditySha3Raw: [Function: soliditySha3Raw],
+        encodePacked: [Function: encodePacked],
+        isAddress: [Function: isAddress],
+        checkAddressChecksum: [Function: checkAddressChecksum],
+        toChecksumAddress: [Function: toChecksumAddress],
+        toHex: [Function: toHex],
+        toBN: [Function: toBN],
+        bytesToHex: [Function: bytesToHex],
+        hexToBytes: [Function: hexToBytes],
+        hexToNumberString: [Function: hexToNumberString],
+        hexToNumber: [Function: hexToNumber],
+        toDecimal: [Function: hexToNumber],
+        numberToHex: [Function: numberToHex],
+        fromDecimal: [Function: numberToHex],
+        hexToUtf8: [Function: hexToUtf8],
+        hexToString: [Function: hexToUtf8],
+        toUtf8: [Function: hexToUtf8],
+        stripHexPrefix: [Function: stripHexPrefix],
+        utf8ToHex: [Function: utf8ToHex],
+        stringToHex: [Function: utf8ToHex],
+        fromUtf8: [Function: utf8ToHex],
+        hexToAscii: [Function: hexToAscii],
+        toAscii: [Function: hexToAscii],
+        asciiToHex: [Function: asciiToHex],
+        fromAscii: [Function: asciiToHex],
+        unitMap: [Object],
+        toWei: [Function: toWei],
+        fromWei: [Function: fromWei],
+        padLeft: [Function: leftPad],
+        leftPad: [Function: leftPad],
+        padRight: [Function: rightPad],
+        rightPad: [Function: rightPad],
+        toTwosComplement: [Function: toTwosComplement],
+        isBloom: [Function: isBloom],
+        isUserEthereumAddressInBloom: [Function: isUserEthereumAddressInBloom],
+        isContractAddressInBloom: [Function: isContractAddressInBloom],
+        isTopic: [Function: isTopic],
+        isTopicInBloom: [Function: isTopicInBloom],
+        isInBloom: [Function: isInBloom],
+        compareBlockNumbers: [Function: compareBlockNumbers] },
+     Method: [Function: Method] },
+  clearSubscriptions: [Function],
+  options: { address: [Getter/Setter], jsonInterface: [Getter/Setter] },
+  handleRevert: [Getter/Setter],
+  defaultCommon: [Getter/Setter],
+  defaultHardfork: [Getter/Setter],
+  defaultChain: [Getter/Setter],
+  transactionPollingTimeout: [Getter/Setter],
+  transactionConfirmationBlocks: [Getter/Setter],
+  transactionBlockTimeout: [Getter/Setter],
+  defaultAccount: [Getter/Setter],
+  defaultBlock: [Getter/Setter],
+  methods:
+   { batFundDeposit: [Function: bound _createTxObject],
+     '0x01a7a8c0': [Function: bound _createTxObject],
+     'batFundDeposit()': [Function: bound _createTxObject],
+     name: [Function: bound _createTxObject],
+     '0x06fdde03': [Function: bound _createTxObject],
+     'name()': [Function: bound _createTxObject],
+     approve: [Function: bound _createTxObject],
+     '0x095ea7b3': [Function: bound _createTxObject],
+     'approve(address,uint256)': [Function: bound _createTxObject],
+     totalSupply: [Function: bound _createTxObject],
+     '0x18160ddd': [Function: bound _createTxObject],
+     'totalSupply()': [Function: bound _createTxObject],
+     batFund: [Function: bound _createTxObject],
+     '0x229a4978': [Function: bound _createTxObject],
+     'batFund()': [Function: bound _createTxObject],
+     transferFrom: [Function: bound _createTxObject],
+     '0x23b872dd': [Function: bound _createTxObject],
+     'transferFrom(address,address,uint256)': [Function: bound _createTxObject],
+     decimals: [Function: bound _createTxObject],
+     '0x313ce567': [Function: bound _createTxObject],
+     'decimals()': [Function: bound _createTxObject],
+     tokenExchangeRate: [Function: bound _createTxObject],
+     '0x4172d080': [Function: bound _createTxObject],
+     'tokenExchangeRate()': [Function: bound _createTxObject],
+     finalize: [Function: bound _createTxObject],
+     '0x4bb278f3': [Function: bound _createTxObject],
+     'finalize()': [Function: bound _createTxObject],
+     version: [Function: bound _createTxObject],
+     '0x54fd4d50': [Function: bound _createTxObject],
+     'version()': [Function: bound _createTxObject],
+     refund: [Function: bound _createTxObject],
+     '0x590e1ae3': [Function: bound _createTxObject],
+     'refund()': [Function: bound _createTxObject],
+     tokenCreationCap: [Function: bound _createTxObject],
+     '0x6f7920fd': [Function: bound _createTxObject],
+     'tokenCreationCap()': [Function: bound _createTxObject],
+     balanceOf: [Function: bound _createTxObject],
+     '0x70a08231': [Function: bound _createTxObject],
+     'balanceOf(address)': [Function: bound _createTxObject],
+     isFinalized: [Function: bound _createTxObject],
+     '0x8d4e4083': [Function: bound _createTxObject],
+     'isFinalized()': [Function: bound _createTxObject],
+     fundingEndBlock: [Function: bound _createTxObject],
+     '0x91b43d13': [Function: bound _createTxObject],
+     'fundingEndBlock()': [Function: bound _createTxObject],
+     symbol: [Function: bound _createTxObject],
+     '0x95d89b41': [Function: bound _createTxObject],
+     'symbol()': [Function: bound _createTxObject],
+     ethFundDeposit: [Function: bound _createTxObject],
+     '0xa81c3bdf': [Function: bound _createTxObject],
+     'ethFundDeposit()': [Function: bound _createTxObject],
+     transfer: [Function: bound _createTxObject],
+     '0xa9059cbb': [Function: bound _createTxObject],
+     'transfer(address,uint256)': [Function: bound _createTxObject],
+     createTokens: [Function: bound _createTxObject],
+     '0xb4427263': [Function: bound _createTxObject],
+     'createTokens()': [Function: bound _createTxObject],
+     tokenCreationMin: [Function: bound _createTxObject],
+     '0xc039daf6': [Function: bound _createTxObject],
+     'tokenCreationMin()': [Function: bound _createTxObject],
+     fundingStartBlock: [Function: bound _createTxObject],
+     '0xd648a647': [Function: bound _createTxObject],
+     'fundingStartBlock()': [Function: bound _createTxObject],
+     allowance: [Function: bound _createTxObject],
+     '0xdd62ed3e': [Function: bound _createTxObject],
+     'allowance(address,address)': [Function: bound _createTxObject] },
+  events:
+   { LogRefund: [Function: bound ],
+     '0xb6c0eca8138e097d71e2dd31e19a1266487f0553f170b7260ffe68bcbe9ff8a7': [Function: bound ],
+     'LogRefund(address,uint256)': [Function: bound ],
+     CreateBAT: [Function: bound ],
+     '0xb33527d2e0d30b7aece2c5e82927985866c1b75173d671c14f4457bf67aa6910': [Function: bound ],
+     'CreateBAT(address,uint256)': [Function: bound ],
+     Transfer: [Function: bound ],
+     '0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef': [Function: bound ],
+     'Transfer(address,address,uint256)': [Function: bound ],
+     Approval: [Function: bound ],
+     '0x8c5be1e5ebec7d5bd14f71427d1e84f3dd0314c0f7b2291e5b200ac8c7c3b925': [Function: bound ],
+     'Approval(address,address,uint256)': [Function: bound ],
+     allEvents: [Function: bound ] },
+  _address: '0x0D8775F648430679A709E98d2b0Cb6250d2887EF',
+  _jsonInterface:
+   [ { constant: true,
+       inputs: [],
+       name: 'batFundDeposit',
+       outputs: [Array],
+       payable: false,
+       type: 'function',
+       signature: '0x01a7a8c0' },
+     { constant: true,
+       inputs: [],
+       name: 'name',
+       outputs: [Array],
+       payable: false,
+       type: 'function',
+       signature: '0x06fdde03' },
+     { constant: false,
+       inputs: [Array],
+       name: 'approve',
+       outputs: [Array],
+       payable: false,
+       type: 'function',
+       signature: '0x095ea7b3' },
+     { constant: true,
+       inputs: [],
+       name: 'totalSupply',
+       outputs: [Array],
+       payable: false,
+       type: 'function',
+       signature: '0x18160ddd' },
+     { constant: true,
+       inputs: [],
+       name: 'batFund',
+       outputs: [Array],
+       payable: false,
+       type: 'function',
+       signature: '0x229a4978' },
+     { constant: false,
+       inputs: [Array],
+       name: 'transferFrom',
+       outputs: [Array],
+       payable: false,
+       type: 'function',
+       signature: '0x23b872dd' },
+     { constant: true,
+       inputs: [],
+       name: 'decimals',
+       outputs: [Array],
+       payable: false,
+       type: 'function',
+       signature: '0x313ce567' },
+     { constant: true,
+       inputs: [],
+       name: 'tokenExchangeRate',
+       outputs: [Array],
+       payable: false,
+       type: 'function',
+       signature: '0x4172d080' },
+     { constant: false,
+       inputs: [],
+       name: 'finalize',
+       outputs: [],
+       payable: false,
+       type: 'function',
+       signature: '0x4bb278f3' },
+     { constant: true,
+       inputs: [],
+       name: 'version',
+       outputs: [Array],
+       payable: false,
+       type: 'function',
+       signature: '0x54fd4d50' },
+     { constant: false,
+       inputs: [],
+       name: 'refund',
+       outputs: [],
+       payable: false,
+       type: 'function',
+       signature: '0x590e1ae3' },
+     { constant: true,
+       inputs: [],
+       name: 'tokenCreationCap',
+       outputs: [Array],
+       payable: false,
+       type: 'function',
+       signature: '0x6f7920fd' },
+     { constant: true,
+       inputs: [Array],
+       name: 'balanceOf',
+       outputs: [Array],
+       payable: false,
+       type: 'function',
+       signature: '0x70a08231' },
+     { constant: true,
+       inputs: [],
+       name: 'isFinalized',
+       outputs: [Array],
+       payable: false,
+       type: 'function',
+       signature: '0x8d4e4083' },
+     { constant: true,
+       inputs: [],
+       name: 'fundingEndBlock',
+       outputs: [Array],
+       payable: false,
+       type: 'function',
+       signature: '0x91b43d13' },
+     { constant: true,
+       inputs: [],
+       name: 'symbol',
+       outputs: [Array],
+       payable: false,
+       type: 'function',
+       signature: '0x95d89b41' },
+     { constant: true,
+       inputs: [],
+       name: 'ethFundDeposit',
+       outputs: [Array],
+       payable: false,
+       type: 'function',
+       signature: '0xa81c3bdf' },
+     { constant: false,
+       inputs: [Array],
+       name: 'transfer',
+       outputs: [Array],
+       payable: false,
+       type: 'function',
+       signature: '0xa9059cbb' },
+     { constant: false,
+       inputs: [],
+       name: 'createTokens',
+       outputs: [],
+       payable: true,
+       type: 'function',
+       signature: '0xb4427263' },
+     { constant: true,
+       inputs: [],
+       name: 'tokenCreationMin',
+       outputs: [Array],
+       payable: false,
+       type: 'function',
+       signature: '0xc039daf6' },
+     { constant: true,
+       inputs: [],
+       name: 'fundingStartBlock',
+       outputs: [Array],
+       payable: false,
+       type: 'function',
+       signature: '0xd648a647' },
+     { constant: true,
+       inputs: [Array],
+       name: 'allowance',
+       outputs: [Array],
+       payable: false,
+       type: 'function',
+       signature: '0xdd62ed3e' },
+     { inputs: [Array],
+       payable: false,
+       type: 'constructor',
+       constant: undefined },
+     { anonymous: false,
+       inputs: [Array],
+       name: 'LogRefund',
+       type: 'event',
+       constant: undefined,
+       payable: undefined,
+       signature:
+        '0xb6c0eca8138e097d71e2dd31e19a1266487f0553f170b7260ffe68bcbe9ff8a7' },
+     { anonymous: false,
+       inputs: [Array],
+       name: 'CreateBAT',
+       type: 'event',
+       constant: undefined,
+       payable: undefined,
+       signature:
+        '0xb33527d2e0d30b7aece2c5e82927985866c1b75173d671c14f4457bf67aa6910' },
+     { anonymous: false,
+       inputs: [Array],
+       name: 'Transfer',
+       type: 'event',
+       constant: undefined,
+       payable: undefined,
+       signature:
+        '0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef' },
+     { anonymous: false,
+       inputs: [Array],
+       name: 'Approval',
+       type: 'event',
+       constant: undefined,
+       payable: undefined,
+       signature:
+        '0x8c5be1e5ebec7d5bd14f71427d1e84f3dd0314c0f7b2291e5b200ac8c7c3b925' } ] }
+> contract.methods
+{ batFundDeposit: [Function: bound _createTxObject],
+  '0x01a7a8c0': [Function: bound _createTxObject],
+  'batFundDeposit()': [Function: bound _createTxObject],
+  name: [Function: bound _createTxObject],
+  '0x06fdde03': [Function: bound _createTxObject],
+  'name()': [Function: bound _createTxObject],
+  approve: [Function: bound _createTxObject],
+  '0x095ea7b3': [Function: bound _createTxObject],
+  'approve(address,uint256)': [Function: bound _createTxObject],
+  totalSupply: [Function: bound _createTxObject],
+  '0x18160ddd': [Function: bound _createTxObject],
+  'totalSupply()': [Function: bound _createTxObject],
+  batFund: [Function: bound _createTxObject],
+  '0x229a4978': [Function: bound _createTxObject],
+  'batFund()': [Function: bound _createTxObject],
+  transferFrom: [Function: bound _createTxObject],
+  '0x23b872dd': [Function: bound _createTxObject],
+  'transferFrom(address,address,uint256)': [Function: bound _createTxObject],
+  decimals: [Function: bound _createTxObject],
+  '0x313ce567': [Function: bound _createTxObject],
+  'decimals()': [Function: bound _createTxObject],
+  tokenExchangeRate: [Function: bound _createTxObject],
+  '0x4172d080': [Function: bound _createTxObject],
+  'tokenExchangeRate()': [Function: bound _createTxObject],
+  finalize: [Function: bound _createTxObject],
+  '0x4bb278f3': [Function: bound _createTxObject],
+  'finalize()': [Function: bound _createTxObject],
+  version: [Function: bound _createTxObject],
+  '0x54fd4d50': [Function: bound _createTxObject],
+  'version()': [Function: bound _createTxObject],
+  refund: [Function: bound _createTxObject],
+  '0x590e1ae3': [Function: bound _createTxObject],
+  'refund()': [Function: bound _createTxObject],
+  tokenCreationCap: [Function: bound _createTxObject],
+  '0x6f7920fd': [Function: bound _createTxObject],
+  'tokenCreationCap()': [Function: bound _createTxObject],
+  balanceOf: [Function: bound _createTxObject],
+  '0x70a08231': [Function: bound _createTxObject],
+  'balanceOf(address)': [Function: bound _createTxObject],
+  isFinalized: [Function: bound _createTxObject],
+  '0x8d4e4083': [Function: bound _createTxObject],
+  'isFinalized()': [Function: bound _createTxObject],
+  fundingEndBlock: [Function: bound _createTxObject],
+  '0x91b43d13': [Function: bound _createTxObject],
+  'fundingEndBlock()': [Function: bound _createTxObject],
+  symbol: [Function: bound _createTxObject],
+  '0x95d89b41': [Function: bound _createTxObject],
+  'symbol()': [Function: bound _createTxObject],
+  ethFundDeposit: [Function: bound _createTxObject],
+  '0xa81c3bdf': [Function: bound _createTxObject],
+  'ethFundDeposit()': [Function: bound _createTxObject],
+  transfer: [Function: bound _createTxObject],
+  '0xa9059cbb': [Function: bound _createTxObject],
+  'transfer(address,uint256)': [Function: bound _createTxObject],
+  createTokens: [Function: bound _createTxObject],
+  '0xb4427263': [Function: bound _createTxObject],
+  'createTokens()': [Function: bound _createTxObject],
+  tokenCreationMin: [Function: bound _createTxObject],
+  '0xc039daf6': [Function: bound _createTxObject],
+  'tokenCreationMin()': [Function: bound _createTxObject],
+  fundingStartBlock: [Function: bound _createTxObject],
+  '0xd648a647': [Function: bound _createTxObject],
+  'fundingStartBlock()': [Function: bound _createTxObject],
+  allowance: [Function: bound _createTxObject],
+  '0xdd62ed3e': [Function: bound _createTxObject],
+  'allowance(address,address)': [Function: bound _createTxObject] }
+> contract.methods.name()
+{ call:
+   { [Function: bound _executeMethod] request: [Function: bound _executeMethod] },
+  send:
+   { [Function: bound _executeMethod] request: [Function: bound _executeMethod] },
+  encodeABI: [Function: bound _encodeMethodABI],
+  estimateGas: [Function: bound _executeMethod],
+  arguments: [],
+  _method:
+   { constant: true,
+     inputs: [],
+     name: 'name',
+     outputs: [ [Object] ],
+     payable: false,
+     type: 'function',
+     signature: '0x06fdde03' },
+  _parent:
+   Contract {
+     setProvider: [Function],
+     currentProvider: [Getter/Setter],
+     _requestManager:
+      RequestManager {
+        provider: [HttpProvider],
+        providers: [Object],
+        subscriptions: Map {} },
+     givenProvider: null,
+     providers:
+      { WebsocketProvider: [Function: WebsocketProvider],
+        HttpProvider: [Function: HttpProvider],
+        IpcProvider: [Function: IpcProvider] },
+     _provider:
+      HttpProvider {
+        withCredentials: false,
+        timeout: 0,
+        headers: undefined,
+        agent: undefined,
+        connected: false,
+        host:
+         'https://mainnet.infura.io/v3/ec21762a0e8c4cb8aa08fcfb4a2e2dea',
+        httpsAgent: [Agent] },
+     setRequestManager: [Function],
+     BatchRequest: [Function: bound Batch],
+     extend:
+      { [Function: ex]
+        formatters: [Object],
+        utils: [Object],
+        Method: [Function: Method] },
+     clearSubscriptions: [Function],
+     options: { address: [Getter/Setter], jsonInterface: [Getter/Setter] },
+     handleRevert: [Getter/Setter],
+     defaultCommon: [Getter/Setter],
+     defaultHardfork: [Getter/Setter],
+     defaultChain: [Getter/Setter],
+     transactionPollingTimeout: [Getter/Setter],
+     transactionConfirmationBlocks: [Getter/Setter],
+     transactionBlockTimeout: [Getter/Setter],
+     defaultAccount: [Getter/Setter],
+     defaultBlock: [Getter/Setter],
+     methods:
+      { batFundDeposit: [Function: bound _createTxObject],
+        '0x01a7a8c0': [Function: bound _createTxObject],
+        'batFundDeposit()': [Function: bound _createTxObject],
+        name: [Function: bound _createTxObject],
+        '0x06fdde03': [Function: bound _createTxObject],
+        'name()': [Function: bound _createTxObject],
+        approve: [Function: bound _createTxObject],
+        '0x095ea7b3': [Function: bound _createTxObject],
+        'approve(address,uint256)': [Function: bound _createTxObject],
+        totalSupply: [Function: bound _createTxObject],
+        '0x18160ddd': [Function: bound _createTxObject],
+        'totalSupply()': [Function: bound _createTxObject],
+        batFund: [Function: bound _createTxObject],
+        '0x229a4978': [Function: bound _createTxObject],
+        'batFund()': [Function: bound _createTxObject],
+        transferFrom: [Function: bound _createTxObject],
+        '0x23b872dd': [Function: bound _createTxObject],
+        'transferFrom(address,address,uint256)': [Function: bound _createTxObject],
+        decimals: [Function: bound _createTxObject],
+        '0x313ce567': [Function: bound _createTxObject],
+        'decimals()': [Function: bound _createTxObject],
+        tokenExchangeRate: [Function: bound _createTxObject],
+        '0x4172d080': [Function: bound _createTxObject],
+        'tokenExchangeRate()': [Function: bound _createTxObject],
+        finalize: [Function: bound _createTxObject],
+        '0x4bb278f3': [Function: bound _createTxObject],
+        'finalize()': [Function: bound _createTxObject],
+        version: [Function: bound _createTxObject],
+        '0x54fd4d50': [Function: bound _createTxObject],
+        'version()': [Function: bound _createTxObject],
+        refund: [Function: bound _createTxObject],
+        '0x590e1ae3': [Function: bound _createTxObject],
+        'refund()': [Function: bound _createTxObject],
+        tokenCreationCap: [Function: bound _createTxObject],
+        '0x6f7920fd': [Function: bound _createTxObject],
+        'tokenCreationCap()': [Function: bound _createTxObject],
+        balanceOf: [Function: bound _createTxObject],
+        '0x70a08231': [Function: bound _createTxObject],
+        'balanceOf(address)': [Function: bound _createTxObject],
+        isFinalized: [Function: bound _createTxObject],
+        '0x8d4e4083': [Function: bound _createTxObject],
+        'isFinalized()': [Function: bound _createTxObject],
+        fundingEndBlock: [Function: bound _createTxObject],
+        '0x91b43d13': [Function: bound _createTxObject],
+        'fundingEndBlock()': [Function: bound _createTxObject],
+        symbol: [Function: bound _createTxObject],
+        '0x95d89b41': [Function: bound _createTxObject],
+        'symbol()': [Function: bound _createTxObject],
+        ethFundDeposit: [Function: bound _createTxObject],
+        '0xa81c3bdf': [Function: bound _createTxObject],
+        'ethFundDeposit()': [Function: bound _createTxObject],
+        transfer: [Function: bound _createTxObject],
+        '0xa9059cbb': [Function: bound _createTxObject],
+        'transfer(address,uint256)': [Function: bound _createTxObject],
+        createTokens: [Function: bound _createTxObject],
+        '0xb4427263': [Function: bound _createTxObject],
+        'createTokens()': [Function: bound _createTxObject],
+        tokenCreationMin: [Function: bound _createTxObject],
+        '0xc039daf6': [Function: bound _createTxObject],
+        'tokenCreationMin()': [Function: bound _createTxObject],
+        fundingStartBlock: [Function: bound _createTxObject],
+        '0xd648a647': [Function: bound _createTxObject],
+        'fundingStartBlock()': [Function: bound _createTxObject],
+        allowance: [Function: bound _createTxObject],
+        '0xdd62ed3e': [Function: bound _createTxObject],
+        'allowance(address,address)': [Function: bound _createTxObject] },
+     events:
+      { LogRefund: [Function: bound ],
+        '0xb6c0eca8138e097d71e2dd31e19a1266487f0553f170b7260ffe68bcbe9ff8a7': [Function: bound ],
+        'LogRefund(address,uint256)': [Function: bound ],
+        CreateBAT: [Function: bound ],
+        '0xb33527d2e0d30b7aece2c5e82927985866c1b75173d671c14f4457bf67aa6910': [Function: bound ],
+        'CreateBAT(address,uint256)': [Function: bound ],
+        Transfer: [Function: bound ],
+        '0xddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef': [Function: bound ],
+        'Transfer(address,address,uint256)': [Function: bound ],
+        Approval: [Function: bound ],
+        '0x8c5be1e5ebec7d5bd14f71427d1e84f3dd0314c0f7b2291e5b200ac8c7c3b925': [Function: bound ],
+        'Approval(address,address,uint256)': [Function: bound ],
+        allEvents: [Function: bound ] },
+     _address: '0x0D8775F648430679A709E98d2b0Cb6250d2887EF',
+     _jsonInterface:
+      [ [Object],
+        [Object],
+        [Object],
+        [Object],
+        [Object],
+        [Object],
+        [Object],
+        [Object],
+        [Object],
+        [Object],
+        [Object],
+        [Object],
+        [Object],
+        [Object],
+        [Object],
+        [Object],
+        [Object],
+        [Object],
+        [Object],
+        [Object],
+        [Object],
+        [Object],
+        [Object],
+        [Object],
+        [Object],
+        [Object],
+        [Object] ] },
+  _ethAccounts:
+   Accounts {
+     currentProvider: [Getter/Setter],
+     _requestManager:
+      RequestManager {
+        provider: [HttpProvider],
+        providers: [Object],
+        subscriptions: Map {} },
+     givenProvider: null,
+     providers:
+      { WebsocketProvider: [Function: WebsocketProvider],
+        HttpProvider: [Function: HttpProvider],
+        IpcProvider: [Function: IpcProvider] },
+     _provider:
+      HttpProvider {
+        withCredentials: false,
+        timeout: 0,
+        headers: undefined,
+        agent: undefined,
+        connected: false,
+        host:
+         'https://mainnet.infura.io/v3/ec21762a0e8c4cb8aa08fcfb4a2e2dea',
+        httpsAgent: [Agent] },
+     setProvider: [Function],
+     setRequestManager: [Function],
+     _ethereumCall:
+      { getNetworkId: [Function],
+        getChainId: [Function],
+        getGasPrice: [Function],
+        getTransactionCount: [Function] },
+     wallet:
+      Wallet {
+        _accounts: [Circular],
+        length: 0,
+        defaultKeyName: 'web3js_wallet' } } }
+> contract.methods.name().call( (err, result) => { console.log(result); }
+... ;
+Thrown:
+contract.methods.name().call( (err, result) => { console.log(result); }
+                                                                      ^
+
+SyntaxError: missing ) after argument list
+> contract.methods.name().call( (err, result) => { console.log(result); })
+Promise {
+  <pending>,
+  domain:
+   Domain {
+     domain: null,
+     _events:
+      [Object: null prototype] {
+        removeListener: [Function: updateExceptionCapture],
+        newListener: [Function: updateExceptionCapture],
+        error: [Function: debugDomainError] },
+     _eventsCount: 3,
+     _maxListeners: undefined,
+     members: [],
+     [Symbol(kWeak)]: WeakReference {} } }
+> Basic Attention Token
+
+> contract.methods.symbol().call( (err, result) => console.log(result); })
+Thrown:
+contract.methods.symbol().call( (err, result) => console.log(result); })
+                                                                   ^
+
+SyntaxError: missing ) after argument list
+> 
+> contract.methods.symbol().call( (err, result) => { console.log(result); })
+Promise {
+  <pending>,
+  domain:
+   Domain {
+     domain: null,
+     _events:
+      [Object: null prototype] {
+        removeListener: [Function: updateExceptionCapture],
+        newListener: [Function: updateExceptionCapture],
+        error: [Function: debugDomainError] },
+     _eventsCount: 3,
+     _maxListeners: undefined,
+     members: [],
+     [Symbol(kWeak)]: WeakReference {} } }
+> BAT
+
+> contract.methods.totalSupply().call( (err, result) => { console.log( result); } )
+Promise {
+  <pending>,
+  domain:
+   Domain {
+     domain: null,
+     _events:
+      [Object: null prototype] {
+        removeListener: [Function: updateExceptionCapture],
+        newListener: [Function: updateExceptionCapture],
+        error: [Function: debugDomainError] },
+     _eventsCount: 3,
+     _maxListeners: undefined,
+     members: [],
+     [Symbol(kWeak)]: WeakReference {} } }
+> 1500000000000000000000000000
+
