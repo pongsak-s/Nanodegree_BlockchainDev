@@ -16,11 +16,11 @@ web3.eth.getBalance(receivingAddress).then(console.log);
 
 // 4. create eth raw transaction
 var rawTransaction = {
-	nonce: web3.utils.toHex(2),
+	nonce: web3.utils.toHex(4),
 	to: receivingAddress,
 	gasPrice: web3.utils.toHex(20000000),
 	gasLimit: web3.utils.toHex(30000),
-	value: web3.utils.toHex(9999999579919999900),
+	value: web3.utils.toHex(999999579919999900),
 	data: web3.utils.toHex("")
 }
 
