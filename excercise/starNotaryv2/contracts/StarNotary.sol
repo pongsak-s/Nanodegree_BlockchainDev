@@ -10,12 +10,18 @@ contract StarNotary is ERC721 {
 	}
 
 
+
 	mapping(uint256 => Star) public tokenIdToStarInfo;
 	mapping(uint256 => uint256) public starForSale;
 
 	constructor() ERC721("StarNotaryV2","SVT") { 
 		// do nothing
 	}
+
+    //for testing only
+    function getMsgSender() public view returns (address) {
+        return msg.sender;
+    }
 
 
     function createStar(string memory _name, uint256 _tokenId) public { 
@@ -41,11 +47,14 @@ contract StarNotary is ERC721 {
     	uint256 starCost = starForSale[_tokenId];
     	address starOwner = ownerOf(_tokenId);
 
+        address payable starOwnerAddressPayable = payable(starOwner);
+        address payable starBuyerAddressPayable = payable(msg.sender);
+
     	require(msg.value >= starCost, "you need to have enough Ether");
-    	transferFrom(starOwner, msg.sender, _tokenId);
-    	address payable ownerAddressPayable = payable(starOwner);
-    	// address payable ownerAddressPayable = _make_payable(starOwner);
-    	ownerAddressPayable.transfer(starCost);
+    	_transfer(starOwnerAddressPayable, starBuyerAddressPayable, _tokenId);
+    	
+        
+    	starOwnerAddressPayable.transfer(starCost);
     	if(msg.value > starCost){
     		address payable senderAddressPayable = payable(msg.sender);
     		senderAddressPayable.transfer(msg.value - starCost);
