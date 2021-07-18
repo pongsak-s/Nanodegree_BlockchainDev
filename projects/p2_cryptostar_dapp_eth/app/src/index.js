@@ -37,8 +37,25 @@ const App = {
     const id = document.getElementById("starId").value;
     await createStar(name, id).send({from: this.account});
     App.setStatus("New Star Owner is " + this.account + ".");
-  }
+  },
 
+
+
+  lookUp: async function() {
+
+    const tokenid = document.getElementById("lookid").value;
+    console.log('tokenid', tokenid);
+    
+    let icontract = this.meta;
+    icontract.methods
+      .lookUptokenIdToStarInfo(tokenid)
+      .call( {from: this.account})
+      .then( (result) => {
+        console.log('result', result);
+        const lookresult = document.getElementById("lookresult");
+        lookresult.innerHTML = result;
+      }); 
+  }
 };
 
 window.App = App;
@@ -46,9 +63,12 @@ window.App = App;
 window.addEventListener("load", async function() {
   if (window.ethereum) {
     // use MetaMask's provider
+    console.log('using MetaMask provider');
     App.web3 = new Web3(window.ethereum);
     await window.ethereum.enable(); // get permission to access accounts
+    console.log(await App.web3.eth.getAccounts());
   } else {
+    console.log('using local provider');
     console.warn("No web3 detected. Falling back to http://127.0.0.1:7545. You should remove this fallback when you deploy live",);
     // fallback - use your fallback strategy (local node / hosted node + in-dapp id mgmt / fail)
     App.web3 = new Web3(new Web3.providers.HttpProvider("http://127.0.0.1:7545"),);

@@ -17,3 +17,5 @@ yarn-debug.log*
 yarn-error.log*
 
 **/node_modules
+
+truffle-config.js.bak

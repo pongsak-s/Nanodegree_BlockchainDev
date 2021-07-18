@@ -1,32 +1,9 @@
-/**
- * Use this file to configure your truffle project. It's seeded with some
- * common settings for different networks and features like migrations,
- * compilation and testing. Uncomment the ones you need or modify
- * them to suit your project as necessary.
- *
- * More information about configuration can be found at:
- *
- * truffleframework.com/docs/advanced/configuration
- *
- * To deploy via Infura you'll need a wallet provider (like truffle-hdwallet-provider)
- * to sign your transactions before they're sent to a remote public node. Infura API
- * keys are available for free at: infura.io/register
- *
- *   > > Using Truffle V5 or later? Make sure you install the `web3-one` version.
- *
- *   > > $ npm install truffle-hdwallet-provider@web3-one
- *
- * You'll also need a mnemonic - the twelve word phrase the wallet uses to generate
- * public/private key pairs. If you're publishing your code to GitHub make sure you load this
- * phrase from a file you've .gitignored so it doesn't accidentally become public.
- *
- */
+const HDWalletProvider = require('truffle-hdwallet-provider');
+const infuraKey = "key was here";
 
-// const HDWallet = require('truffle-hdwallet-provider');
-// const infuraKey = "fj4jll3k.....";
-//
-// const fs = require('fs');
-// const mnemonic = fs.readFileSync(".secret").toString().trim();
+const mnemonic = "seed was here";
+
+//UDACITY EXAMINER NOTE: Key and Seed and hided; for test result you can refer to: https://rinkeby.etherscan.io/tx/0xc6a9110052b9d2a8751f059d047a8bd615447fd1f50c35eeed3bd322618b6ed7
 
 module.exports = {
   /**
@@ -51,7 +28,13 @@ module.exports = {
       port: 7545,            // Standard Ethereum port (default: none)
       network_id: "*",       // Any network (default: none)
     },
-
+    
+    rinkeby: {
+      provider: () => new HDWalletProvider(mnemonic, `https://rinkeby.infura.io/v3/${infuraKey}`),
+        network_id: 4,       // rinkeby's id
+        gas: 4500000,        // rinkeby has a lower block limit than mainnet
+        gasPrice: 10000000000
+    },
     // Another network with more advanced options...
     // advanced: {
       // port: 8777,             // Custom port
