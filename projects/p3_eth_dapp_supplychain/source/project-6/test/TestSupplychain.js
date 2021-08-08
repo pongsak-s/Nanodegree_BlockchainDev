@@ -91,6 +91,8 @@ contract('SupplyChain', function(accounts) {
         
 
         // Verify the result set
+
+        assert.equal(1,0, 'error: not implemented');
         
     })    
 
@@ -111,6 +113,8 @@ contract('SupplyChain', function(accounts) {
         
 
         // Verify the result set
+
+        assert.equal(1,0, 'error: not implemented');
         
     })    
 
@@ -131,6 +135,8 @@ contract('SupplyChain', function(accounts) {
         
 
         // Verify the result set
+
+        assert.equal(1,0, 'error: not implemented');
           
     })    
 
@@ -152,6 +158,8 @@ contract('SupplyChain', function(accounts) {
         
 
         // Verify the result set
+
+        assert.equal(1,0, 'error: not implemented');
         
     })    
 
@@ -172,6 +180,8 @@ contract('SupplyChain', function(accounts) {
         
 
         // Verify the result set
+
+        assert.equal(1,0, 'error: not implemented');
               
     })    
 
@@ -192,6 +202,8 @@ contract('SupplyChain', function(accounts) {
         
 
         // Verify the result set
+
+        assert.equal(1,0, 'error: not implemented');
              
     })    
 
@@ -212,6 +224,8 @@ contract('SupplyChain', function(accounts) {
         
 
         // Verify the result set
+
+        assert.equal(1,0, 'error: not implemented');
         
     })    
 
@@ -223,6 +237,8 @@ contract('SupplyChain', function(accounts) {
         
         
         // Verify the result set:
+
+        assert.equal(1,0, 'error: not implemented');
         
     })
 
@@ -234,6 +250,8 @@ contract('SupplyChain', function(accounts) {
         
         
         // Verify the result set:
+
+        assert.equal(1,0, 'error: not implemented');
         
     })
 
