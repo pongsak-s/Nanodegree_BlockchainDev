@@ -221,9 +221,9 @@ contract SupplyChain is FarmerRole, DistributorRole, RetailerRole, ConsumerRole 
 
 
   // Function that allows you to convert an address into a payable address
-  function _make_payable(address x) internal pure returns (address payable) {
-      return address(uint160(x));
-  }
+  // function _make_payable(address x) internal pure returns (address payable) {
+  //     return address(uint160(x));
+  // }
 
   // Define a function 'buyItem' that allows the disributor to mark an item 'Sold'
   // Use the above defined modifiers to check if the item is available for sale, if the buyer has paid enough, 
@@ -244,8 +244,9 @@ contract SupplyChain is FarmerRole, DistributorRole, RetailerRole, ConsumerRole 
     targetItem.distributorID = msg.sender;
 
     // Transfer money to farmer
-    address payable ownerAddressPayable = _make_payable(msg.sender);
-    ownerAddressPayable.transfer(targetItem.productPrice);
+    //address payable ownerAddressPayable = _make_payable(msg.sender);
+    //ownerAddressPayable.transfer(targetItem.productPrice);
+    msg.sender.transfer(targetItem.productPrice);
     
     // emit the appropriate event
     emit Sold(_upc);
@@ -301,7 +302,7 @@ contract SupplyChain is FarmerRole, DistributorRole, RetailerRole, ConsumerRole 
     targetItem.consumerID = msg.sender;
 
     // Emit the appropriate event
-    emit Purchased(_upc)
+    emit Purchased(_upc);
     
   }
 
