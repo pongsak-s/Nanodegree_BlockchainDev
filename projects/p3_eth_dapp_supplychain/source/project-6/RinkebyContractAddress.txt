@@ -1,31 +1,5 @@
-const HDWalletProvider = require('truffle-hdwallet-provider');
-const infuraKey = "key was here";
+https://rinkeby.etherscan.io/address/0x5927745365f6a629f12f05b962e5fc4948dfd75e#code
 
-const mnemonic = "key was here";
-
-module.exports = {
-  networks: {
-    development: {
-      host: "127.0.0.1",
-      port: 8545,
-      network_id: "*" // Match any network id
-    },
-    
-    rinkeby: {
-      provider: () => new HDWalletProvider(mnemonic, `https://rinkeby.infura.io/v3/${infuraKey}`),
-        network_id: 4,       // rinkeby's id
-        gas: 4500000,        // rinkeby has a lower block limit than mainnet
-        gasPrice: 10000000000
-    },
-  }
-};
-
-
-/*
-
-MIGRATE RESULT
-
- ~ truffle migrate --network rinkeby --reset
 
 Using network 'rinkeby'.
 
@@ -55,6 +29,3 @@ Running migration: 2_deploy_contracts.js
 Saving successful migration to network...
   ... 0x3b1674c6a0b30ddf656d27030a5b4143c0b73d3fa5f165238338d76834d70205
 Saving artifacts...
- 
-
-*/
