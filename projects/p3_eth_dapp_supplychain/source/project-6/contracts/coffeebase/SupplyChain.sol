@@ -384,4 +384,15 @@ contract SupplyChain is FarmerRole, DistributorRole, RetailerRole, ConsumerRole 
   consumerID
   );
   }
+
+  // get owner
+  function getOwner() public view returns 
+  (
+  address ownerID
+  ) 
+  {
+  
+    
+  return owner;
+  }
 }
