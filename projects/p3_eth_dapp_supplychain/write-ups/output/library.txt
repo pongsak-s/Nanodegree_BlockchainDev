@@ -1,0 +1,7 @@
+Truffle v4.1.14 (core: 4.1.14)
+Solidity v0.4.24 (solc-js)
+Node v10.16.0
+Dependencies:
+-lite-server v2.4.0
+-truffle-hdwallet-provider v1.0.17
+-web3 v1.2.4
