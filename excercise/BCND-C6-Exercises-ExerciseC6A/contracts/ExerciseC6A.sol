@@ -17,6 +17,8 @@ contract ExerciseC6A {
 
     bool private operational = true;                // Blocks all state changes throughout the contract if false
 
+    uint constant M = 2;
+    address[] multiCalls = new address[](0);
 
     /********************************************************************************************/
     /*                                       EVENT DEFINITIONS                                  */
@@ -120,19 +122,29 @@ contract ExerciseC6A {
 
 
 
-    /**
-    * @dev Sets contract operations on/off
-    *
-    * When operational mode is disabled, all write transactions except for this one will fail
-    */    
     function setOperatingStatus
                             (
                                 bool mode
                             ) 
                             external
-                            requireContractOwner 
     {
-        operational = mode;
+        require(mode != operational, "New mode must be different from existing mode");
+        require(userProfiles[msg.sender].isAdmin, "Caller is not an admin");
+
+        bool isDuplicate = false;
+        for(uint c=0; c<multiCalls.length; c++) {
+            if (multiCalls[c] == msg.sender) {
+                isDuplicate = true;
+                break;
+            }
+        }
+        require(!isDuplicate, "Caller has already called this function.");
+
+        multiCalls.push(msg.sender);
+        if (multiCalls.length >= M) {
+            operational = mode;      
+            multiCalls = new address[](0);      
+        }
     }
 }
 
