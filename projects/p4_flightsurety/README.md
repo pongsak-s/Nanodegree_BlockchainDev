@@ -1,3 +1,19 @@
+# Note:
+
+## Clear node modules
+rm -rf package-lock.json
+rm -rf node_modules
+
+## Using specific version
+sudo n 12.16.2
+npm install -g npm@latest
+
+Truffle v5.0.1 (core: 5.0.1)
+Node v12.16.2
+NPM 6.14.4
+
+ganache-cli -p 8545 -m "depart hotel swap bubble pass other dilemma fluid silk seek claw offer" -a 50 -l 9999999
+
 # FlightSurety
 
 FlightSurety is a sample application project for Udacity's Blockchain course.
