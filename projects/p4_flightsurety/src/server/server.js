@@ -5,6 +5,7 @@ import express from 'express';
 
 
 let config = Config['localhost'];
+console.log('config.url',config.url);
 let web3 = new Web3(new Web3.providers.WebsocketProvider(config.url.replace('http', 'ws')));
 web3.eth.defaultAccount = web3.eth.accounts[0];
 let flightSuretyApp = new web3.eth.Contract(FlightSuretyApp.abi, config.appAddress);
@@ -25,5 +26,3 @@ app.get('/api', (req, res) => {
 })
 
 export default app;
-
-

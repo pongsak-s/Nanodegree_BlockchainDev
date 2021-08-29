@@ -40,7 +40,8 @@ module.exports = {
     extensions: [".js"]
   },
   devServer: {
-    static: path.join(__dirname, "dapp"),
-    port: 8000
+    contentBase: path.join(__dirname, "dapp"),
+    port: 8001,
+    stats: "minimal"
   }
 };

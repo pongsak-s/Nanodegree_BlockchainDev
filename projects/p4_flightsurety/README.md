@@ -8,9 +8,11 @@ rm -rf node_modules
 sudo n 12.16.2
 npm install -g npm@latest
 
-Truffle v5.0.1 (core: 5.0.1)
-Node v12.16.2
 NPM 6.14.4
+Truffle v5.0.8 (core: 5.0.8)
+Solidity - ^0.4.24 (solc-js)
+Node v10.7.0
+Web3.js v1.0.0-beta.37
 
 ganache-cli -p 8545 -m "depart hotel swap bubble pass other dilemma fluid silk seek claw offer" -a 50 -l 9999999
 
