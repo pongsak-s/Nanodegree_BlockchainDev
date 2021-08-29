@@ -34,6 +34,8 @@ contract FlightSuretyApp {
     }
     mapping(bytes32 => Flight) private flights;
 
+    FlightSuretyData flightSuretyData;
+
  
     /********************************************************************************************/
     /*                                       FUNCTION MODIFIERS                                 */
@@ -73,10 +75,12 @@ contract FlightSuretyApp {
     */
     constructor
                                 (
+                                address dataAddress
                                 ) 
                                 public 
     {
         contractOwner = msg.sender;
+        flightSuretyData = FlightSuretyData(dataAddress);
     }
 
     /********************************************************************************************/
@@ -85,10 +89,10 @@ contract FlightSuretyApp {
 
     function isOperational() 
                             public 
-                            pure 
+                            view 
                             returns(bool) 
     {
-        return true;  // Modify to call data contract's status
+        return flightSuretyData.isOperational();
     }
 
     /********************************************************************************************/
@@ -335,3 +339,19 @@ contract FlightSuretyApp {
 // endregion
 
 }   
+
+
+
+contract FlightSuretyData {
+
+    function isOperational() public view returns(bool);
+    function setOperatingStatus (bool mode) external;
+    function registerAirline() external pure;
+    function buy() external payable;
+    function creditInsurees() external pure;
+    function pay() external pure;
+    function fund() public payable;
+    function getFlightKey(address airline,string memory flight,uint256 timestamp) pure internal returns(bytes32);
+
+    
+}
