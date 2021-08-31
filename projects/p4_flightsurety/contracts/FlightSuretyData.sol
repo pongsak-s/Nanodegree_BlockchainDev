@@ -12,6 +12,8 @@ contract FlightSuretyData {
     address private contractOwner;                                      // Account used to deploy contract
     bool private operational = true;                                    // Blocks all state changes throughout the contract if false
 
+    address[] private airlines;
+
     /********************************************************************************************/
     /*                                       EVENT DEFINITIONS                                  */
     /********************************************************************************************/
@@ -23,10 +25,12 @@ contract FlightSuretyData {
     */
     constructor
                                 (
+                                    address initialAirline
                                 ) 
                                 public 
     {
         contractOwner = msg.sender;
+        airlines.push(initialAirline);
     }
 
     /********************************************************************************************/
@@ -181,6 +185,17 @@ contract FlightSuretyData {
         fund();
     }
 
+
+
+    /**
+    * helpers
+    *
+    */
+
+
+    function getAirlines() public view returns (address[] arls) {
+        return airlines;
+    }
 
 }
 

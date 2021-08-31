@@ -14,6 +14,15 @@ contract('Flight Surety Tests', async (accounts) => {
   /* Operations and Settings                                                              */
   /****************************************************************************************/
 
+  it(`first airline gets inited`, async function () {
+
+    let airlines = await config.flightSuretyData.getAirlines.call();
+    console.log('airlines',airlines.length);
+
+    assert.equal(airlines.length, 1, 'first airline must be inited');
+
+  });
+
   it(`(multiparty) has correct initial isOperational() value`, async function () {
 
     // Get operating status
