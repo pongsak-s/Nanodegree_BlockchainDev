@@ -12,7 +12,19 @@ contract FlightSuretyData {
     address private contractOwner;                                      // Account used to deploy contract
     bool private operational = true;                                    // Blocks all state changes throughout the contract if false
 
-    address[] private airlines;
+    //address[] private airlines;
+
+    uint256 totalRegisteredAirlines;
+    struct Airline {
+        address airline;
+        bool isRegistered;
+        bool isFunded;
+        address[] voters;
+    }
+    mapping(address => Airline) registeredAirlines;      
+
+
+    uint256 public constant AIRLINE_REGISTRATION_FEE = 10 ether;
 
     /********************************************************************************************/
     /*                                       EVENT DEFINITIONS                                  */
@@ -30,7 +42,16 @@ contract FlightSuretyData {
                                 public 
     {
         contractOwner = msg.sender;
-        airlines.push(initialAirline);
+
+
+        registeredAirlines[initialAirline] = Airline({
+                                        airline: initialAirline,
+                                        isRegistered: true,
+                                        isFunded: false,
+                                        voters: new address[](0x00)
+                                });
+        totalRegisteredAirlines = 1;
+        //airlines.push(initialAirline);
     }
 
     /********************************************************************************************/
@@ -57,6 +78,13 @@ contract FlightSuretyData {
     modifier requireContractOwner()
     {
         require(msg.sender == contractOwner, "Caller is not contract owner");
+        _;
+    }
+
+
+    modifier requireFromRegisteredAirlines(address voter)
+    {
+        require(isAirlineRegistered(voter), "Voter not from registered airline (<4)");
         _;
     }
 
@@ -103,11 +131,53 @@ contract FlightSuretyData {
     *
     */   
     function registerAirline
-                            (   
+                            (
+                            address airline,
+                            address voter
                             )
                             external
-                            pure
+                            requireIsOperational
+                            requireFromRegisteredAirlines(voter)
+                            returns(uint256 votes)
+
     {
+
+        require(!registeredAirlines[airline].isRegistered, "Airline is already registered.");
+
+        if(totalRegisteredAirlines < 4)
+        {
+            registeredAirlines[airline] = Airline({
+                                            airline: airline,
+                                            isRegistered: true,
+                                            isFunded: false,
+                                            voters: new address[](0x00)
+                                    });
+            totalRegisteredAirlines ++;
+        }
+        else
+        {
+            if (registeredAirlines[airline].airline == address(0x0))
+            {
+                registeredAirlines[airline] = Airline({
+                                                airline: airline,
+                                                isRegistered: false,
+                                                isFunded: false,
+                                                voters: new address[](0x00)
+                                        });
+            }
+            if(!isExistInArray(registeredAirlines[airline].voters, voter))
+            {
+                registeredAirlines[airline].voters.push(voter);
+            }
+            uint treshold = totalRegisteredAirlines / 2;
+            votes = registeredAirlines[airline].voters.length;
+            if(registeredAirlines[airline].voters.length > treshold)
+            {
+                totalRegisteredAirlines ++;
+                registeredAirlines[airline].isRegistered = true;
+            }
+
+        }
     }
 
 
@@ -154,11 +224,17 @@ contract FlightSuretyData {
     *
     */   
     function fund
-                            (   
+                            (  
+                            address airline 
                             )
                             public
                             payable
+                            requireIsOperational
+                            requireFromRegisteredAirlines(airline)
     {
+
+        require(msg.value >= AIRLINE_REGISTRATION_FEE, "Not sufficient fund");
+        registeredAirlines[airline].isFunded = true;
     }
 
     function getFlightKey
@@ -182,7 +258,7 @@ contract FlightSuretyData {
                             external 
                             payable 
     {
-        fund();
+        fund(msg.sender);
     }
 
 
@@ -193,9 +269,34 @@ contract FlightSuretyData {
     */
 
 
-    function getAirlines() public view returns (address[] arls) {
-        return airlines;
+    function isAirlineRegistered(address airline) public view returns (bool result) {
+        return registeredAirlines[airline].isRegistered;
     }
+
+    function isAirlineFunded(address airline) public view returns (bool result) {
+        return registeredAirlines[airline].isFunded;
+    }
+
+    function isExistInArray(address[] targetArray, address searchElement) private view returns (bool result) {
+        for(uint256 i=0; i< targetArray.length; i++)
+        {
+            if (targetArray[i] == searchElement)
+            {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    function getTotalRegisteredAirlines() public view returns (uint256 result) {
+        result = totalRegisteredAirlines;
+    }
+
+    function getVoters(address airline) public view returns (address[] result) {
+        result = registeredAirlines[airline].voters;
+    }
+
+
 
 }
 

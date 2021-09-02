@@ -99,19 +99,21 @@ contract FlightSuretyApp {
     /*                                     SMART CONTRACT FUNCTIONS                             */
     /********************************************************************************************/
 
-  
+
+
    /**
     * @dev Add an airline to the registration queue
     *
     */   
     function registerAirline
-                            (   
+                            ( 
+                            address airline  
                             )
                             external
-                            pure
+                            requireIsOperational
                             returns(bool success, uint256 votes)
     {
-        return (success, 0);
+        return (true, flightSuretyData.registerAirline(airline, msg.sender));
     }
 
 
@@ -338,6 +340,7 @@ contract FlightSuretyApp {
 
 // endregion
 
+
 }   
 
 
@@ -346,12 +349,16 @@ contract FlightSuretyData {
 
     function isOperational() public view returns(bool);
     function setOperatingStatus (bool mode) external;
-    function registerAirline() external pure;
+    //function registerAirline(address airline) external returns(bool success, uint256 votes);
+    function registerAirline(address airline, address voter) external returns(uint256 votes);
     function buy() external payable;
     function creditInsurees() external pure;
     function pay() external pure;
-    function fund() public payable;
+    function fund(address airline) public payable;
     function getFlightKey(address airline,string memory flight,uint256 timestamp) pure internal returns(bytes32);
 
     
+    function isAirlineRegistered(address airline) public view returns (bool result);
+    function getTotalRegisteredAirlines() public view returns (uint256 result);
+    function isAirlineFunded(address airline) public view returns (bool result);
 }
