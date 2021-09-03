@@ -21,7 +21,29 @@ contract FlightSuretyData {
         bool isFunded;
         address[] voters;
     }
-    mapping(address => Airline) registeredAirlines;      
+    mapping(address => Airline) registeredAirlines; 
+
+    uint256 totalRegisteredFlights;
+    struct Flight {
+        bytes32 key;
+        address airline;
+        string flightCode;
+        uint departureTime;
+        bool isRegistered;
+        // uint status;
+        // uint updatedTime;
+    }
+    mapping(bytes32 => Flight) registeredFlights;    
+
+    uint256 totalBoughtInsurance;
+    struct Insurance {
+        bytes32 key;
+        bytes32 flightKey;
+        address insuree;
+        uint256 amount;
+        uint state; // 0 = init, 1 = new
+    }
+    mapping(bytes32 => Insurance) insurances;     
 
 
     uint256 public constant AIRLINE_REGISTRATION_FEE = 10 ether;
@@ -71,6 +93,20 @@ contract FlightSuretyData {
         require(operational, "Contract is currently not operational");
         _;  // All modifiers require an "_" which indicates where the function body will be added
     }
+
+    modifier requireAirlineOperable(address airline) 
+    {
+        require(registeredAirlines[airline].isRegistered && registeredAirlines[airline].isFunded, "airline is not register or fully funded yet");
+        _;  
+    }
+
+    modifier requireFlightRegistered(address airline, string flightCode, uint256 timestamp) 
+    {
+        require(isFlightRegistered(airline, flightCode, timestamp), "flight is not register yet");
+        _;  
+    }
+
+    
 
     /**
     * @dev Modifier that requires the "ContractOwner" account to be the function caller
@@ -124,6 +160,33 @@ contract FlightSuretyData {
     /********************************************************************************************/
     /*                                     SMART CONTRACT FUNCTIONS                             */
     /********************************************************************************************/
+
+    function registerFlight
+                            (
+                                address airline, 
+                                string flightCode,
+                                uint256 timestamp
+
+                            )
+                            external
+                            requireIsOperational
+                            requireAirlineOperable(airline)
+                            returns(bool success)
+    {
+        var key = getFlightKey(airline, flightCode, timestamp);
+
+
+        registeredFlights[key] = Flight({
+                                        key: key,
+                                        airline: airline,
+                                        flightCode: flightCode,
+                                        departureTime: timestamp,
+                                        isRegistered: true
+                                });
+        totalRegisteredFlights += 1;
+        success = true;
+
+    }
 
    /**
     * @dev Add an airline to the registration queue
@@ -186,12 +249,34 @@ contract FlightSuretyData {
     *
     */   
     function buy
-                            (                             
+                            (   
+                            address airline,
+                            string flightCode,
+                            uint256 timestamp,
+                            address insuree                          
                             )
                             external
                             payable
+                            requireIsOperational
+                            requireAirlineOperable(airline)
+                            requireFlightRegistered(airline, flightCode, timestamp)
+                            returns(bool success)
     {
 
+        var flightKey = getFlightKey(airline, flightCode, timestamp);
+        var insKey = getInsuranceKey(airline, flightCode, timestamp, insuree, msg.value);
+
+
+
+        insurances[insKey] = Insurance({
+                                        key: insKey,
+                                        flightKey: flightKey,
+                                        insuree: insuree,
+                                        amount: msg.value,
+                                        state: 1
+                                });
+        totalBoughtInsurance += 1;
+        success = true;
     }
 
     /**
@@ -250,6 +335,22 @@ contract FlightSuretyData {
         return keccak256(abi.encodePacked(airline, flight, timestamp));
     }
 
+    function getInsuranceKey
+                        (
+                            address airline,
+                            string memory flight,
+                            uint256 timestamp,
+                            address insuree,
+                            uint256 amount
+                        )
+                        pure
+                        internal
+                        returns(bytes32) 
+    {
+        return keccak256(abi.encodePacked(airline, flight, timestamp, insuree,amount));
+    }
+
+
     /**
     * @dev Fallback function for funding smart contract.
     *
@@ -267,6 +368,11 @@ contract FlightSuretyData {
     * helpers
     *
     */
+
+    function isFlightRegistered(address airline, string flightCode, uint256 timestamp) public view returns (bool result) {
+        var key = getFlightKey(airline, flightCode, timestamp);
+        return registeredFlights[key].isRegistered;
+    }
 
 
     function isAirlineRegistered(address airline) public view returns (bool result) {
@@ -292,8 +398,26 @@ contract FlightSuretyData {
         result = totalRegisteredAirlines;
     }
 
+    function getTotalRegisteredFlights() public view returns (uint256 result) {
+        result = totalRegisteredFlights;
+    }
+
     function getVoters(address airline) public view returns (address[] result) {
         result = registeredAirlines[airline].voters;
+    }
+
+    function getInsuranceState ( address airline, string memory flight, uint256 timestamp, address insuree, uint256 amount ) public view returns (uint)
+    {
+        var key = getInsuranceKey(airline, flight, timestamp, insuree, amount);
+
+        return insurances[key].state;
+    }
+
+    function getInsuranceAmount ( address airline, string memory flight, uint256 timestamp, address insuree, uint256 amount ) public view returns (uint)
+    {
+        var key = getInsuranceKey(airline, flight, timestamp, insuree, amount);
+
+        return insurances[key].amount;
     }
 
 

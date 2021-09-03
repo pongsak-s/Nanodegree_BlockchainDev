@@ -164,11 +164,44 @@ contract('Flight Surety Tests', async (accounts) => {
   it('(airline) can participate when funded', async () => {
 
     let newAirline = accounts[5];
-    await config.flightSuretyData.fund(newAirline, {from: newAirline, value: 10000000000000000000});
+    await config.flightSuretyData.fund(newAirline, {from: newAirline, value: web3.utils.toWei('10', 'ether')});
 
     let result = await config.flightSuretyData.isAirlineFunded.call(newAirline);
-    console.log('result',result);
+    //console.log('result',result);
     assert.equal(result, true, "should now register as sufficient voters");
+
+  });
+
+  it('(flight) can register new flight', async () => {
+
+    let flightCode = "485784";
+    let timestamp = Date.now();
+
+    let newAirline = accounts[5];
+    await config.flightSuretyApp.registerFlight(flightCode, timestamp, {from: newAirline});
+
+    let result = await config.flightSuretyData.isFlightRegistered.call(newAirline, flightCode, timestamp);
+    let count = await config.flightSuretyData.getTotalRegisteredFlights.call();
+    //console.log('result',result);
+    assert.equal(result, true, "flight is not yet registered");
+    assert.equal(count, 1, "flight is not yet registered");
+
+  });
+
+  it('(passenger) can buy insurance', async () => {
+
+    let flightCode = "485785";
+    let timestamp = Date.now();
+    let insuree = accounts[7];
+    let newAirline = accounts[5];
+
+
+    await config.flightSuretyApp.registerFlight(flightCode, timestamp, {from: newAirline});
+
+    await config.flightSuretyApp.buyInsurance(newAirline, flightCode, timestamp, {from: insuree, value: web3.utils.toWei('1', 'ether')});
+
+    let result = await config.flightSuretyData.getInsuranceState.call(newAirline, flightCode, timestamp, insuree, web3.utils.toWei('1', 'ether'));
+    assert.equal(result, 1, "insurance bought");
 
   });
  

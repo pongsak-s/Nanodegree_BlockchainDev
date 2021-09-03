@@ -123,11 +123,14 @@ contract FlightSuretyApp {
     */  
     function registerFlight
                                 (
+                                     string flightCode, 
+                                     uint256 timestamp
                                 )
                                 external
-                                pure
+                                requireIsOperational
+                                returns(bool success)
     {
-
+        return flightSuretyData.registerFlight(msg.sender, flightCode, timestamp);
     }
     
    /**
@@ -167,6 +170,21 @@ contract FlightSuretyApp {
 
         emit OracleRequest(index, airline, flight, timestamp);
     } 
+
+
+    function buyInsurance
+                            (   
+                            address airline,
+                            string flightCode,
+                            uint256 timestamp                        
+                            )
+                            external
+                            payable
+                            requireIsOperational
+                            returns(bool success)
+    {
+        return flightSuretyData.buy.value(msg.value)(airline, flightCode, timestamp, msg.sender);
+    }
 
 
 // region ORACLE MANAGEMENT
@@ -350,15 +368,21 @@ contract FlightSuretyData {
     function isOperational() public view returns(bool);
     function setOperatingStatus (bool mode) external;
     //function registerAirline(address airline) external returns(bool success, uint256 votes);
+    function registerFlight( address airline, string flightCode, uint256 timestamp) external returns(bool success);
     function registerAirline(address airline, address voter) external returns(uint256 votes);
-    function buy() external payable;
+    function buy(address airline,string flightCode,uint256 timestamp,address insuree) external payable returns(bool success);
     function creditInsurees() external pure;
     function pay() external pure;
     function fund(address airline) public payable;
     function getFlightKey(address airline,string memory flight,uint256 timestamp) pure internal returns(bytes32);
 
-    
+    function isFlightRegistered(address airline, string flightCode, uint256 timestamp) public view returns (bool result) ;
+    function getTotalRegisteredFlights() public view returns (uint256 result);
+
     function isAirlineRegistered(address airline) public view returns (bool result);
     function getTotalRegisteredAirlines() public view returns (uint256 result);
     function isAirlineFunded(address airline) public view returns (bool result);
+
+    function getInsuranceAmount ( address airline, string memory flight, uint256 timestamp, address insuree, uint256 amount ) public view returns (uint);
+
 }
