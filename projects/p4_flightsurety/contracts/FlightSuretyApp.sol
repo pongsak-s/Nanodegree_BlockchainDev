@@ -140,25 +140,19 @@ contract FlightSuretyApp {
     function processFlightStatus
                                 (
                                     address airline,
-                                    string memory flight,
+                                    string memory flightCode,
                                     uint256 timestamp,
                                     uint8 statusCode
                                 )
                                 internal
                                 requireIsOperational 
+                                returns (bool success)
     {
-        if (statusCode == STATUS_CODE_LATE_AIRLINE) {  //20
-            //bytes32 flightKey = getFlightKey(airline, flightCode, departureTime);
+        if (statusCode == STATUS_CODE_LATE_AIRLINE)    //20
+        {
 
-            //get all insurances id
-            //address[] storage insIDs = flightSuretyData.getInsuranceIDs();
+            return flightSuretyData.creditInsurees(airline, flightCode, timestamp, statusCode);
 
-            //loop through id and credit insuree with multiplier
-            //for(uint i = 0; i<insIDs.length; i++)
-            //{
-                //if(flightData.insurances[] == 1)
-
-            //}
 
         }
 
@@ -402,7 +396,7 @@ contract FlightSuretyData {
     function registerFlight( address airline, string flightCode, uint256 timestamp) external returns(bool success);
     function registerAirline(address airline, address voter) external returns(uint256 votes);
     function buy(address airline,string flightCode,uint256 timestamp,address insuree) external payable returns(bool success);
-    function creditInsurees() external pure;
+    function creditInsurees(address airline, string flightCode, uint256 timestamp, uint8 statusCode) external returns(bool success);
     function pay() external pure;
     function fund(address airline) public payable;
     function getFlightKey(address airline,string memory flight,uint256 timestamp) pure internal returns(bytes32);

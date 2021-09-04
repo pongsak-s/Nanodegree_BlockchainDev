@@ -44,7 +44,7 @@ contract FlightSuretyData {
         uint256 amount;
         uint state; // 0 = not found, 1 = new
     }
-    mapping(uint256 => Insurance) insurances; 
+    mapping(uint256 => Insurance) public insurances; 
     uint256[] insuranceIDs;    
 
 
@@ -287,10 +287,30 @@ contract FlightSuretyData {
     */
     function creditInsurees
                                 (
+                                    address airline,
+                                    string flightCode,
+                                    uint256 timestamp,
+                                    uint8 statusCode
                                 )
                                 external
-                                pure
+                                requireIsOperational
+                                requireAirlineOperable(airline)
+                                returns(bool success)
     {
+
+        bytes32 flightKey = getFlightKey(airline, flightCode, timestamp);
+
+        //loop through id and credit insuree with multiplier
+        for(uint i = 0; i<insuranceIDs.length; i++)
+        {
+            if(insurances[insuranceIDs[i]].state == 1)
+            {
+                // credit
+                // flightSuretyData.creditInsurees();
+            }
+
+        }
+        return true;
     }
     
 
