@@ -206,6 +206,36 @@ contract('Flight Surety Tests', async (accounts) => {
     assert.equal(result2.length, 1, "insurance bought");
 
   });
+
+  it('(passenger) insurance state get change to "ready for payout" when flight delay and passenger can withdraw fund', async () => {
+
+    let flightCode = "485786";
+    let timestamp = Date.now();
+    let insuree = accounts[8];
+    let targetAirline = accounts[5]; //test flight status needs contract owner role
+
+    //arrange
+    await config.flightSuretyApp.registerFlight(flightCode, timestamp, {from: targetAirline});
+    await config.flightSuretyApp.buyInsurance(targetAirline, flightCode, timestamp, {from: insuree, value: web3.utils.toWei('1', 'ether')});
+    let result_arrange = await config.flightSuretyData.getInsuranceState.call(targetAirline, flightCode, insuree, web3.utils.toWei('1', 'ether'));
+    assert.equal(result_arrange, 1, "setup fail: cannot register and buy insurance");
+
+    //act
+    await config.flightSuretyApp.extProcessFlightStatus(targetAirline, flightCode, timestamp, 20, {from: accounts[0]});
+
+    //assert
+    let result_act = await config.flightSuretyData.getInsuranceState.call(targetAirline, flightCode, insuree, web3.utils.toWei('1', 'ether'));
+    assert.equal(result_act, 2, "process flight status to 'ready for payout'");
+
+
+    //act
+    await config.flightSuretyApp.withdrawFund({from: insuree});
+
+   //assert
+    let result_act2 = await config.flightSuretyData.getInsuranceState.call(targetAirline, flightCode, insuree, web3.utils.toWei('1', 'ether'));
+    assert.equal(result_act2, 9, "process flight status to 'funded'");
+
+  });
  
  
 

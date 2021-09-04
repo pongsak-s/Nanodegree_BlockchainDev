@@ -109,7 +109,7 @@ contract FlightSuretyApp {
                             ( 
                             address airline  
                             )
-                            external
+                            public
                             requireIsOperational
                             returns(bool success, uint256 votes)
     {
@@ -126,11 +126,21 @@ contract FlightSuretyApp {
                                      string flightCode, 
                                      uint256 timestamp
                                 )
-                                external
+                                public
                                 requireIsOperational
                                 returns(bool success)
     {
         return flightSuretyData.registerFlight(msg.sender, flightCode, timestamp);
+    }
+
+    function withdrawFund
+                                (
+                                )
+                                public
+                                requireIsOperational
+                                returns(bool success)
+    {
+        return flightSuretyData.pay(msg.sender);
     }
     
    /**
@@ -203,7 +213,7 @@ contract FlightSuretyApp {
                             string flightCode,
                             uint256 timestamp                        
                             )
-                            external
+                            public
                             payable
                             requireIsOperational
                             returns(bool success)
@@ -397,7 +407,8 @@ contract FlightSuretyData {
     function registerAirline(address airline, address voter) external returns(uint256 votes);
     function buy(address airline,string flightCode,uint256 timestamp,address insuree) external payable returns(bool success);
     function creditInsurees(address airline, string flightCode, uint256 timestamp, uint8 statusCode) external returns(bool success);
-    function pay() external pure;
+
+    function pay(address insuree) external payable returns (bool success);
     function fund(address airline) public payable;
     function getFlightKey(address airline,string memory flight,uint256 timestamp) pure internal returns(bytes32);
 

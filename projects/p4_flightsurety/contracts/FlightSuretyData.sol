@@ -42,7 +42,7 @@ contract FlightSuretyData {
         bytes32 flightKey;
         address insuree;
         uint256 amount;
-        uint state; // 0 = not found, 1 = new
+        uint state; // 0 = not found, 1 = new, 2 = flight delay, 9 = paid out
     }
     mapping(uint256 => Insurance) public insurances; 
     uint256[] insuranceIDs;    
@@ -305,8 +305,7 @@ contract FlightSuretyData {
         {
             if(insurances[insuranceIDs[i]].state == 1)
             {
-                // credit
-                // flightSuretyData.creditInsurees();
+                insurances[insuranceIDs[i]].state = 2;
             }
 
         }
@@ -320,10 +319,24 @@ contract FlightSuretyData {
     */
     function pay
                             (
+                                address insuree
                             )
                             external
-                            pure
+                            payable
+                            requireIsOperational
+                            returns (bool success)
     {
+        for(uint i = 0; i<insuranceIDs.length; i++)
+        {
+            if(insurances[insuranceIDs[i]].insuree == insuree && insurances[insuranceIDs[i]].state == 2)
+            {
+                insurances[insuranceIDs[i]].state = 9;
+                var paidAmount = insurances[insuranceIDs[i]].amount * 3 / 2;
+                insuree.transfer(paidAmount);
+                return true;
+            }
+        }
+        return false;
     }
 
    /**
