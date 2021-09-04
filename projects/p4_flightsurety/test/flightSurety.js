@@ -200,8 +200,10 @@ contract('Flight Surety Tests', async (accounts) => {
 
     await config.flightSuretyApp.buyInsurance(newAirline, flightCode, timestamp, {from: insuree, value: web3.utils.toWei('1', 'ether')});
 
-    let result = await config.flightSuretyData.getInsuranceState.call(newAirline, flightCode, timestamp, insuree, web3.utils.toWei('1', 'ether'));
+    let result = await config.flightSuretyData.getInsuranceState.call(newAirline, flightCode, insuree, web3.utils.toWei('1', 'ether'));
+    let result2 = await config.flightSuretyData.getInsuranceIDs.call();
     assert.equal(result, 1, "insurance bought");
+    assert.equal(result2.length, 1, "insurance bought");
 
   });
  

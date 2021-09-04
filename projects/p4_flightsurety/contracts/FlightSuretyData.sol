@@ -37,13 +37,15 @@ contract FlightSuretyData {
 
     uint256 totalBoughtInsurance;
     struct Insurance {
-        bytes32 key;
+        uint256 id;
+        address airline;
         bytes32 flightKey;
         address insuree;
         uint256 amount;
-        uint state; // 0 = init, 1 = new
+        uint state; // 0 = not found, 1 = new
     }
-    mapping(bytes32 => Insurance) insurances;     
+    mapping(uint256 => Insurance) insurances; 
+    uint256[] insuranceIDs;    
 
 
     uint256 public constant AIRLINE_REGISTRATION_FEE = 10 ether;
@@ -264,18 +266,19 @@ contract FlightSuretyData {
     {
 
         var flightKey = getFlightKey(airline, flightCode, timestamp);
-        var insKey = getInsuranceKey(airline, flightCode, timestamp, insuree, msg.value);
 
 
-
-        insurances[insKey] = Insurance({
-                                        key: insKey,
+        uint256 insID = totalBoughtInsurance;
+        insurances[insID] = Insurance({
+                                        id: insID,
+                                        airline: airline,
                                         flightKey: flightKey,
                                         insuree: insuree,
                                         amount: msg.value,
                                         state: 1
                                 });
-        totalBoughtInsurance += 1;
+        insuranceIDs.push(insID);
+        totalBoughtInsurance = insID + 1;
         success = true;
     }
 
@@ -335,22 +338,6 @@ contract FlightSuretyData {
         return keccak256(abi.encodePacked(airline, flight, timestamp));
     }
 
-    function getInsuranceKey
-                        (
-                            address airline,
-                            string memory flight,
-                            uint256 timestamp,
-                            address insuree,
-                            uint256 amount
-                        )
-                        pure
-                        internal
-                        returns(bytes32) 
-    {
-        return keccak256(abi.encodePacked(airline, flight, timestamp, insuree,amount));
-    }
-
-
     /**
     * @dev Fallback function for funding smart contract.
     *
@@ -406,18 +393,45 @@ contract FlightSuretyData {
         result = registeredAirlines[airline].voters;
     }
 
-    function getInsuranceState ( address airline, string memory flight, uint256 timestamp, address insuree, uint256 amount ) public view returns (uint)
+    function getInsuranceState ( address airline, string memory flightCode, address insuree, uint256 amount ) public view returns (uint)
     {
-        var key = getInsuranceKey(airline, flight, timestamp, insuree, amount);
-
-        return insurances[key].state;
+        var allIns = getInsuranceIDs();
+        for(uint8 i = 0; i< allIns.length; i++)
+        {
+            if(insurances[i].airline == airline && isEqualString(registeredFlights[insurances[i].flightKey].flightCode, flightCode) && insurances[i].insuree == insuree && insurances[i].amount == amount)
+            {
+                return insurances[i].state;
+            }
+        }
+        return 0;
     }
 
-    function getInsuranceAmount ( address airline, string memory flight, uint256 timestamp, address insuree, uint256 amount ) public view returns (uint)
+    function getInsuranceStateByID ( uint256 insuranceID ) public view returns (uint)
     {
-        var key = getInsuranceKey(airline, flight, timestamp, insuree, amount);
+        return insurances[insuranceID].state;
+    }
 
-        return insurances[key].amount;
+    function getInsuranceAmount ( address airline, string flightCode, address insuree, uint256 amount ) public view returns (uint)
+    {
+        var allIns = getInsuranceIDs();
+        for(uint8 i = 0; i< allIns.length; i++)
+        {
+            if(insurances[i].airline == airline && isEqualString(registeredFlights[insurances[i].flightKey].flightCode, flightCode) && insurances[i].insuree == insuree && insurances[i].amount == amount)
+            {
+                return insurances[i].amount;
+            }
+        }
+        return 0;
+    }
+
+    function getInsuranceIDs ( ) public view returns (uint256[])
+    {
+        return insuranceIDs;
+    }   
+
+    function isEqualString( string a, string b) public view returns (bool)
+    {
+        return keccak256(bytes(a)) == keccak256(bytes(b));
     }
 
 

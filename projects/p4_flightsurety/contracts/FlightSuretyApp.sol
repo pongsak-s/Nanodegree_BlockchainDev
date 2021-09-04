@@ -145,8 +145,38 @@ contract FlightSuretyApp {
                                     uint8 statusCode
                                 )
                                 internal
-                                pure
+                                requireIsOperational 
     {
+        if (statusCode == STATUS_CODE_LATE_AIRLINE) {  //20
+            //bytes32 flightKey = getFlightKey(airline, flightCode, departureTime);
+
+            //get all insurances id
+            //address[] storage insIDs = flightSuretyData.getInsuranceIDs();
+
+            //loop through id and credit insuree with multiplier
+            //for(uint i = 0; i<insIDs.length; i++)
+            //{
+                //if(flightData.insurances[] == 1)
+
+            //}
+
+        }
+
+    } 
+
+    function extProcessFlightStatus
+                                (
+                                    address airline,
+                                    string memory flight,
+                                    uint256 timestamp,
+                                    uint8 statusCode
+                                )
+                                public
+                                requireIsOperational
+                                requireContractOwner
+    {
+        processFlightStatus(airline, flight, timestamp, statusCode);
+
     }
 
 
@@ -158,6 +188,7 @@ contract FlightSuretyApp {
                             uint256 timestamp                            
                         )
                         external
+                        requireIsOperational
     {
         uint8 index = getRandomIndex(msg.sender);
 
@@ -382,7 +413,9 @@ contract FlightSuretyData {
     function isAirlineRegistered(address airline) public view returns (bool result);
     function getTotalRegisteredAirlines() public view returns (uint256 result);
     function isAirlineFunded(address airline) public view returns (bool result);
-
-    function getInsuranceAmount ( address airline, string memory flight, uint256 timestamp, address insuree, uint256 amount ) public view returns (uint);
+    function getInsuranceState ( address airline, string memory flightCode, address insuree, uint256 amount ) public view returns (uint);
+    function getInsuranceStateByID ( uint256 insuranceID ) public view returns (uint);
+    function getInsuranceAmount ( address airline, string memory flight, address insuree, uint256 amount ) public view returns (uint);
+    function getInsuranceIDs ( ) public view returns (uint256[]);
 
 }
